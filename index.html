@@ -243,7 +243,7 @@
 <div class="bp-title">
   <h1>EXTENDED MIND BLUEPRINT</h1>
   <div class="sub">Multi-Machine AI Development Environment</div>
-  <div class="auth">Designed &amp; Built by Aragorn Meulendijks (MrMetaverse) &mdash; 2026</div>
+  <div class="auth">Designed &amp; Built by Aragorn Meulendijks &mdash; 2026</div>
 </div>
 
 <!-- ========== LEGEND ========== -->
@@ -269,42 +269,42 @@
   <div class="section-body">
 
     <!-- Topology diagram -->
-    <svg class="topo-svg" viewBox="0 0 3080 200">
+    <svg class="topo-svg" viewBox="0 0 3080 440">
       <defs>
         <marker id="ac" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3 L0,6" fill="none" stroke="#58a6ff" stroke-width="1.2"/></marker>
         <marker id="ao" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3 L0,6" fill="none" stroke="#f0a030" stroke-width="1.2"/></marker>
       </defs>
-      <!-- Machine nodes -->
-      <rect x="80" y="40" width="200" height="80" rx="6" fill="rgba(26,58,92,0.3)" stroke="#58a6ff" stroke-width="2"/>
-      <text x="180" y="72" text-anchor="middle" fill="#58a6ff" font-family="Orbitron" font-size="18" font-weight="900">DAWN</text>
-      <text x="180" y="100" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="10">100.x.x.108</text>
+      <!-- Machine nodes — triangle: Day top center, Dawn bottom-left, Dusk bottom-right -->
+      <rect x="1190" y="30" width="200" height="80" rx="6" fill="rgba(10,61,46,0.3)" stroke="#16c79a" stroke-width="2"/>
+      <text x="1290" y="62" text-anchor="middle" fill="#16c79a" font-family="Orbitron" font-size="18" font-weight="900">DAY</text>
+      <text x="1290" y="90" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="10">100.x.x.104 &bull; macOS &bull; always-on</text>
 
-      <rect x="1190" y="40" width="200" height="80" rx="6" fill="rgba(10,61,46,0.3)" stroke="#16c79a" stroke-width="2"/>
-      <text x="1290" y="72" text-anchor="middle" fill="#16c79a" font-family="Orbitron" font-size="18" font-weight="900">DAY</text>
-      <text x="1290" y="100" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="10">100.x.x.104</text>
+      <rect x="280" y="290" width="200" height="80" rx="6" fill="rgba(26,58,92,0.3)" stroke="#58a6ff" stroke-width="2"/>
+      <text x="380" y="322" text-anchor="middle" fill="#58a6ff" font-family="Orbitron" font-size="18" font-weight="900">DAWN</text>
+      <text x="380" y="350" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="10">100.x.x.108 &bull; WSL2 &bull; RTX 5090</text>
 
-      <rect x="2300" y="40" width="200" height="80" rx="6" fill="rgba(26,58,92,0.3)" stroke="#58a6ff" stroke-width="2"/>
-      <text x="2400" y="72" text-anchor="middle" fill="#58a6ff" font-family="Orbitron" font-size="18" font-weight="900">DUSK</text>
-      <text x="2400" y="100" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="10">100.x.x.61</text>
+      <rect x="2100" y="290" width="200" height="80" rx="6" fill="rgba(26,58,92,0.3)" stroke="#58a6ff" stroke-width="2"/>
+      <text x="2200" y="322" text-anchor="middle" fill="#58a6ff" font-family="Orbitron" font-size="18" font-weight="900">DUSK</text>
+      <text x="2200" y="350" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="10">100.x.x.61 &bull; WSL2 &bull; laptop</text>
 
-      <!-- Tailscale connections -->
-      <line x1="280" y1="70" x2="1190" y2="70" stroke="#58a6ff" stroke-width="3" stroke-dasharray="12,6" class="flow-anim" marker-end="url(#ac)"/>
-      <line x1="1390" y1="70" x2="2300" y2="70" stroke="#58a6ff" stroke-width="3" stroke-dasharray="12,6" class="flow-anim" marker-end="url(#ac)"/>
-      <path d="M 280,110 Q 1290,220 2300,110" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,6" fill="none" opacity=".35" class="flow-anim"/>
+      <!-- Tailscale connections — diagonal lines forming the triangle -->
+      <line x1="1210" y1="110" x2="470" y2="300" stroke="#58a6ff" stroke-width="3" stroke-dasharray="12,6" class="flow-anim" marker-end="url(#ac)"/>
+      <line x1="1370" y1="110" x2="2110" y2="300" stroke="#58a6ff" stroke-width="3" stroke-dasharray="12,6" class="flow-anim" marker-end="url(#ac)"/>
+      <line x1="480" y1="330" x2="2100" y2="330" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,6" fill="none" opacity=".35" class="flow-anim"/>
 
-      <!-- Relay connections -->
-      <line x1="280" y1="90" x2="1190" y2="90" stroke="#f0a030" stroke-width="2.5" stroke-dasharray="10,5" class="flow-anim" opacity=".6" marker-end="url(#ao)"/>
-      <line x1="1390" y1="90" x2="2300" y2="90" stroke="#f0a030" stroke-width="2.5" stroke-dasharray="10,5" class="flow-anim" opacity=".6" marker-end="url(#ao)"/>
+      <!-- Relay connections — offset from Tailscale lines -->
+      <line x1="1230" y1="110" x2="460" y2="290" stroke="#f0a030" stroke-width="2.5" stroke-dasharray="10,5" class="flow-anim" opacity=".6" marker-end="url(#ao)"/>
+      <line x1="1350" y1="110" x2="2120" y2="290" stroke="#f0a030" stroke-width="2.5" stroke-dasharray="10,5" class="flow-anim" opacity=".6" marker-end="url(#ao)"/>
 
-      <!-- Labels -->
-      <rect x="620" y="52" width="150" height="20" rx="3" fill="rgba(8,12,20,0.9)" stroke="#1a3a5c"/>
-      <text x="695" y="66" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="10">2-8ms &bull; TCP :7272</text>
-      <rect x="1720" y="52" width="170" height="20" rx="3" fill="rgba(8,12,20,0.9)" stroke="#1a3a5c"/>
-      <text x="1805" y="66" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="10">22-28ms &bull; TCP :7272</text>
-      <rect x="620" y="78" width="180" height="18" rx="3" fill="rgba(8,12,20,0.9)" stroke="#3d2a0a"/>
-      <text x="710" y="91" text-anchor="middle" fill="#f0a030" font-family="Share Tech Mono" font-size="9">Relay TCP :7272 &bull; HMAC-SHA256</text>
+      <!-- Labels — positioned along diagonal lines -->
+      <rect x="700" y="170" width="150" height="20" rx="3" fill="rgba(8,12,20,0.9)" stroke="#1a3a5c"/>
+      <text x="775" y="184" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="10">2-8ms &bull; TCP :7272</text>
+      <rect x="1830" y="170" width="170" height="20" rx="3" fill="rgba(8,12,20,0.9)" stroke="#1a3a5c"/>
+      <text x="1915" y="184" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="10">22-28ms &bull; TCP :7272</text>
+      <rect x="700" y="196" width="180" height="18" rx="3" fill="rgba(8,12,20,0.9)" stroke="#3d2a0a"/>
+      <text x="790" y="209" text-anchor="middle" fill="#f0a030" font-family="Share Tech Mono" font-size="9">Relay TCP :7272 &bull; HMAC-SHA256</text>
 
-      <text x="1290" y="180" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="10" opacity=".4">Dawn&#8596;Dusk 26-39ms</text>
+      <text x="1290" y="420" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="10" opacity=".4">Dawn&#8596;Dusk 26-39ms &bull; Obsidian Sync &bull; ClipCascade</text>
     </svg>
 
     <!-- Machine details -->
@@ -323,6 +323,7 @@
           <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">relay.py daemon</span>
           <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">Audio Receiver :12345</span>
           <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">Beeper MCP</span>
+          <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">ComfyUI :8188</span>
           <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">Docker DOCKER-USER</span>
         </div>
       </div>
@@ -333,7 +334,7 @@
       <div class="msub" style="color:var(--green)">Mac Mini M4 &mdash; Always-On Server</div>
       <div class="mspecs">
         <span class="k">hostname</span> <span class="v">day</span> &bull; <span class="k">os</span> <span class="v">macOS / Colima Docker</span><br>
-        <span class="k">tailscale</span> <span class="v">100.x.x.104</span> &bull; <span class="k">vault</span> <span class="v">[home]/42/</span><br>
+        <span class="k">tailscale</span> <span class="v">100.x.x.104</span> &bull; <span class="k">vault</span> <span class="v">[vault]/</span><br>
         <span class="k">relay</span> <span class="v">launchd (KeepAlive)</span> &bull; <span class="k">role</span> <span class="v">Server, automation hub</span>
       </div>
       <div class="inner-box" style="border-color:var(--green-dim)">
@@ -343,6 +344,11 @@
           <span class="tag" style="border-color:var(--green);color:var(--green)">Voice Hook (TTS)</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">Jellyfin :8096</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">Jellyseerr :5055</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">Parallax :7073</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">Image Forge :7074</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">ClipCascade :8085</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">EMOC Dashboard :7171</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">Cloudflare Tunnel</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">relay.py daemon</span>
         </div>
       </div>
@@ -389,7 +395,7 @@
     </div>
     <div class="card t-orange">
       <div class="clabel">Google Cloud Platform</div>
-      <div class="cdetail">Project: <span class="v">[GCP project]</span><br>Single OAuth credential &rarr; 4 accounts<br>Services: Gmail, Calendar, Drive<br>Client: <span class="v">[OAuth client ID]</span></div>
+      <div class="cdetail">Project: <span class="v">claude-mcp-drive-42</span><br>Single OAuth credential &rarr; 4 accounts<br>Services: Gmail, Calendar, Drive<br>Client: <span class="v">35917905878-...</span></div>
     </div>
     <div class="card t-orange">
       <div class="clabel">Cloud Connectors</div>
@@ -440,19 +446,19 @@
       <div class="clabel">Symlink Architecture</div>
       <div class="cdetail">Created by <span class="v">setup-symlinks.sh</span> per machine<br><br>
         Config/settings.json &rarr; <span class="v">~/.claude/settings.json</span><br>
-        Config/commands/ &rarr; <span class="v">~/.claude/commands/</span> (36 cmds)<br>
-        Config/rules/ &rarr; <span class="v">~/.claude/rules/</span> (17 rules)<br>
+        Config/skills/ &rarr; <span class="v">~/.claude/skills/</span> (75 skills)<br>
+        Config/rules/ &rarr; <span class="v">~/.claude/rules/</span> (16 rules)<br>
         Config/CLAUDE.md &rarr; <span class="v">~/workspace/CLAUDE.md</span><br>
         Config/memory/ &rarr; <span class="v">~/.claude/projects/*/memory/</span> (28+)
       </div>
     </div>
     <div class="card t-red">
       <div class="clabel">Per-Machine (Not Synced)</div>
-      <div class="cdetail"><span class="v">~/.claude.json</span> &mdash; MCP configs<br><span class="v">settings.local.json</span> &mdash; permissions<br><span class="v">~/.claude/plugins/</span> &mdash; installs<br><span class="v">[pre-shared key file]</span> &mdash; HMAC key<br><span class="v">[secrets directory]</span> &mdash; API keys (chmod 600)</div>
+      <div class="cdetail"><span class="v">~/.claude.json</span> &mdash; MCP configs<br><span class="v">settings.local.json</span> &mdash; permissions<br><span class="v">~/.claude/plugins/</span> &mdash; installs<br><span class="v">~/.relay-secret</span> &mdash; HMAC key<br><span class="v">~/.secrets/*.env</span> &mdash; API keys (chmod 600)</div>
     </div>
     <div class="card t-green">
       <div class="clabel">Vault Locations</div>
-      <div class="cdetail"><span class="v" style="color:var(--cyan)">Dawn</span> [home]/vault/ ([Windows vault path])<br><span class="v" style="color:var(--cyan)">Dusk</span> [home]/vault/<br><span class="v" style="color:var(--green)">Day</span>&nbsp; [home]/42/</div>
+      <div class="cdetail"><span class="v" style="color:var(--cyan)">Dawn</span> [vault]/ ([vault-windows])<br><span class="v" style="color:var(--cyan)">Dusk</span> [vault]/<br><span class="v" style="color:var(--green)">Day</span>&nbsp; [vault]/</div>
     </div>
   </div>
 </div>
@@ -507,11 +513,11 @@
       <div class="cdetail">Package: <span class="v">taylorwilsdon/google_workspace_mcp</span> via uvx<br><br>
         <table class="bp-table">
           <tr><td class="tk" style="color:var(--orange)">mrmetaverse</td><td>aragorn@itsmrmetaverse.com</td><td>Day :8010 / Dawn :8000</td></tr>
-          <tr><td class="tk" style="color:var(--orange)">business</td><td>[business email]</td><td>Day :8011 / Dawn :8001</td></tr>
-          <tr><td class="tk" style="color:var(--orange)">innovation</td><td>[innovation email]</td><td>Day :8012 / Dawn :8002</td></tr>
+          <tr><td class="tk" style="color:var(--orange)">business</td><td>[org email]</td><td>Day :8011 / Dawn :8001</td></tr>
+          <tr><td class="tk" style="color:var(--orange)">innovation</td><td>[org email]</td><td>Day :8012 / Dawn :8002</td></tr>
           <tr><td class="tk" style="color:var(--orange)">difine</td><td>[consulting email]</td><td>Day :8013 / Dawn :8003</td></tr>
         </table>
-        <br>Tokens: <span class="v">[token storage]</span>
+        <br>Tokens: <span class="v">~/.config/workspace-mcp/{name}/</span>
       </div>
     </div>
     <div class="card t-orange" style="flex:1;min-width:400px">
@@ -527,7 +533,11 @@
     </div>
     <div class="card t-orange">
       <div class="clabel">Messaging MCP</div>
-      <div class="cdetail"><span class="v" style="color:var(--green)">WhatsApp</span> &mdash; Day only, Bun + TS<br>&nbsp;Auth: [auth directory]<br>&nbsp;Groups: groupFetchAllParticipating()<br><br><span class="v" style="color:var(--cyan)">Beeper</span> &mdash; Dawn/Dusk, HTTP [local port]<br>&nbsp;iMessage, Google, Instagram, LinkedIn, FB, Signal<br>&nbsp;Tokens expire 24h</div>
+      <div class="cdetail"><span class="v" style="color:var(--green)">WhatsApp</span> &mdash; Day only, Bun + TS<br>&nbsp;Auth: ~/.whatsapp-auth/<br>&nbsp;Groups: groupFetchAllParticipating()<br><br><span class="v" style="color:var(--cyan)">Beeper</span> &mdash; Dawn/Dusk, HTTP :23373<br>&nbsp;iMessage, Google, Instagram, LinkedIn, FB, Signal<br>&nbsp;Tokens expire 24h</div>
+    </div>
+    <div class="card t-orange">
+      <div class="clabel">Gemini Design MCP</div>
+      <div class="cdetail"><span class="v">gemini-design</span> &mdash; multi-modal AI<br>Image gen/edit, video gen, deep research, TTS<br>Code execution, URL analysis, YouTube summaries<br>Caching, structured output, brainstorming</div>
     </div>
     <div class="card t-orange">
       <div class="clabel">Other MCP</div>
@@ -565,7 +575,7 @@
           <tr><td class="tk" style="color:var(--red)">UserPromptSubmit</td><td>relay-check-hook.sh (messages) + voice-shutup.sh (stop TTS)</td><td style="text-align:right;opacity:.5">5s ea</td></tr>
           <tr><td class="tk" style="color:var(--red)">PostToolUseFailure</td><td>echo: suggest /learn:from</td><td style="text-align:right;opacity:.5">5s</td></tr>
         </table>
-        <br>Scripts: Day <span class="v">~/scripts/claude-hooks/</span> &bull; Dawn/Dusk <span class="v">~/scripts/claude-hooks/</span>
+        <br>Scripts: Day <span class="v">[home]/scripts/claude-hooks/</span> &bull; Dawn/Dusk <span class="v">[home]/scripts/claude-hooks/</span>
       </div>
     </div>
   </div>
@@ -656,7 +666,7 @@
     </div>
     <div class="card t-green">
       <div class="clabel">Backup Systems (GitHub Private)</div>
-      <div class="cdetail"><span class="v" style="color:var(--green)">Config Guard</span> &mdash; [private: config backup]<br>Hourly &bull; settings, CLAUDE.md, memory, rules, scripts<br><br><span class="v" style="color:var(--green)">Vault Backup</span> &mdash; [private: vault backup]<br>Nightly 3am &bull; Full vault + ~/scripts/<br>Excludes: media, credentials, node_modules</div>
+      <div class="cdetail"><span class="v" style="color:var(--green)">Config Guard</span> &mdash; Aragorn2046/claude-config-guard<br>Hourly &bull; settings, CLAUDE.md, memory, rules, scripts<br><br><span class="v" style="color:var(--green)">Vault Backup</span> &mdash; Aragorn2046/vault-backup<br>Nightly 3am &bull; Full vault + ~/scripts/<br>Excludes: media, credentials, node_modules</div>
     </div>
   </div>
 </div>
@@ -673,7 +683,7 @@
   <div class="section-body">
     <div class="card t-orange" style="flex:1;min-width:480px">
       <div class="clabel">Relay v2.0</div>
-      <div class="cdetail">Implementation: <span class="v">relay.py</span> (~900 lines, stdlib, asyncio)<br>Transport: <span class="v">TCP :7272</span> primary, file-based fallback<br>Fallback paths: Day <span class="v">[vault]/claude-relay/</span> &bull; Dawn <span class="v">[vault]/claude-relay/</span> &bull; Dusk <span class="v">[vault]/claude-relay/</span><br>Security: <span class="v">HMAC-SHA256</span> (pre-shared [pre-shared key file])<br>Freshness: 5-min timestamp &bull; Rate limiting &bull; Dedup<br>TCP bound to Tailscale IPs only<br><br>CLI: <span class="v">send, check, read, status, history, ping, health</span><br><br><span class="v" style="color:var(--orange)">Auto-Execute</span>: [AUTO] spawns headless Claude Code<br>Budget: $5 default &bull; Model: allowlisted</div>
+      <div class="cdetail">Implementation: <span class="v">relay.py</span> (~900 lines, stdlib, asyncio)<br>Transport: <span class="v">TCP :7272</span> primary, file-based fallback<br>Fallback paths: Day <span class="v">[vault]/claude-relay/</span> &bull; Dawn <span class="v">[relay-path]/</span> &bull; Dusk <span class="v">[vault]/claude-relay/</span><br>Security: <span class="v">HMAC-SHA256</span> (pre-shared ~/.relay-secret)<br>Freshness: 5-min timestamp &bull; Rate limiting &bull; Dedup<br>TCP bound to Tailscale IPs only<br><br>CLI: <span class="v">send, check, read, status, history, ping, health</span><br><br><span class="v" style="color:var(--orange)">Auto-Execute</span>: [AUTO] spawns headless Claude Code<br>Budget: $5 default &bull; Model: allowlisted</div>
     </div>
     <div class="card t-orange">
       <div class="clabel">Instruction Bus</div>
@@ -692,51 +702,95 @@
 </div>
 
 <!-- ============================================================ -->
-<!-- SECTION 10: ORCHESTRATOR -->
+<!-- SECTION 10: ORCHESTRATOR v3 -->
 <!-- ============================================================ -->
 <div class="section" id="sec-orchestrator">
   <div class="section-head" style="border-color:var(--cyan);color:var(--cyan)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
-    <span class="stitle">Orchestrator &mdash; Task Delegation</span>
-    <span class="scount">Auto-routes tasks to specialist sessions</span>
+    <span class="stitle">Orchestrator v3 &mdash; Corporate Hierarchy</span>
+    <span class="scount">CEO &rarr; Department Heads &rarr; Specialists &bull; Auto-Orchestration</span>
   </div>
   <div class="section-body">
-    <!-- Orchestrator flow -->
-    <svg class="topo-svg" viewBox="0 0 2400 100">
-      <defs><marker id="acn" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3 L0,6" fill="none" stroke="#58a6ff" stroke-width="1.2"/></marker></defs>
-      <text x="40" y="45" fill="#58a6ff" font-family="Orbitron" font-size="11" font-weight="700">TASK</text>
-      <line x1="90" y1="40" x2="200" y2="40" stroke="#58a6ff" stroke-width="3" class="flow-anim" marker-end="url(#acn)"/>
-      <rect x="200" y="20" width="180" height="40" rx="4" fill="rgba(26,58,92,0.3)" stroke="#58a6ff"/><text x="290" y="45" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="10">task-router.py</text>
-      <line x1="380" y1="40" x2="480" y2="40" stroke="#58a6ff" stroke-width="3" class="flow-anim" marker-end="url(#acn)"/>
-      <rect x="480" y="20" width="220" height="40" rx="4" fill="rgba(26,58,92,0.3)" stroke="#58a6ff"/><text x="590" y="45" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="10">context-assembler.py</text>
-      <line x1="700" y1="40" x2="800" y2="40" stroke="#58a6ff" stroke-width="3" class="flow-anim" marker-end="url(#acn)"/>
-      <rect x="800" y="20" width="200" height="40" rx="4" fill="rgba(26,58,92,0.3)" stroke="#58a6ff"/><text x="900" y="45" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="10">orchestrator.sh</text>
-      <line x1="1000" y1="40" x2="1100" y2="40" stroke="#58a6ff" stroke-width="3" class="flow-anim" marker-end="url(#acn)"/>
-      <rect x="1100" y="20" width="200" height="40" rx="4" fill="rgba(26,58,92,0.3)" stroke="#58a6ff"/><text x="1200" y="45" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="10">result-collector.py</text>
-      <line x1="1300" y1="40" x2="1380" y2="40" stroke="#58a6ff" stroke-width="3" class="flow-anim" marker-end="url(#acn)"/>
-      <text x="1400" y="45" fill="#16c79a" font-family="Orbitron" font-size="11" font-weight="700">RESULT</text>
-      <!-- Budget tracker (parallel track) -->
-      <rect x="800" y="65" width="200" height="30" rx="4" fill="rgba(61,42,10,0.3)" stroke="#f0a030" stroke-width="1"/>
-      <text x="900" y="84" text-anchor="middle" fill="#f0a030" font-family="Share Tech Mono" font-size="9">budget-tracker.py</text>
-      <line x1="900" y1="60" x2="900" y2="65" stroke="#f0a030" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <!-- Corporate hierarchy diagram -->
+    <svg class="topo-svg" viewBox="0 0 2400 460">
+      <defs>
+        <marker id="acn" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3 L0,6" fill="none" stroke="#58a6ff" stroke-width="1.2"/></marker>
+        <marker id="agn" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3 L0,6" fill="none" stroke="#16c79a" stroke-width="1.2"/></marker>
+      </defs>
+      <!-- CEO node -->
+      <rect x="1050" y="20" width="300" height="55" rx="6" fill="rgba(26,58,92,0.4)" stroke="#58a6ff" stroke-width="2.5"/>
+      <text x="1200" y="44" text-anchor="middle" fill="#58a6ff" font-family="Orbitron" font-size="16" font-weight="900">CEO</text>
+      <text x="1200" y="63" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9">Main Session &bull; Assess &bull; Route &bull; Synthesize</text>
+
+      <!-- Lines from CEO to heads -->
+      <line x1="1100" y1="75" x2="200" y2="195" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#acn)"/>
+      <line x1="1120" y1="75" x2="600" y2="195" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#acn)"/>
+      <line x1="1200" y1="75" x2="1000" y2="195" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#acn)"/>
+      <line x1="1200" y1="75" x2="1400" y2="195" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#acn)"/>
+      <line x1="1280" y1="75" x2="1800" y2="195" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#acn)"/>
+      <line x1="1300" y1="75" x2="2200" y2="195" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#acn)"/>
+
+      <!-- Department Head nodes -->
+      <rect x="100" y="195" width="200" height="50" rx="5" fill="rgba(26,58,92,0.3)" stroke="#f0a030" stroke-width="1.5"/>
+      <text x="200" y="218" text-anchor="middle" fill="#f0a030" font-family="Orbitron" font-size="12" font-weight="700">ATLAS</text>
+      <text x="200" y="236" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9">Research</text>
+
+      <rect x="500" y="195" width="200" height="50" rx="5" fill="rgba(45,27,80,0.3)" stroke="#b388ff" stroke-width="1.5"/>
+      <text x="600" y="218" text-anchor="middle" fill="#b388ff" font-family="Orbitron" font-size="12" font-weight="700">SCRIBE</text>
+      <text x="600" y="236" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9">Content</text>
+
+      <rect x="900" y="195" width="200" height="50" rx="5" fill="rgba(26,58,92,0.3)" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="1000" y="218" text-anchor="middle" fill="#58a6ff" font-family="Orbitron" font-size="12" font-weight="700">DEV</text>
+      <text x="1000" y="236" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9">Software &bull; /dev-cycle</text>
+
+      <rect x="1300" y="195" width="200" height="50" rx="5" fill="rgba(10,61,46,0.3)" stroke="#16c79a" stroke-width="1.5"/>
+      <text x="1400" y="218" text-anchor="middle" fill="#16c79a" font-family="Orbitron" font-size="12" font-weight="700">INFRA</text>
+      <text x="1400" y="236" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9">Infrastructure &bull; /infra-cycle</text>
+
+      <rect x="1700" y="195" width="200" height="50" rx="5" fill="rgba(61,42,10,0.3)" stroke="#f0c929" stroke-width="1.5"/>
+      <text x="1800" y="218" text-anchor="middle" fill="#f0c929" font-family="Orbitron" font-size="12" font-weight="700">WEB</text>
+      <text x="1800" y="236" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9">Web Dev &bull; /web-cycle</text>
+
+      <rect x="2100" y="195" width="200" height="50" rx="5" fill="rgba(61,26,26,0.3)" stroke="#ff6b6b" stroke-width="1.5"/>
+      <text x="2200" y="218" text-anchor="middle" fill="#ff6b6b" font-family="Orbitron" font-size="12" font-weight="700">MAVEN</text>
+      <text x="2200" y="236" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9">HR / Classification</text>
+
+      <!-- Specialist nodes (example under Dev) -->
+      <line x1="960" y1="245" x2="860" y2="350" stroke="#16c79a" stroke-width="1.5" stroke-dasharray="6,3" class="flow-anim" marker-end="url(#agn)"/>
+      <line x1="1000" y1="245" x2="1000" y2="350" stroke="#16c79a" stroke-width="1.5" stroke-dasharray="6,3" class="flow-anim" marker-end="url(#agn)"/>
+      <line x1="1040" y1="245" x2="1140" y2="350" stroke="#16c79a" stroke-width="1.5" stroke-dasharray="6,3" class="flow-anim" marker-end="url(#agn)"/>
+
+      <rect x="800" y="350" width="120" height="35" rx="3" fill="rgba(10,61,46,0.2)" stroke="#16c79a" stroke-width="1" opacity=".7"/>
+      <text x="860" y="372" text-anchor="middle" fill="#16c79a" font-family="Share Tech Mono" font-size="8">Specialist A</text>
+      <rect x="940" y="350" width="120" height="35" rx="3" fill="rgba(10,61,46,0.2)" stroke="#16c79a" stroke-width="1" opacity=".7"/>
+      <text x="1000" y="372" text-anchor="middle" fill="#16c79a" font-family="Share Tech Mono" font-size="8">Specialist B</text>
+      <rect x="1080" y="350" width="120" height="35" rx="3" fill="rgba(10,61,46,0.2)" stroke="#16c79a" stroke-width="1" opacity=".7"/>
+      <text x="1140" y="372" text-anchor="middle" fill="#16c79a" font-family="Share Tech Mono" font-size="8">Specialist C</text>
+
+      <!-- Labels -->
+      <text x="200" y="445" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9" opacity=".5">Heads recruit specialists on demand via Maven &bull; 474 tests &bull; Public repo: Aragorn2046/orchestrator-v3</text>
+
+      <!-- Budget tracker -->
+      <rect x="1600" y="400" width="200" height="30" rx="4" fill="rgba(61,42,10,0.3)" stroke="#f0a030" stroke-width="1"/>
+      <text x="1700" y="419" text-anchor="middle" fill="#f0a030" font-family="Share Tech Mono" font-size="9">budget: cli.py budget</text>
     </svg>
     <div class="card t-cyan" style="flex:1;min-width:400px">
-      <div class="clabel">Specialist Templates (8)</div>
-      <div class="cdetail">Location: <span class="v">~/scripts/orchestrator/templates/*.yaml</span><br><br>
-        <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">code</span>
-        <span class="tag" style="border-color:var(--purple);color:var(--purple)">writing-en</span>
-        <span class="tag" style="border-color:var(--purple);color:var(--purple)">writing-nl</span>
-        <span class="tag" style="border-color:var(--orange);color:var(--orange)">research</span>
-        <span class="tag" style="border-color:var(--green);color:var(--green)">image-gen</span>
-        <span class="tag" style="border-color:var(--green);color:var(--green)">vault-ops</span>
-        <span class="tag" style="border-color:var(--orange);color:var(--orange)">data-extraction</span>
-        <span class="tag" style="border-color:var(--dim);color:var(--dim)">base</span><br><br>
-        Each: model, budget, context files, rules subset
+      <div class="clabel">Department Heads (6)</div>
+      <div class="cdetail">
+        <table class="bp-table">
+          <tr><td class="tk" style="color:var(--orange)">Atlas</td><td>Research</td><td>investigate, analyze, explore, study</td></tr>
+          <tr><td class="tk" style="color:var(--purple)">Scribe</td><td>Content</td><td>write, draft, blog, newsletter</td></tr>
+          <tr><td class="tk" style="color:var(--cyan)">Dev</td><td>Software</td><td>build, code, fix, debug, refactor</td></tr>
+          <tr><td class="tk" style="color:var(--green)">Infra</td><td>Infrastructure</td><td>deploy, docker, server, network</td></tr>
+          <tr><td class="tk" style="color:var(--yellow)">Web</td><td>Web Dev</td><td>website, frontend, landing page</td></tr>
+          <tr><td class="tk" style="color:var(--red)">Maven</td><td>HR</td><td>classify, recruit, assess</td></tr>
+        </table>
+        <br>Repo: <span class="v">~/projects/orchestrator/</span> &bull; CLI: <span class="v">cli.py</span>
       </div>
     </div>
     <div class="card t-cyan">
-      <div class="clabel">Orchestrator Runtime</div>
-      <div class="cdetail">Commands: <span class="v">/delegate</span> (single) &bull; <span class="v">/orchestrate</span> (multi)<br>Scripts: <span class="v">~/scripts/orchestrator/</span><br>Projects: <span class="v">~/projects/_orchestrated/&lt;job-id&gt;/</span><br>Budget: <span class="v">/tmp/orchestrator/budget.json</span><br>Logs: <span class="v">vault/Knowledge Base/Automation Logs/</span><br><br><span style="opacity:.5;font-size:9px">Phases 1-5 done &bull; Phase 6-7 remaining</span></div>
+      <div class="clabel">Auto-Orchestration (CEO Mode)</div>
+      <div class="cdetail"><span class="v" style="color:var(--cyan)">Default ON</span> for main sessions<br><br>Three-layer activation:<br>1. <span class="v">orchestrator-ceo.md</span> (rules file)<br>2. <span class="v">SessionStart hook</span> (CEO_SESSION_INFO)<br>3. <span class="v">/prime step 7</span> (roster check)<br><br>Commands: <span class="v">/delegate</span> (single) &bull; <span class="v">/orchestrate</span> (multi)<br>Opt-out: <span class="v">ORCHESTRATE_MODE=0</span><br>Dashboard: <span class="v">EMOC :7171</span> (Day)<br><br><span style="opacity:.5;font-size:9px">v3 complete &bull; 14 sections &bull; 474 tests &bull; all 7 phases done</span></div>
     </div>
   </div>
 </div>
@@ -748,7 +802,7 @@
   <div class="section-head" style="border-color:var(--yellow);color:var(--yellow)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Plugin Ecosystem</span>
-    <span class="scount">14 Plugins &bull; 30 gstack Skills &bull; 36 Commands &bull; 17 Rules</span>
+    <span class="scount">14 Plugins &bull; 29 gstack Skills &bull; 75 Skills &bull; 16 Rules</span>
   </div>
   <div class="section-body">
     <div class="card t-yellow" style="flex:1;min-width:460px">
@@ -780,7 +834,7 @@
       </div>
     </div>
     <div class="card t-yellow">
-      <div class="clabel">gstack v0.13 &mdash; 30 SDLC Skills</div>
+      <div class="clabel">gstack v0.13 &mdash; 29 SDLC Skills</div>
       <div class="cdetail">Location: <span class="v">~/.claude/skills/gstack/</span><br>Requires: Bun &bull; Auto-upgrade: ON<br><br>
         <span class="tag" style="border-color:var(--yellow);color:var(--yellow)">/plan-ceo-review</span>
         <span class="tag" style="border-color:var(--yellow);color:var(--yellow)">/plan-eng-review</span>
@@ -797,20 +851,20 @@
       </div>
     </div>
     <div class="card t-yellow">
-      <div class="clabel">34 Slash Commands</div>
+      <div class="clabel">75 Skills (SKILL.md format)</div>
       <div class="cdetail">
+        <span style="color:var(--dim);font-size:9px">Migrated from /commands/ to /skills/ (CC 2.1.88)</span><br>
         <span style="color:var(--white);font-size:10px">Session</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/prime</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/today</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/wrapup</span>
-        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/wrapupday</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/sync</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/recover</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/catchup</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/handover</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/relay</span>
-        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/sidequest</span>
-        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/openends</span>
+        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/park</span>
+        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/pickup</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/todo</span><br>
         <span style="color:var(--white);font-size:10px">Content</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/write</span>
@@ -818,47 +872,47 @@
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/ghost</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/challenge</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/emerge</span>
-        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/mindmap</span>
-        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/drift</span><br>
-        <span style="color:var(--white);font-size:10px">Dev</span>
+        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/drift</span>
+        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/scribe</span>
+        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/quill</span><br>
+        <span style="color:var(--white);font-size:10px">Dev &amp; Ops</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/spinoff</span>
-        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/spinoff-status</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/deep-research</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/cortex</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/delegate</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/orchestrate</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/blueprint</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/tts</span>
-        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/listen</span><br>
+        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/listen</span>
+        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/parallax</span><br>
         <span style="color:var(--white);font-size:10px">Lifecycle</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/dev-cycle</span>
-        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/project-cycle</span>
+        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/web-cycle</span>
+        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/infra-cycle</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/content-cycle</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/business-cycle</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/keynote-cycle</span>
-        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/infra-cycle</span><br>
-        <span style="color:var(--white);font-size:10px">Business</span>
-        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/innovation-network</span>
-        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/exponential-executives</span>
+        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/project-cycle</span><br>
+        <span style="color:var(--dim);font-size:9px">+ 40 more (design, business, QA, guards, ...)</span>
       </div>
     </div>
     <div class="card t-yellow">
-      <div class="clabel">16 Behavioral Rules</div>
+      <div class="clabel">16 Rules</div>
       <div class="cdetail">
         <span class="tag" style="border-color:var(--red-dim);color:var(--red)">api-key-security</span>
         <span class="tag" style="border-color:var(--red-dim);color:var(--red)">external-data-security</span>
         <span class="tag" style="border-color:var(--orange-dim);color:var(--orange)">infrastructure</span>
         <span class="tag" style="border-color:var(--orange-dim);color:var(--orange)">learned-rules</span>
         <span class="tag" style="border-color:var(--dim);color:var(--dim)">model-selection</span>
-        <span class="tag" style="border-color:var(--dim);color:var(--dim)">plugins</span>
-        <span class="tag" style="border-color:var(--dim);color:var(--dim)">screenshots</span>
+        <span class="tag" style="border-color:var(--cyan-dim);color:var(--cyan)">orchestrator</span>
+        <span class="tag" style="border-color:var(--cyan-dim);color:var(--cyan)">orchestrator-ceo</span>
+        <span class="tag" style="border-color:var(--dim);color:var(--dim)">path-resolution</span>
         <span class="tag" style="border-color:var(--dim);color:var(--dim)">session-start</span>
         <span class="tag" style="border-color:var(--dim);color:var(--dim)">thinking</span>
         <span class="tag" style="border-color:var(--dim);color:var(--dim)">todo-hygiene</span>
         <span class="tag" style="border-color:var(--dim);color:var(--dim)">vault-rules</span>
         <span class="tag" style="border-color:var(--purple-dim);color:var(--purple)">voice-mode</span>
-        <span class="tag" style="border-color:var(--dim);color:var(--dim)">workflow</span>
-        <span class="tag" style="border-color:var(--dim);color:var(--dim)">articles-rules</span>
+        <span class="tag" style="border-color:var(--dim);color:var(--dim)">workflow-core</span>
         <span class="tag" style="border-color:var(--dim);color:var(--dim)">claude-md-meta</span>
         <span class="tag" style="border-color:var(--dim);color:var(--dim)">widget-rules</span>
       </div>
@@ -886,7 +940,7 @@
     </div>
     <div class="card t-red">
       <div class="clabel">API Key Hygiene</div>
-      <div class="cdetail"><span class="v" style="color:var(--red)">NEVER in git-tracked files</span><br><br>Env vars or ~/.claude.json<br>[secrets directory] (chmod 600)<br><br>Pre-commit scan for:<br><span class="v">sk_ pk_ token_ secret password bearer</span><br>High-entropy string detection (32+ chars)</div>
+      <div class="cdetail"><span class="v" style="color:var(--red)">NEVER in git-tracked files</span><br><br>Env vars or ~/.claude.json<br>~/.secrets/*.env (chmod 600)<br><br>Pre-commit scan for:<br><span class="v">sk_ pk_ token_ secret password bearer</span><br>High-entropy string detection (32+ chars)</div>
     </div>
     <div class="card t-red">
       <div class="clabel">SSH / Remote Access</div>
@@ -912,25 +966,21 @@
   <div class="stat"><span class="sn" style="color:var(--cyan)">3</span>Machines</div>
   <div class="stat"><span class="sn" style="color:var(--orange)">11</span>MCP Servers</div>
   <div class="stat"><span class="sn" style="color:var(--yellow)">14</span>Plugins</div>
-  <div class="stat"><span class="sn" style="color:var(--yellow)">36</span>Commands</div>
-  <div class="stat"><span class="sn" style="color:var(--yellow)">17</span>Rules</div>
+  <div class="stat"><span class="sn" style="color:var(--yellow)">75</span>Skills</div>
+  <div class="stat"><span class="sn" style="color:var(--yellow)">16</span>Rules</div>
   <div class="stat"><span class="sn" style="color:var(--red)">6</span>Hook Events</div>
   <div class="stat"><span class="sn" style="color:var(--green)">6</span>Cron Jobs</div>
   <div class="stat"><span class="sn" style="color:var(--purple)">3</span>TTS Engines</div>
   <div class="stat"><span class="sn" style="color:var(--green)">2</span>GitHub Backups</div>
   <div class="stat"><span class="sn" style="color:var(--orange)">4</span>Google Accounts</div>
-  <div class="stat"><span class="sn" style="color:var(--cyan)">8</span>Orchestrator Templates</div>
+  <div class="stat"><span class="sn" style="color:var(--cyan)">6</span>Dept Heads</div>
 </div>
 
 <!-- ========== FOOTER ========== -->
 <div class="bp-footer">
-  <span>EXTENDED MIND BLUEPRINT &mdash; <strong>by MrMetaverse</strong> (Aragorn Meulendijks) &mdash; 2026</span>
+  <span>EXTENDED MIND BLUEPRINT &mdash; Aragorn Meulendijks &mdash; 2026</span>
   <span>Claude Code (Opus 4.6) &bull; Tailscale &bull; Obsidian &bull; Docker &bull; GitHub</span>
   <span class="quote">"The Extended Mind is not a metaphor &mdash; it is architecture."</span>
-</div>
-
-<div style="text-align:center;padding-top:10px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--dim)">
-  <a href="https://github.com/Aragorn2046/extended-mind-blueprint" target="_blank" style="color:var(--cyan);opacity:.5;text-decoration:none;">&#128279; View source on GitHub</a>
 </div>
 
 </div><!-- /blueprint -->
