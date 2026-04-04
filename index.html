@@ -468,16 +468,17 @@
   <div class="section-head" style="border-color:var(--yellow);color:var(--yellow)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Plugin Ecosystem</span>
-    <span class="scount">14 Plugins &bull; 29 gstack Skills &bull; 75 Skills &bull; 16 Rules</span>
+    <span class="scount">15 Plugins &bull; 29 gstack Skills &bull; 86 Skills &bull; 18 Rules</span>
   </div>
   <div class="section-body">
     <div class="card t-yellow" style="flex:1;min-width:460px">
-      <div class="clabel">Official Plugins (7)</div>
+      <div class="clabel">Official Plugins (8)</div>
       <div class="cdetail">
         <table class="bp-table">
           <tr><td class="tk" style="color:var(--yellow)">frontend-design</td><td>/frontend-design</td><td>Production UI gen</td></tr>
           <tr><td class="tk" style="color:var(--yellow)">security-guidance</td><td>(hook)</td><td>Auto security warnings</td></tr>
           <tr><td class="tk" style="color:var(--yellow)">code-review</td><td>/code-review</td><td>PR review</td></tr>
+          <tr><td class="tk" style="color:var(--yellow)">code-simplifier</td><td>/simplify</td><td>Auto code cleanup</td></tr>
           <tr><td class="tk" style="color:var(--yellow)">commit-commands</td><td>/commit</td><td>Git workflow</td></tr>
           <tr><td class="tk" style="color:var(--yellow)">claude-md-mgmt</td><td>/revise-claude-md</td><td>Audit CLAUDE.md</td></tr>
           <tr><td class="tk" style="color:var(--yellow)">skill-creator</td><td>/skill-creator</td><td>Create commands</td></tr>
@@ -517,7 +518,7 @@
       </div>
     </div>
     <div class="card t-yellow">
-      <div class="clabel">75 Skills (SKILL.md format)</div>
+      <div class="clabel">86 Skills (SKILL.md format)</div>
       <div class="cdetail">
         <span style="color:var(--dim);font-size:9px">Migrated from /commands/ to /skills/ (CC 2.1.88)</span><br>
         <span style="color:var(--white);font-size:10px">Session</span>
@@ -559,14 +560,16 @@
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/business-cycle</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/keynote-cycle</span>
         <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">/project-cycle</span><br>
-        <span style="color:var(--dim);font-size:9px">+ 40 more (design, business, QA, guards, ...)</span>
+        <span style="color:var(--dim);font-size:9px">+ 51 more (design, business, QA, guards, ...)</span>
       </div>
     </div>
     <div class="card t-yellow">
-      <div class="clabel">16 Rules</div>
+      <div class="clabel">18 Rules</div>
       <div class="cdetail">
         <span class="tag" style="border-color:var(--red-dim);color:var(--red)">api-key-security</span>
         <span class="tag" style="border-color:var(--red-dim);color:var(--red)">external-data-security</span>
+        <span class="tag" style="border-color:var(--yellow-dim);color:var(--yellow)">automated-quality-gates</span>
+        <span class="tag" style="border-color:var(--cyan-dim);color:var(--cyan)">borg-protocol</span>
         <span class="tag" style="border-color:var(--orange-dim);color:var(--orange)">infrastructure</span>
         <span class="tag" style="border-color:var(--orange-dim);color:var(--orange)">learned-rules</span>
         <span class="tag" style="border-color:var(--dim);color:var(--dim)">model-selection</span>
@@ -609,13 +612,13 @@
       </div>
     </div>
     <div class="card t-orange" style="flex:1;min-width:400px">
-      <div class="clabel">Research Stack (Docker Hardened)</div>
-      <div class="cdetail">Wrapper: <span class="v">mcp-docker-run.sh</span> &bull; All 3 machines<br><br>
+      <div class="clabel">Research Stack (stdio Launchers)</div>
+      <div class="cdetail">Launcher: <span class="v">~/scripts/*-launcher.sh</span> &bull; All 3 machines<br>Pattern: source <span class="v">~/.secrets/*.env</span> &rarr; exec <span class="v">npx -y &lt;package&gt;</span><br><br>
         <table class="bp-table">
-          <tr><td class="tk" style="color:var(--orange)">tavily</td><td>AI search</td><td style="color:var(--red)">256MB</td></tr>
-          <tr><td class="tk" style="color:var(--orange)">exa</td><td>Neural search</td><td style="color:var(--red)">256MB</td></tr>
-          <tr><td class="tk" style="color:var(--orange)">firecrawl</td><td>Web scraping</td><td style="color:var(--red)">512MB</td></tr>
-          <tr><td class="tk" style="color:var(--orange)">gemini</td><td>Deep research</td><td style="color:var(--red)">512MB</td></tr>
+          <tr><td class="tk" style="color:var(--orange)">tavily</td><td>AI search</td><td style="color:var(--dim)">stdio</td></tr>
+          <tr><td class="tk" style="color:var(--orange)">exa</td><td>Neural search</td><td style="color:var(--dim)">stdio</td></tr>
+          <tr><td class="tk" style="color:var(--orange)">firecrawl</td><td>Web scraping</td><td style="color:var(--dim)">stdio</td></tr>
+          <tr><td class="tk" style="color:var(--orange)">gemini-design</td><td>Deep research + multi-modal</td><td style="color:var(--dim)">stdio</td></tr>
         </table>
       </div>
     </div>
@@ -629,7 +632,7 @@
     </div>
     <div class="card t-orange">
       <div class="clabel">Other MCP</div>
-      <div class="cdetail"><span class="v">memory</span> &mdash; knowledge graph<br>npx @modelcontextprotocol/server-memory<br>All 3 machines<br><br>Config: <span class="v">~/.claude.json</span></div>
+      <div class="cdetail"><span class="v">memory</span> &mdash; knowledge graph<br>npx @modelcontextprotocol/server-memory<br>All 3 machines<br><br><span class="v">sequential-thinking</span> &mdash; structured reasoning<br>npx @modelcontextprotocol/server-sequential-thinking<br><br>Config: <span class="v">~/.claude.json</span></div>
     </div>
     <div class="card t-orange">
       <div class="clabel">Google Services</div>
@@ -996,9 +999,9 @@
 <div class="stats-bar">
   <div class="stat"><span class="sn" style="color:var(--cyan)">3</span>Machines</div>
   <div class="stat"><span class="sn" style="color:var(--orange)">11</span>MCP Servers</div>
-  <div class="stat"><span class="sn" style="color:var(--yellow)">14</span>Plugins</div>
-  <div class="stat"><span class="sn" style="color:var(--yellow)">75</span>Skills</div>
-  <div class="stat"><span class="sn" style="color:var(--yellow)">16</span>Rules</div>
+  <div class="stat"><span class="sn" style="color:var(--yellow)">15</span>Plugins</div>
+  <div class="stat"><span class="sn" style="color:var(--yellow)">86</span>Skills</div>
+  <div class="stat"><span class="sn" style="color:var(--yellow)">18</span>Rules</div>
   <div class="stat"><span class="sn" style="color:var(--red)">6</span>Hook Events</div>
   <div class="stat"><span class="sn" style="color:var(--green)">6</span>Cron Jobs</div>
   <div class="stat"><span class="sn" style="color:var(--purple)">3</span>TTS Engines</div>
