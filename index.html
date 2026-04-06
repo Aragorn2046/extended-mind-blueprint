@@ -387,18 +387,18 @@
     </div>
     <div class="card t-green" style="flex:1;min-width:400px">
       <div class="clabel">Claude Code &mdash; Day</div>
-      <div class="cdetail">Model: <span class="v">Claude Opus 4.6</span> (main)<br>Automation hub: instruction watcher, relay daemon, config guard<br>Also runs: cortex cron, background agents, spinoffs</div>
+      <div class="cdetail">Model: <span class="v">Claude Opus 4.6</span> (main)<br>Automation hub: instruction watcher, relay daemon, config guard<br>Also runs: cortex cron, background agents, delegated tasks</div>
     </div>
     <div class="card t-cyan">
-      <div class="clabel">Spinoff System</div>
-      <div class="cdetail">Root: <span class="v">~/projects/</span> &bull; Isolated project environments<br>Launch: <span class="v">/spinoff</span> &bull; Status: <span class="v">/spinoff-status</span><br>Default: Sonnet &bull; Production: <span class="v">--deep</span> (Opus)<br>Must unset CLAUDECODE: <span class="v">env -u CLAUDECODE</span><br>Headless: <span class="v">--permission-mode acceptEdits</span></div>
+      <div class="clabel">Delegation System</div>
+      <div class="cdetail">Root: <span class="v">~/projects/</span> &bull; Isolated project environments<br>Launch: <span class="v">/delegate</span> &bull; Multi-task: <span class="v">/orchestrate</span><br>Default: Sonnet &bull; Production: <span class="v">--deep</span> (Opus)<br>Must unset CLAUDECODE: <span class="v">env -u CLAUDECODE</span><br>Headless: <span class="v">--permission-mode acceptEdits</span></div>
     </div>
     <div class="card" style="border-color:var(--border)">
       <div class="clabel" style="color:var(--white);border-color:var(--border)">Model Routing</div>
       <div class="cdetail">
         <table class="bp-table">
           <tr><td class="tk" style="color:var(--cyan);font-family:Orbitron;font-size:13px">OPUS 4.6</td><td><span class="v">Primary</span></td><td>Writing, research, architecture, security, complex reasoning</td></tr>
-          <tr><td class="tk" style="color:var(--green);font-family:Orbitron;font-size:13px">SONNET</td><td><span class="v">Delegated</span></td><td>Routine ops, cortex cron ($0.50), spinoffs, background agents</td></tr>
+          <tr><td class="tk" style="color:var(--green);font-family:Orbitron;font-size:13px">SONNET</td><td><span class="v">Delegated</span></td><td>Routine ops, cortex cron ($0.50), delegated tasks, background agents</td></tr>
           <tr><td class="tk" style="color:var(--dim);font-family:Orbitron;font-size:13px">HAIKU</td><td><span class="v">Throwaway</span></td><td>Extraction, classification, validation</td></tr>
           <tr><td colspan="3" style="border-top:1px dashed var(--border);padding-top:6px;font-size:9px;color:var(--dim)">LOCAL (shelby-llm &mdash; free compute, zero tokens)</td></tr>
           <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:12px">GEMMA4:31B</td><td><span class="v">Dawn</span></td><td>Sonnet-tier: code review, summarization, multi-pass drafts</td></tr>
