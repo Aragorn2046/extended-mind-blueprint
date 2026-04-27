@@ -345,7 +345,7 @@
       <text x="1140" y="372" text-anchor="middle" fill="#16c79a" font-family="Share Tech Mono" font-size="8">Specialist C</text>
 
       <!-- Labels -->
-      <text x="200" y="445" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9" opacity=".5">Heads recruit specialists on demand via Maven &bull; 474 tests &bull; Public repo: Aragorn2046/orchestrator-v3</text>
+      <text x="200" y="445" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9" opacity=".5">Heads recruit specialists on demand via Maven &bull; 723 tests &bull; Public repo: Aragorn2046/orchestrator-v3</text>
 
       <!-- Budget tracker -->
       <rect x="1600" y="400" width="200" height="30" rx="4" fill="rgba(61,42,10,0.3)" stroke="#f0a030" stroke-width="1"/>
@@ -367,7 +367,15 @@
     </div>
     <div class="card t-cyan">
       <div class="clabel">Auto-Orchestration (CEO Mode)</div>
-      <div class="cdetail"><span class="v" style="color:var(--cyan)">Default ON</span> for main sessions<br><br>Three-layer activation:<br>1. <span class="v">orchestrator-ceo.md</span> (rules file)<br>2. <span class="v">SessionStart hook</span> (CEO_SESSION_INFO)<br>3. <span class="v">/prime step 7</span> (roster check)<br><br>Commands: <span class="v">/delegate</span> (single) &bull; <span class="v">/orchestrate</span> (multi)<br>Opt-out: <span class="v">ORCHESTRATE_MODE=0</span><br>Dashboard: <span class="v">EMOC :7171</span> (Day)<br><br><span style="opacity:.5;font-size:9px">v3 complete &bull; 14 sections &bull; 474 tests &bull; all 7 phases done</span></div>
+      <div class="cdetail"><span class="v" style="color:var(--cyan)">Default ON</span> for main sessions<br><br>Three-layer activation:<br>1. <span class="v">orchestrator-ceo.md</span> (rules file)<br>2. <span class="v">SessionStart hook</span> (CEO_SESSION_INFO)<br>3. <span class="v">/prime step 7</span> (roster check)<br><br>Commands: <span class="v">/delegate</span> (single) &bull; <span class="v">/orchestrate</span> (multi)<br>Opt-out: <span class="v">ORCHESTRATE_MODE=0</span><br>Dashboard: <span class="v">EMOC :7171</span> (Day)<br><br><span style="opacity:.5;font-size:9px">v3 complete &bull; 14 sections &bull; 723 tests &bull; PID tracking fixed</span></div>
+    </div>
+    <div class="card t-cyan">
+      <div class="clabel">/spawn &mdash; Fire-and-Forget Sessions</div>
+      <div class="cdetail">Skill: <span class="v">[vault]/Config/skills/spawn/</span><br>Wraps: <span class="v">[home]/scripts/spawn-fresh.sh</span><br>Canonical: <span class="v">[vault]/Config/scripts/spawn-fresh.sh</span><br>All 3 machines<br><br>Use when: self-contained delegation that won't return to current session, writes results to disk<br><br>Distinguish from <span class="v">Agent tool</span> (sub-agent within session, returns summary)<br><br>Briefs: <span class="v">[vault]/Config/briefs/YYYY-MM-DD-NN-&lt;name&gt;.md</span><br>Cleanup: launchd daily 03:30</div>
+    </div>
+    <div class="card t-cyan">
+      <div class="clabel">Effort + Model Architecture</div>
+      <div class="cdetail">Session floor: <span class="v">effortLevel=high</span> via launch alias + settings.json<br>Per-skill <span class="v">effort:</span> frontmatter on 44/53 skills<br>&nbsp;&bull; 30 <span class="v" style="color:var(--green)">low</span> (loaders, routine)<br>&nbsp;&bull; 14 <span class="v" style="color:var(--orange)">xhigh</span> (cycles, deep reasoning)<br>&nbsp;&bull; 9 default <span class="v">high</span><br><br>Escape hatches: <span class="v">/effort max</span>, "ultrathink" keyword, <span class="v">/effort low</span><br>xhigh only on Opus 4.7 (silent fallback to high otherwise)</div>
     </div>
   </div>
 </div>
@@ -384,11 +392,11 @@
   <div class="section-body">
     <div class="card t-cyan" style="flex:1;min-width:400px">
       <div class="clabel">Claude Code &mdash; Dawn/Dusk</div>
-      <div class="cdetail">Model: <span class="v">Claude Opus 4.6</span> (main)<br>Launch: <span class="v">ccode</span> alias (--model claude-opus-4-6)<br>Permissions: <span class="v">--dangerously-skip-permissions</span><br>Session type: <span class="v">CLAUDE_SESSION_TYPE=main</span><br>Cron: Sonnet ($0.50) &bull; Spinoffs: Sonnet (Opus with --deep)</div>
+      <div class="cdetail">Model: <span class="v">Claude Opus 4.7</span> (main)<br>Launch: <span class="v">ccode</span> alias (--model claude-opus-4-7 --effort high)<br>Mobile: <span class="v">hcode</span> alias (Happy Engineering, E2E Signal-protocol)<br>Permissions: <span class="v">--dangerously-skip-permissions</span><br>Session type: <span class="v">CLAUDE_SESSION_TYPE=main</span><br>Cron: Sonnet ($0.50) &bull; Sub-agents: Sonnet 4.6 (CLAUDE_CODE_SUBAGENT_MODEL)</div>
     </div>
     <div class="card t-green" style="flex:1;min-width:400px">
       <div class="clabel">Claude Code &mdash; Day</div>
-      <div class="cdetail">Model: <span class="v">Claude Opus 4.6</span> (main)<br>Automation hub: instruction watcher, relay daemon, config guard<br>Also runs: cortex cron, background agents, delegated tasks</div>
+      <div class="cdetail">Model: <span class="v">Claude Opus 4.7</span> (main)<br>Parallel harness: <span class="v">Codex CLI 0.125</span> (read-only context tools)<br>Automation hub: instruction watcher, relay daemon, config guard<br>Also runs: cortex cron, background agents, delegated tasks, /spawn fresh</div>
     </div>
     <div class="card t-cyan">
       <div class="clabel">Delegation System</div>
@@ -398,12 +406,17 @@
       <div class="clabel" style="color:var(--white);border-color:var(--border)">Model Routing</div>
       <div class="cdetail">
         <table class="bp-table">
-          <tr><td class="tk" style="color:var(--cyan);font-family:Orbitron;font-size:13px">OPUS 4.6</td><td><span class="v">Primary</span></td><td>Writing, research, architecture, security, complex reasoning</td></tr>
-          <tr><td class="tk" style="color:var(--green);font-family:Orbitron;font-size:13px">SONNET</td><td><span class="v">Delegated</span></td><td>Routine ops, cortex cron ($0.50), delegated tasks, background agents</td></tr>
-          <tr><td class="tk" style="color:var(--dim);font-family:Orbitron;font-size:13px">HAIKU</td><td><span class="v">Throwaway</span></td><td>Extraction, classification, validation</td></tr>
-          <tr><td colspan="3" style="border-top:1px dashed var(--border);padding-top:6px;font-size:9px;color:var(--dim)">LOCAL (shelby-llm &mdash; free compute, zero tokens)</td></tr>
-          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:12px">GEMMA4:31B</td><td><span class="v">Dawn</span></td><td>Sonnet-tier: code review, summarization, multi-pass drafts</td></tr>
-          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:12px">GEMMA4:E4B</td><td><span class="v">Day / Dusk</span></td><td>Haiku-tier: Q&amp;A, transforms, transcription, image analysis</td></tr>
+          <tr><td class="tk" style="color:var(--cyan);font-family:Orbitron;font-size:13px">OPUS 4.7</td><td><span class="v">Primary</span></td><td>Writing, research, architecture, security, complex reasoning</td></tr>
+          <tr><td class="tk" style="color:var(--green);font-family:Orbitron;font-size:13px">SONNET 4.6</td><td><span class="v">Delegated</span></td><td>Sub-agents (CLAUDE_CODE_SUBAGENT_MODEL), cortex cron ($0.50)</td></tr>
+          <tr><td class="tk" style="color:var(--dim);font-family:Orbitron;font-size:13px">HAIKU 4.5</td><td><span class="v">Throwaway</span></td><td>Extraction, classification, validation</td></tr>
+          <tr><td colspan="3" style="border-top:1px dashed var(--border);padding-top:6px;font-size:9px;color:var(--dim)">TIER 2 ROUTER (cheap-cloud + local fallback)</td></tr>
+          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:11px">LEMONADE</td><td><span class="v">Local Vulkan</span></td><td>Llama-3.2-3B Q4 on iGPU &mdash; FREE</td></tr>
+          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:11px">GROQ</td><td><span class="v">Llama 4 Scout</span></td><td>$0.11/$0.34 MTok &bull; ~594 tok/s &bull; bulk text</td></tr>
+          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:11px">GEMINI 2.5</td><td><span class="v">Flash</span></td><td>$0.30/$2.50 MTok &bull; web grounding + vision</td></tr>
+          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:11px">MISTRAL</td><td><span class="v">Large 3</span></td><td>$0.50/$1.50 MTok &bull; EU GDPR-safe</td></tr>
+          <tr><td colspan="3" style="border-top:1px dashed var(--border);padding-top:6px;font-size:9px;color:var(--dim)">LOCAL (shelby-llm &mdash; PARKED 2026-04-12, text-only limitation)</td></tr>
+          <tr><td class="tk" style="color:var(--dim);font-family:Orbitron;font-size:11px">GEMMA4:31B</td><td><span class="v">Dawn</span></td><td>Sonnet-tier &bull; OpenClaw potential replacement</td></tr>
+          <tr><td class="tk" style="color:var(--dim);font-family:Orbitron;font-size:11px">GEMMA4:E4B</td><td><span class="v">Day / Dusk</span></td><td>Haiku-tier &bull; existing delegations still working</td></tr>
         </table>
       </div>
     </div>
@@ -473,7 +486,7 @@
   <div class="section-head" style="border-color:var(--yellow);color:var(--yellow)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Plugin Ecosystem</span>
-    <span class="scount">15 Plugins &bull; 36 gstack Skills &bull; 88 Skills &bull; 22 Rules</span>
+    <span class="scount">15 Plugins &bull; 36 gstack Skills &bull; 55 Config Skills &bull; 23 Rules &bull; Effort Architecture</span>
   </div>
   <div class="section-body">
     <div class="card t-yellow" style="flex:1;min-width:460px">
@@ -544,7 +557,11 @@
       </div>
     </div>
     <div class="card t-yellow">
-      <div class="clabel">88 Skills (SKILL.md format)</div>
+      <div class="clabel">/ultrareview + /session-audit</div>
+      <div class="cdetail"><span class="v" style="color:var(--yellow)">/ultrareview</span> &mdash; cloud multi-agent code review<br>~$20/run, ~20 min, Team/Ent billing<br>Conditional: dev-cycle 9b, web-cycle 11b, infra-cycle 7b<br>User-approval gate &bull; never default-fire<br><br><span class="v" style="color:var(--yellow)">/session-audit</span> &mdash; claude-doctor wrapper<br>Scans transcripts for anti-patterns<br>~30s, free, never auto-writes MEMORY.md<br>Conditional: cycle phase 10b/12b/8b<br>Output: <span class="v">[vault]/Config/cc-doctor/</span></div>
+    </div>
+    <div class="card t-yellow">
+      <div class="clabel">55 Config Skills (SKILL.md format)</div>
       <div class="cdetail">
         <span style="color:var(--dim);font-size:9px">Migrated from /commands/ to /skills/ (CC 2.1.88)</span><br>
         <span style="color:var(--white);font-size:10px">Session</span>
@@ -663,16 +680,24 @@
       <div class="cdetail"><span class="v">context7</span> &mdash; live library documentation<br>resolve-library-id &rarr; query-docs<br>All 3 machines &bull; stdio launcher<br>Mandatory before any external library code</div>
     </div>
     <div class="card t-orange">
-      <div class="clabel">shelby-llm MCP</div>
-      <div class="cdetail"><span class="v">shelby-llm</span> &mdash; local LLM mesh<br>Gemma 4 via Ollama across 3 machines<br>Dawn: gemma4:31b (Sonnet-tier)<br>Day/Dusk: gemma4:e4b (Haiku-tier)<br>Tools: llm_ask, llm_summarize, llm_transform, llm_code_review, llm_analyze_image, llm_transcribe_audio</div>
+      <div class="clabel">shelby-llm MCP <span style="color:var(--red);font-size:9px">[PARKED 2026-04-12]</span></div>
+      <div class="cdetail"><span class="v">shelby-llm</span> &mdash; local LLM mesh (still running, no further investment)<br>Gemma 4 via Ollama across 3 machines<br>Dawn: gemma4:31b (Sonnet-tier) &bull; Day/Dusk: gemma4:e4b<br>Tools: llm_ask, llm_summarize, llm_transform, llm_code_review, llm_analyze_image, llm_transcribe_audio<br><br><span style="color:var(--dim);font-size:9px">Why parked: text-only, no MCP tool use. <span class="v">OpenClaw</span> identified as potential replacement (native MCP + Ollama). 26B MoE minimum viable for tool calling.</span></div>
+    </div>
+    <div class="card t-orange">
+      <div class="clabel">Tier 2 LLM Router</div>
+      <div class="cdetail">Wrapper: <span class="v">[home]/scripts/tier2-llm.py</span> (stdlib-only)<br>Order: <span class="v">Lemonade &rarr; Groq &rarr; Gemini &rarr; Mistral &rarr; Sonnet &rarr; Opus</span><br><br>4 providers below Sonnet:<br>&bull; <span class="v">Lemonade</span> &mdash; local Llama-3.2-3B Q4 via Vulkan iGPU, FREE<br>&bull; <span class="v">Groq</span> &mdash; Llama 4 Scout, $0.11/$0.34, ~594 tok/s<br>&bull; <span class="v">Gemini 2.5 Flash</span> &mdash; web grounding + vision<br>&bull; <span class="v">Mistral Large 3</span> &mdash; EU GDPR-safe<br><br>Never route Claude through OpenRouter (100% markup)<br>Skill: <span class="v">shelby-llm-tier2-delegation</span></div>
     </div>
     <div class="card t-orange">
       <div class="clabel">Utility MCP</div>
       <div class="cdetail"><span class="v">mcp-memory-service</span> &mdash; hybrid BM25+vector search<br>Docker on Day :8765, Streamable HTTP<br>Local ONNX MiniLM-L6-v2 embeddings<br><br><span class="v">sequential-thinking</span> &mdash; structured reasoning<br>Launcher script + pkill cleanup<br><br>Config: <span class="v">~/.claude.json</span></div>
     </div>
     <div class="card t-orange">
-      <div class="clabel">MemPalace MCP</div>
-      <div class="cdetail"><span class="v">mempalace</span> &mdash; knowledge graph + diary<br>Day :8767 &bull; FastMCP streamable-http (<span class="v">/mcp/mcp</span>)<br>SQLite + vector embeddings<br>Tools: kg_add, kg_query, kg_invalidate, diary_write<br>Inline KG capture during sessions (no ceremony)</div>
+      <div class="clabel">MemPalace MCP v3 <span style="color:var(--red);font-size:9px">[bearer-auth]</span></div>
+      <div class="cdetail"><span class="v">mempalace</span> &mdash; knowledge graph + diary<br>Day :8767 &bull; FastMCP streamable-http (<span class="v">/mcp/mcp</span>)<br>Bearer auth on <span class="v">/mcp/*</span> &bull; token: <span class="v">~/.secrets/mempalace.env</span> (chmod 600)<br>SQLite + vector embeddings &bull; 609+ drawers<br>Tools: kg_add, kg_query, kg_invalidate, diary_write,<br>mempalace_wake_up, mempalace_search, mempalace_store, mempalace_inspect, mempalace_delete<br>Inline KG capture during sessions (no ceremony)</div>
+    </div>
+    <div class="card t-orange">
+      <div class="clabel">shelby-designer MCP <span style="color:var(--red);font-size:9px">[bearer-auth]</span></div>
+      <div class="cdetail"><span class="v">shelby-designer</span> &mdash; AI design generation (Gemini Flash)<br>Day :8768 (Docker, Colima)<br>Web GUI at <span class="v">http://localhost:8768/</span> (no auth)<br>Bearer auth on <span class="v">/mcp/*</span> &bull; token: <span class="v">~/.secrets/shelby-designer.env</span><br>Tools: generate_design, refine_design, get_credit_status, whoami<br>Artifacts: <span class="v">~/.shelby-designer/runs/&lt;id&gt;/</span></div>
     </div>
     <div class="card t-orange">
       <div class="clabel">mcp-local-rag</div>
@@ -697,6 +722,27 @@
         <div><span class="v" style="color:var(--orange)">Calendar</span><br>4 accounts, full CRUD</div>
         <div><span class="v" style="color:var(--orange)">Drive</span><br>4 accounts, search/read/write</div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5b: CODEX PARALLEL HARNESS -->
+<!-- ============================================================ -->
+<div class="section" id="sec-codex">
+  <div class="section-head" style="border-color:var(--red);color:var(--red)" onclick="toggle(this)">
+    <span class="arrow">&#9660;</span>
+    <span class="stitle">Codex Parallel Harness</span>
+    <span class="scount">CLI 0.125 &bull; 5-Layer Defense-in-Depth &bull; Day Only</span>
+  </div>
+  <div class="section-body">
+    <div class="card t-red" style="flex:1.2;min-width:520px">
+      <div class="clabel">Codex CLI 0.125 (parallel to Claude Code)</div>
+      <div class="cdetail">Runs alongside Claude Code on Day<br>Read-only context tools only &mdash; <span class="v">no Gmail/Drive/Calendar/WhatsApp</span><br><br><span class="v" style="color:var(--red)">5-layer defense-in-depth:</span><br>1. <span class="v">Prompt allowlist</span><br>2. <span class="v">Sandbox deny_read</span> rules<br>3. <span class="v">Tool-call hook</span> (codex-guard-hook.py)<br>4. <span class="v">HMAC integrity</span> on AGENTS-shelby.md<br>5. <span class="v">MCP capability scoping</span> (read-only)<br><br>Vault canonicals (no symlinks &mdash; Obsidian Sync):<br>&bull; <span class="v">[vault]/Config/AGENTS-shelby.md</span><br>&bull; <span class="v">[vault]/Config/templates/codex-config.toml.tpl</span><br>&bull; <span class="v">[vault]/Config/scripts/codex-install-day.sh</span><br>&bull; <span class="v">[vault]/Config/scripts/codex-guard-hook.py</span><br>&bull; <span class="v">[vault]/Config/scripts/check-agent-sync.py</span></div>
+    </div>
+    <div class="card t-red" style="flex:1;min-width:340px">
+      <div class="clabel">Codex MCP Profile (intentionally narrow)</div>
+      <div class="cdetail"><span class="v" style="color:var(--green)">Allowed (read-only):</span><br>&bull; <span class="v">context7</span> &mdash; library docs<br>&bull; <span class="v">memory_service</span> (search-only)<br>&bull; <span class="v">mempalace</span> (search-only)<br><br><span class="v" style="color:var(--red)">Blocked:</span><br>Gmail, Drive, Calendar, WhatsApp, write-mutate access<br><br>Install (idempotent): <span class="v">bash [vault]/Config/scripts/codex-install-day.sh</span></div>
     </div>
   </div>
 </div>
@@ -797,8 +843,8 @@
       <div class="clabel">Symlink Architecture</div>
       <div class="cdetail">Created by <span class="v">setup-symlinks.sh</span> per machine<br><br>
         Config/settings.json &rarr; <span class="v">~/.claude/settings.json</span><br>
-        Config/skills/ &rarr; <span class="v">~/.claude/skills/</span> (75 skills)<br>
-        Config/rules/ &rarr; <span class="v">~/.claude/rules/</span> (22 rules)<br>
+        Config/skills/ &rarr; <span class="v">~/.claude/skills/</span> (55 Config skills)<br>
+        Config/rules/ &rarr; <span class="v">~/.claude/rules/</span> (23 rules)<br>
         Config/CLAUDE.md &rarr; <span class="v">~/workspace/CLAUDE.md</span><br>
         Config/memory/ &rarr; <span class="v">~/.claude/projects/*/memory/</span> (28+)
       </div>
@@ -810,6 +856,18 @@
     <div class="card t-green">
       <div class="clabel">Vault Locations</div>
       <div class="cdetail"><span class="v" style="color:var(--cyan)">Dawn</span> [vault]/ ([vault-windows])<br><span class="v" style="color:var(--cyan)">Dusk</span> [vault]/<br><span class="v" style="color:var(--green)">Day</span>&nbsp; [vault]/</div>
+    </div>
+    <div class="card t-green" style="flex:1.2;min-width:380px">
+      <div class="clabel">ClipSync (replaces ClipCascade)</div>
+      <div class="cdetail">Custom stdlib-only Python hub-and-spoke daemon over Tailscale<br><br>Hub: <span class="v">Day 100.x.x.NNN:9876</span> (launchd <span class="v">com.clipsync.hub</span>)<br>Spokes: Dawn/Dusk via systemd user (<span class="v">clipsync.service</span>)<br><br>Channels:<br>&bull; Text &mdash; <span class="v">GET/POST /clip</span> (1 MB cap)<br>&bull; PNG images &mdash; <span class="v">GET/POST /image</span> (10 MB cap, base64)<br><br>Anti-feedback: SHA-256 hash dedup + 2s write cooldowns<br>Repo: <span class="v">Aragorn2046/clipsync</span> (private)<br><br><span style="color:var(--dim);font-size:9px">Why ClipCascade dropped: stale WS sessions, volume-name DB loss, infinite reconnect loop on macOS.</span></div>
+    </div>
+    <div class="card t-green">
+      <div class="clabel">Tailscale Drive (Taildrive)</div>
+      <div class="cdetail">Cross-device WebDAV over Tailscale<br>WebDAV: <span class="v">http://100.100.100.100:8080/</span><br><br><span class="v" style="color:var(--cyan)">Dawn</span> shares <span class="v">E:\SharedDrive</span><br><span class="v" style="color:var(--cyan)">Dusk</span> mapped as <span class="v">S:</span> drive<br><span class="v" style="color:var(--green)">Day</span> auto-mount via launchd <span class="v">com.tailscale.drive.mount</span> &rarr; <span class="v">/Volumes/shared</span><br>Phone: Taildrop (Share sheet) + FolderSync<br><br>ACL: nodeAttrs <span class="v">drive:share, drive:access</span> + grants</div>
+    </div>
+    <div class="card t-green">
+      <div class="clabel">Caddy *arr Proxy (Day)</div>
+      <div class="cdetail">Native Caddy via <span class="v">/opt/homebrew/bin/caddy</span><br>launchd: <span class="v">com.shelby.media-stack-caddy.plist</span><br>Listens Tailscale-only on <span class="v">100.x.x.NNN:{7878,8989,9696,5055,6500}</span><br><br>Strips <span class="v">X-Forwarded-*</span> headers &rarr; *arr falls back to TCP source = bridge gateway = local &rarr; no auth needed<br><br><span style="color:var(--dim);font-size:9px">Why: *arr Forms auth gives drift-prone cookies. Tailscale + bridge IP = the auth boundary. AuthenticationRequired=DisabledForLocalAddresses bypasses login.</span></div>
     </div>
   </div>
 </div>
@@ -922,6 +980,10 @@
       <div class="clabel">Sandbox Tools</div>
       <div class="cdetail"><span class="v" style="color:var(--red)">docker-sandbox</span> &mdash; isolated dev shell, --offline mode<br><br><span class="v" style="color:var(--red)">mcp-sandbox</span> &mdash; test MCP servers before deploy, validates schemas</div>
     </div>
+    <div class="card t-red" style="flex:1.2;min-width:380px">
+      <div class="clabel">AmneziaWG Self-Host (Day)</div>
+      <div class="cdetail">Endpoint: <span class="v">[vpn-host]:443</span> UDP (ext) &rarr; <span class="v">:51820</span> (int, container)<br>DDNS auto-refresh: launchd (Cloudflare DDNS)<br>Obfuscated WireGuard (Jc/S1/S2/H1-H4 params)<br><br>Client configs:<br><span class="v">~/projects/amnezia-server/secrets/configs/</span><br>&nbsp;&bull; mobile.{conf,png} &bull; laptop.{conf,png}<br><br><span style="color:var(--dim);font-size:9px">macOS UDP gotcha: requires <span class="v">portForwarder: grpc</span> in colima.yaml + macOS App Firewall exception. Tailscale exit-node IP forwarding persists at boot via LaunchDaemon.</span></div>
+    </div>
     <div class="card t-red">
       <div class="clabel">Known Fragility</div>
       <div class="cdetail">1. Obsidian Sync not instant<br>2. MCP schema bugs brick sessions<br>3. Workspace-MCP OAuth zombie processes (pkill before re-auth)<br>4. Plugins not synced via vault<br>5. WSL cron dies on shutdown<br>6. Never kill MCP mid-session<br>7. settings.json = SYMLINK</div>
@@ -976,7 +1038,7 @@
       <rect x="700" y="196" width="180" height="18" rx="3" fill="rgba(8,12,20,0.9)" stroke="#3d2a0a"/>
       <text x="790" y="209" text-anchor="middle" fill="#f0a030" font-family="Share Tech Mono" font-size="9">Relay TCP :7272 &bull; HMAC-SHA256</text>
 
-      <text x="1290" y="420" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="10" opacity=".4">Dawn&#8596;Dusk 26-39ms &bull; Obsidian Sync &bull; ClipCascade</text>
+      <text x="1290" y="420" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="10" opacity=".4">Dawn&#8596;Dusk 26-39ms &bull; Obsidian Sync &bull; ClipSync &bull; Tailscale Drive</text>
     </svg>
 
     <!-- Machine details -->
@@ -1018,12 +1080,18 @@
           <span class="tag" style="border-color:var(--green);color:var(--green)">Jellyseerr :5055</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">Parallax :7073</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">Image Forge :7074</span>
-          <span class="tag" style="border-color:var(--green);color:var(--green)">ClipCascade :8085</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">ClipSync hub :9876</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">EMOC Dashboard :7171</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">Cloudflare Tunnel</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">relay.py daemon</span>
-          <span class="tag" style="border-color:var(--green);color:var(--green)">shelby-llm (gemma4:e4b)</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">mcp-memory-service :8765</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">MemPalace :8767</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">shelby-designer :8768</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">Maven MCP :7199</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">AmneziaWG :443/UDP</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">Caddy *arr proxy</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">Tailscale Drive auto-mount</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">Codex CLI 0.125</span>
         </div>
       </div>
     </div>
@@ -1058,7 +1126,7 @@
   <div class="stat"><span class="sn" style="color:var(--cyan)">3</span>Machines</div>
   <div class="stat"><span class="sn" style="color:var(--orange)">18</span>MCP Servers</div>
   <div class="stat"><span class="sn" style="color:var(--yellow)">15</span>Plugins</div>
-  <div class="stat"><span class="sn" style="color:var(--yellow)">88</span>Skills</div>
+  <div class="stat"><span class="sn" style="color:var(--yellow)">55</span>Config Skills</div>
   <div class="stat"><span class="sn" style="color:var(--yellow)">23</span>Rules</div>
   <div class="stat"><span class="sn" style="color:var(--red)">6</span>Hook Events</div>
   <div class="stat"><span class="sn" style="color:var(--green)">6</span>Cron Jobs</div>
@@ -1066,12 +1134,15 @@
   <div class="stat"><span class="sn" style="color:var(--green)">2</span>GitHub Backups</div>
   <div class="stat"><span class="sn" style="color:var(--orange)">4</span>Google Accounts</div>
   <div class="stat"><span class="sn" style="color:var(--cyan)">6</span>Dept Heads</div>
+  <div class="stat"><span class="sn" style="color:var(--orange)">4</span>Tier-2 Providers</div>
+  <div class="stat"><span class="sn" style="color:var(--red)">5</span>Codex Defenses</div>
+  <div class="stat"><span class="sn" style="color:var(--cyan)">723</span>Orchestrator Tests</div>
 </div>
 
 <!-- ========== FOOTER ========== -->
 <div class="bp-footer">
   <span>EXTENDED MIND BLUEPRINT &mdash; Aragorn Meulendijks &mdash; 2026</span>
-  <span>Claude Code (Opus 4.6) &bull; Tailscale &bull; Obsidian &bull; Docker &bull; GitHub</span>
+  <span>Claude Code (Opus 4.7) + Codex 0.125 &bull; Tailscale &bull; Obsidian &bull; Docker &bull; GitHub</span>
   <span class="quote">"The Extended Mind is not a metaphor &mdash; it is architecture."</span>
 </div>
 
