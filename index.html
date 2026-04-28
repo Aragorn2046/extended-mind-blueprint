@@ -160,21 +160,15 @@
     filter:blur(1px);
   }
 
-  .tag[data-tip]{position:relative;cursor:help}
-  .tag[data-tip]:hover::after{
-    content:attr(data-tip);
-    position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  .tag[data-tip]{cursor:help}
+  #bp-tip{
+    position:fixed;display:none;z-index:99999;pointer-events:none;
     background:#0a0e14;color:#c9d1d9;border:1px solid #58a6ff;
     padding:7px 11px;border-radius:3px;
     font-family:'Share Tech Mono',monospace;font-size:11px;line-height:1.5;
-    white-space:normal;width:max-content;max-width:300px;
-    z-index:9999;pointer-events:none;
+    max-width:300px;text-transform:none;letter-spacing:.2px;
     box-shadow:0 0 14px rgba(88,166,255,.45);
-    text-transform:none;letter-spacing:.2px;
-  }
-  .tag[data-tip]:hover::before{
-    content:'';position:absolute;bottom:calc(100% + 3px);left:50%;transform:translateX(-50%);
-    border:5px solid transparent;border-top-color:#58a6ff;z-index:9999;pointer-events:none;
+    transform:translate(-50%,-100%);
   }
 
   /* === TAGS === */
@@ -266,6 +260,7 @@
 </style>
 </head>
 <body>
+<div id="bp-tip"></div>
 
 <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
 <div class="gen-stamp" id="genStamp"></div>
@@ -1211,5 +1206,38 @@ function setFont(name) {
 }
 </script>
 
+<script>
+(function(){
+  const tip = document.getElementById('bp-tip');
+  if(!tip) return;
+  document.addEventListener('mouseover', e => {
+    const t = e.target.closest('[data-tip]');
+    if(!t) return;
+    tip.textContent = t.getAttribute('data-tip');
+    tip.style.display = 'block';
+    const r = t.getBoundingClientRect();
+    let left = r.left + r.width/2;
+    let top = r.top - 8;
+    // Clamp horizontally so tooltip stays in viewport
+    const tw = tip.offsetWidth;
+    const vw = window.innerWidth;
+    if(left - tw/2 < 8) left = tw/2 + 8;
+    if(left + tw/2 > vw - 8) left = vw - tw/2 - 8;
+    // Flip below if no room above
+    if(top - tip.offsetHeight < 8){
+      top = r.bottom + 8;
+      tip.style.transform = 'translate(-50%,0)';
+    } else {
+      tip.style.transform = 'translate(-50%,-100%)';
+    }
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+  });
+  document.addEventListener('mouseout', e => {
+    if(e.target.closest && e.target.closest('[data-tip]')) tip.style.display = 'none';
+  });
+  document.addEventListener('scroll', () => { tip.style.display = 'none'; }, true);
+})();
+</script>
 </body>
 </html>
