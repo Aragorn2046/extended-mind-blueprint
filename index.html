@@ -1210,28 +1210,31 @@ function setFont(name) {
 (function(){
   const tip = document.getElementById('bp-tip');
   if(!tip) return;
-  document.addEventListener('mouseover', e => {
-    const t = e.target.closest('[data-tip]');
-    if(!t) return;
+  function place(e, t){
     tip.textContent = t.getAttribute('data-tip');
     tip.style.display = 'block';
-    const r = t.getBoundingClientRect();
-    let left = r.left + r.width/2;
-    let top = r.top - 8;
-    // Clamp horizontally so tooltip stays in viewport
-    const tw = tip.offsetWidth;
-    const vw = window.innerWidth;
-    if(left - tw/2 < 8) left = tw/2 + 8;
-    if(left + tw/2 > vw - 8) left = vw - tw/2 - 8;
-    // Flip below if no room above
-    if(top - tip.offsetHeight < 8){
-      top = r.bottom + 8;
-      tip.style.transform = 'translate(-50%,0)';
-    } else {
-      tip.style.transform = 'translate(-50%,-100%)';
-    }
+    const tw = tip.offsetWidth, th = tip.offsetHeight;
+    const vw = window.innerWidth, vh = window.innerHeight;
+    const PAD = 14; // gap between cursor and tooltip
+    let left = e.clientX + PAD;
+    let top  = e.clientY - th - PAD;
+    // Flip to right-below if not enough room above-right
+    if(left + tw > vw - 6) left = e.clientX - tw - PAD;
+    if(top < 6) top = e.clientY + PAD;
+    // Final clamp so it never leaves viewport
+    if(left < 6) left = 6;
+    if(top + th > vh - 6) top = vh - th - 6;
+    tip.style.transform = 'none';
     tip.style.left = left + 'px';
-    tip.style.top = top + 'px';
+    tip.style.top  = top  + 'px';
+  }
+  document.addEventListener('mouseover', e => {
+    const t = e.target.closest('[data-tip]');
+    if(t) place(e, t);
+  });
+  document.addEventListener('mousemove', e => {
+    const t = e.target.closest('[data-tip]');
+    if(t) place(e, t);
   });
   document.addEventListener('mouseout', e => {
     if(e.target.closest && e.target.closest('[data-tip]')) tip.style.display = 'none';
