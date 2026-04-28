@@ -1228,18 +1228,11 @@ function setFont(name) {
     tip.style.left = left + 'px';
     tip.style.top  = top  + 'px';
   }
-  document.addEventListener('mouseover', e => {
-    const t = e.target.closest('[data-tip]');
-    if(t) place(e, t);
-  });
   document.addEventListener('mousemove', e => {
     const t = e.target.closest('[data-tip]');
     if(t) place(e, t);
+    else if(tip.style.display !== 'none') tip.style.display = 'none';
   });
-  document.addEventListener('mouseout', e => {
-    if(e.target.closest && e.target.closest('[data-tip]')) tip.style.display = 'none';
-  });
-  document.addEventListener('scroll', () => { tip.style.display = 'none'; }, true);
 })();
 </script>
 </body>
