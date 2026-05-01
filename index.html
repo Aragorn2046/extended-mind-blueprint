@@ -697,7 +697,7 @@
     </div>
     <div class="card t-orange">
       <div class="clabel">Tier 2 LLM Router</div>
-      <div class="cdetail">Wrapper: <span class="v">[home]/scripts/tier2-llm.py</span> (stdlib-only)<br>Order: <span class="v">Lemonade &rarr; Groq &rarr; Gemini &rarr; Mistral &rarr; Sonnet &rarr; Opus</span><br><br>4 providers below Sonnet:<br>&bull; <span class="v">Lemonade</span> &mdash; local Llama-3.2-3B Q4 via Vulkan iGPU, FREE<br>&bull; <span class="v">Groq</span> &mdash; Llama 4 Scout, $0.11/$0.34, ~594 tok/s<br>&bull; <span class="v">Gemini 2.5 Flash</span> &mdash; web grounding + vision<br>&bull; <span class="v">Mistral Large 3</span> &mdash; EU GDPR-safe<br><br>Never route Claude through OpenRouter (100% markup)<br>Skill: <span class="v">shelby-llm-tier2-delegation</span></div>
+      <div class="cdetail">Wrapper: <span class="v">[home]/scripts/tier2-llm.py</span> (stdlib-only)<br>Order: <span class="v">Lemonade &rarr; Groq &rarr; Gemini &rarr; Mistral &rarr; Perplexity &rarr; Sonnet &rarr; Opus</span><br><br>5 providers below Sonnet:<br>&bull; <span class="v">Lemonade</span> &mdash; local Llama-3.2-3B Q4 via Vulkan iGPU, FREE<br>&bull; <span class="v">Groq</span> &mdash; Llama 4 Scout, $0.11/$0.34, ~594 tok/s<br>&bull; <span class="v">Gemini 2.5 Flash</span> &mdash; web grounding + vision<br>&bull; <span class="v">Mistral Large 2411</span> &mdash; EU GDPR-safe<br>&bull; <span class="v">Perplexity Sonar Pro</span> &mdash; web research + citations, ~$0.007/call (auto-routed via shelby-route <span class="v">web-grounded-research</span> class)<br><br>OpenRouter is at-parity vs direct vendors but adds intermediary failure mode &mdash; skip for architectural reasons<br>Skill: <span class="v">shelby-llm-tier2-delegation</span></div>
     </div>
     <div class="card t-orange">
       <div class="clabel">Utility MCP</div>
@@ -756,6 +756,10 @@
       <div class="clabel">Codex MCP Profile (intentionally narrow)</div>
       <div class="cdetail"><span class="v" style="color:var(--green)">Allowed (read-only):</span><br>&bull; <span class="v">context7</span> &mdash; library docs<br>&bull; <span class="v">memory_service</span> (search-only)<br>&bull; <span class="v">mempalace</span> (search-only)<br><br><span class="v" style="color:var(--red)">Blocked:</span><br>Gmail, Drive, Calendar, WhatsApp, write-mutate access<br><br>Install (idempotent): <span class="v">bash [vault]/Config/scripts/codex-install-day.sh</span></div>
     </div>
+    <div class="card t-red" style="flex:1.5;min-width:520px">
+      <div class="clabel">shelby-route v2 &mdash; Auto-routing layer (Day-only)</div>
+      <div class="cdetail">v1 shipped 2026-04-30, v2 shipped 2026-05-01<br>Wrapper: <span class="v">[home]/scripts/shelby-route.sh --auto "&lt;brief&gt;"</span><br>Policy: <span class="v">[vault]/Config/relay/route-policy.toml</span><br><br><span class="v" style="color:var(--red)">8 task classes:</span> repo-bug-fix, log-triage, vault-cleanup, mechanical-refactor, spec-implementation, bulk-text-transform, long-context-analysis, web-grounded-research<br><span class="v" style="color:var(--red)">6 engines (fallback chain):</span> codex, sonnet-spawn, gemini, groq, lemonade, <span style="color:var(--orange)">perplexity</span><br><br><span class="v" style="color:var(--red)">8-mode failure detection:</span> exit-code, timeout, empty-result, error-keywords, self-report phrases, context-misalignment (task_id), AGENTS.md truncation, Rule of Two<br>Full-chain failure &rarr; Cortex alert (no silent skips)<br><br><span class="v" style="color:var(--cyan)">v2 advisory hook</span> (UserPromptSubmit, ~35ms p50):<br>&bull; <span class="v">[vault]/Config/scripts/route-advisory-hook.py</span><br>&bull; Classifies prompt &rarr; injects <span class="v">[shelby-route] suggests: &lt;class&gt; chain=...</span> into context<br>&bull; Converts routing from opt-in (model must remember) &rarr; opt-out (auto-classified)<br><br>PATH addition in settings.json: <span class="v">[home]/scripts</span> resolves bare in Bash</div>
+    </div>
   </div>
 </div>
 
@@ -777,7 +781,7 @@
           <tr><td class="tk" style="color:var(--red)">PreToolUse</td><td>session-guard.sh &mdash; file ownership + mkdir advisory lock (Edit|Write)</td><td style="text-align:right;opacity:.5">5s</td></tr>
           <tr><td class="tk" style="color:var(--red)">PostToolUse</td><td>session-unlock.sh &mdash; release advisory lock (Edit|Write)</td><td style="text-align:right;opacity:.5">5s</td></tr>
           <tr><td class="tk" style="color:var(--red)">Stop</td><td>voice-hook.sh (TTS playback) + session-cleanup.sh (release all locks)</td><td style="text-align:right;opacity:.5">30s+5s</td></tr>
-          <tr><td class="tk" style="color:var(--red)">UserPromptSubmit</td><td>relay-check-hook.sh (messages) + voice-shutup.sh (stop TTS)</td><td style="text-align:right;opacity:.5">5s ea</td></tr>
+          <tr><td class="tk" style="color:var(--red)">UserPromptSubmit</td><td>relay-check-hook.sh (messages) + voice-shutup.sh (stop TTS) + route-advisory-hook.py (shelby-route classifier injection, Day-only)</td><td style="text-align:right;opacity:.5">5s+5s+2s</td></tr>
           <tr><td class="tk" style="color:var(--red)">PostToolUseFailure</td><td>echo: suggest /learn:from</td><td style="text-align:right;opacity:.5">5s</td></tr>
         </table>
         <br>Scripts: Day <span class="v">[home]/scripts/claude-hooks/</span> &bull; Dawn/Dusk <span class="v">[home]/scripts/claude-hooks/</span>
@@ -1150,7 +1154,7 @@
   <div class="stat"><span class="sn" style="color:var(--green)">2</span>GitHub Backups</div>
   <div class="stat"><span class="sn" style="color:var(--orange)">4</span>Google Accounts</div>
   <div class="stat"><span class="sn" style="color:var(--cyan)">6</span>Dept Heads</div>
-  <div class="stat"><span class="sn" style="color:var(--orange)">4</span>Tier-2 Providers</div>
+  <div class="stat"><span class="sn" style="color:var(--orange)">5</span>Tier-2 Providers</div>
   <div class="stat"><span class="sn" style="color:var(--red)">5</span>Codex Defenses</div>
   <div class="stat"><span class="sn" style="color:var(--cyan)">723</span>Orchestrator Tests</div>
 </div>
