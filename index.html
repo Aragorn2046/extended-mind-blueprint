@@ -389,6 +389,14 @@
       <div class="clabel">Effort + Model Architecture</div>
       <div class="cdetail">Session floor: <span class="v">effortLevel=high</span> via launch alias + settings.json<br>Per-skill <span class="v">effort:</span> frontmatter on 44/53 skills<br>&nbsp;&bull; 30 <span class="v" style="color:var(--green)">low</span> (loaders, routine)<br>&nbsp;&bull; 14 <span class="v" style="color:var(--orange)">xhigh</span> (cycles, deep reasoning)<br>&nbsp;&bull; 9 default <span class="v">high</span><br><br>Escape hatches: <span class="v">/effort max</span>, "ultrathink" keyword, <span class="v">/effort low</span><br>xhigh only on Opus 4.7 (silent fallback to high otherwise)</div>
     </div>
+    <div class="card t-cyan">
+      <div class="clabel">EMOC Command Center v1 <span style="color:var(--green);font-size:9px">[LIVE]</span></div>
+      <div class="cdetail">Day-only orchestrator UI &mdash; <span class="v">100.x.x.x:7171/command-center</span><br>Auth: <span class="v">Bearer $ORCHESTRATOR_DASHBOARD_TOKEN</span><br><br>Four panels:<br>&nbsp;&bull; <span class="v">Goals Kanban</span> &mdash; pending / in-flight / done<br>&nbsp;&bull; <span class="v">Skills Launcher</span> &mdash; one-click skill dispatch<br>&nbsp;&bull; <span class="v">Recent Runs</span> &mdash; last 50 spawn outputs<br>&nbsp;&bull; <span class="v">7-day Schedule</span> &mdash; routines / cron view<br><br>Repo: <span class="v">~/projects/orchestrator-dashboard/</span><br>Canon: <span class="v">Knowledge Base/Agentic OS &mdash; Shelby Adaptation.md</span></div>
+    </div>
+    <div class="card t-cyan">
+      <div class="clabel">JARVIS Front-Door <span style="color:var(--green);font-size:9px">[LIVE]</span></div>
+      <div class="cdetail">Three paths into the orchestrator goals queue:<br>&nbsp;&bull; <span class="v">CLI</span> &mdash; <code>sx &lt;objective&gt; | &lt;end_goal&gt;</code><br>&nbsp;&bull; <span class="v">EMOC GUI</span> &mdash; kick-off form on Command Center<br>&nbsp;&bull; <span class="v">Telegram</span> &mdash; <code>/exec</code> / <code>/orchestrate</code> / <code>/go</code><br><br>POST <span class="v">/api/command-center/goals/planner</span><br><br>Vendor-aware dispatch (per Vendor enum):<br>&nbsp;&bull; ANTHROPIC &rarr; <span class="v">spawn-fresh.sh</span><br>&nbsp;&bull; OPENAI_CODEX &rarr; <span class="v">codex-spawn.sh</span><br>&nbsp;&bull; GOOGLE / MISTRAL / GROQ / LEMONADE &rarr; <span class="v">tier2-llm.py</span></div>
+    </div>
   </div>
 </div>
 
@@ -744,6 +752,10 @@
       <div class="cdetail"><span class="v">hermes</span> &mdash; Hermes Agent messaging bridge<br>Cross-platform: Telegram, Discord, Slack, WhatsApp, Signal, Matrix<br>Tools: messages_send/read, conversations_list, events_wait,<br>permissions_list_open / permissions_respond, attachments_fetch<br>launchd <span class="v">ai.hermes.gateway</span></div>
     </div>
     <div class="card t-orange">
+      <div class="clabel">gbrain MCP <span style="color:var(--green);font-size:9px">[LIVE all 3 machines]</span></div>
+      <div class="cdetail"><span class="v">gbrain</span> &mdash; gstack KB, PGLite local per-machine<br>CLI: <span class="v">~/.bun/bin/gbrain</span> v0.18.2<br>Brain: <span class="v">~/.gbrain/brain.pglite</span> (mode 0600)<br>Memory sync: artifacts-only via private repo (Day &harr; Dawn &harr; Dusk)<br>Federation: each machine's PGLite + brain repo registered as source<br>Gotcha: PGLite single-process lock &mdash; kill <span class="v">gbrain serve</span> before CLI access</div>
+    </div>
+    <div class="card t-orange">
       <div class="clabel">Google Services</div>
       <div class="cdetail" style="display:flex;gap:24px">
         <div><span class="v" style="color:var(--orange)">Gmail</span><br>4 accounts, full read/send</div>
@@ -813,7 +825,7 @@
   <div class="section-head" style="border-color:var(--green);color:var(--green)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Automation &amp; Cron</span>
-    <span class="scount">6 Cron Jobs &bull; Script Chain &bull; 2 Backup Systems</span>
+    <span class="scount">15+ launchd Jobs &bull; Cron + Self-Healing Daemons &bull; Backup Systems</span>
   </div>
   <div class="section-body">
     <div class="card t-green" style="flex:1;min-width:460px">
@@ -836,6 +848,25 @@
     <div class="card t-green">
       <div class="clabel">Backup Systems (GitHub Private)</div>
       <div class="cdetail"><span class="v" style="color:var(--green)">Config Guard</span> &mdash; private repo<br>Hourly &bull; settings, CLAUDE.md, memory, rules, scripts<br><br><span class="v" style="color:var(--green)">Vault Backup</span> &mdash; private repo<br>Nightly 3am &bull; Full vault + ~/scripts/<br>Excludes: media, credentials, node_modules</div>
+    </div>
+    <div class="card t-green" style="flex:1;min-width:520px">
+      <div class="clabel">Day Daemons (com.shelby.* &bull; launchd)</div>
+      <div class="cdetail">
+        <table class="bp-table">
+          <tr><td class="tk" style="color:var(--green);width:140px">Self-healing</td><td><span class="v">process-janitor</span> 04:15 &bull; <span class="v">kuma-watchdog</span> 5min &bull; <span class="v">colima-healer</span></td></tr>
+          <tr><td class="tk" style="color:var(--green)">Hygiene</td><td><span class="v">context-hygiene</span> nightly 03:00 &bull; <span class="v">context-hygiene-repair</span> Sun 04:00 &bull; <span class="v">plugin-drift</span> nightly 03:30</td></tr>
+          <tr><td class="tk" style="color:var(--green)">Token health</td><td><span class="v">budget-check</span> Sun 19:00 &mdash; OAuth probe + size check &rarr; _Cortex.md if RED</td></tr>
+          <tr><td class="tk" style="color:var(--green)">Borg/discovery</td><td><span class="v">borg-scan-pull</span> daily 03:45 &bull; <span class="v">borg-watcher-quantized</span> &rarr; _Cortex.md</td></tr>
+          <tr><td class="tk" style="color:var(--green)">CC ecosystem</td><td><span class="v">cc-update</span> Sun 04:00 (npm + plugin updates) &bull; <span class="v">cc-update-verify</span></td></tr>
+          <tr><td class="tk" style="color:var(--green)">Memory layer</td><td><span class="v">memory-lifecycle</span> daily 02:30 + Sat 03:30 &mdash; reclassify &amp; score</td></tr>
+          <tr><td class="tk" style="color:var(--green)">Hooks (per-turn)</td><td><span class="v">budget-tier-hook</span> &mdash; injects [shelby-budget] when &ge;40%<br><span class="v">auto-rename-session</span> &mdash; renames new ccode sessions via Groq</td></tr>
+          <tr><td class="tk" style="color:var(--green)">Recovery</td><td><span class="v">boot-recover</span> &bull; <span class="v">machine-recovery-drift-check</span> daily 03:30 &bull; <span class="v">cloudflare-ddns-vpn</span></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="card t-cyan">
+      <div class="clabel">Browser Harness (Day, CDP)</div>
+      <div class="cdetail">Chrome dedicated profile: <span class="v">~/.chrome-cdp</span><br>Wrapper: <span class="v">~/scripts/chrome-with-cdp.sh</span><br>CDP listener: <span class="v">127.0.0.1:9222</span><br>launchd: <span class="v">com.shelby.chrome-cdp</span><br>Used by: <span class="v">browse</span>, <span class="v">gstack</span>, <span class="v">browser-harness</span>, QA testing skills, /qa /design-review /benchmark /canary</div>
     </div>
   </div>
 </div>
@@ -1165,7 +1196,7 @@
   <div class="stat"><span class="sn" style="color:var(--yellow)">77</span>Config Skills</div>
   <div class="stat"><span class="sn" style="color:var(--yellow)">25</span>Rules</div>
   <div class="stat"><span class="sn" style="color:var(--red)">6</span>Hook Events</div>
-  <div class="stat"><span class="sn" style="color:var(--green)">6</span>Cron Jobs</div>
+  <div class="stat"><span class="sn" style="color:var(--green)">15+</span>Day Daemons</div>
   <div class="stat"><span class="sn" style="color:var(--purple)">3</span>TTS Engines</div>
   <div class="stat"><span class="sn" style="color:var(--green)">2</span>GitHub Backups</div>
   <div class="stat"><span class="sn" style="color:var(--orange)">4</span>Google Accounts</div>
