@@ -317,7 +317,6 @@
       <line x1="1200" y1="75" x2="1000" y2="195" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#acn)"/>
       <line x1="1200" y1="75" x2="1400" y2="195" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#acn)"/>
       <line x1="1280" y1="75" x2="1800" y2="195" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#acn)"/>
-      <line x1="1300" y1="75" x2="2200" y2="195" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#acn)"/>
 
       <!-- Department Head nodes -->
       <rect x="100" y="195" width="200" height="50" rx="5" fill="rgba(26,58,92,0.3)" stroke="#f0a030" stroke-width="1.5"/>
@@ -340,10 +339,6 @@
       <text x="1800" y="218" text-anchor="middle" fill="#f0c929" font-family="Orbitron" font-size="12" font-weight="700">WEB</text>
       <text x="1800" y="236" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9">Web Dev &bull; /web-cycle</text>
 
-      <rect x="2100" y="195" width="200" height="50" rx="5" fill="rgba(61,26,26,0.3)" stroke="#ff6b6b" stroke-width="1.5"/>
-      <text x="2200" y="218" text-anchor="middle" fill="#ff6b6b" font-family="Orbitron" font-size="12" font-weight="700">MAVEN</text>
-      <text x="2200" y="236" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9">retired / inline</text>
-
       <!-- Specialist nodes (example under Dev) -->
       <line x1="960" y1="245" x2="860" y2="350" stroke="#16c79a" stroke-width="1.5" stroke-dasharray="6,3" class="flow-anim" marker-end="url(#agn)"/>
       <line x1="1000" y1="245" x2="1000" y2="350" stroke="#16c79a" stroke-width="1.5" stroke-dasharray="6,3" class="flow-anim" marker-end="url(#agn)"/>
@@ -357,14 +352,14 @@
       <text x="1140" y="372" text-anchor="middle" fill="#16c79a" font-family="Share Tech Mono" font-size="8">Specialist C</text>
 
       <!-- Labels -->
-      <text x="200" y="445" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9" opacity=".5">Heads recruit specialists on demand via Maven &bull; 723 tests &bull; Public repo: Aragorn2046/orchestrator-v3</text>
+      <text x="200" y="445" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9" opacity=".5">Heads recruit specialists on demand &bull; 723 tests &bull; Public repo: Aragorn2046/orchestrator-v3</text>
 
       <!-- Budget tracker -->
       <rect x="1600" y="400" width="200" height="30" rx="4" fill="rgba(61,42,10,0.3)" stroke="#f0a030" stroke-width="1"/>
       <text x="1700" y="419" text-anchor="middle" fill="#f0a030" font-family="Share Tech Mono" font-size="9">budget: cli.py budget</text>
     </svg>
     <div class="card t-cyan" style="flex:1;min-width:400px">
-      <div class="clabel">Department Heads (6)</div>
+      <div class="clabel">Department Heads (5)</div>
       <div class="cdetail">
         <table class="bp-table">
           <tr><td class="tk" style="color:var(--orange)">Atlas</td><td>Research</td><td>investigate, analyze, explore, study</td></tr>
@@ -372,7 +367,6 @@
           <tr><td class="tk" style="color:var(--cyan)">Dev</td><td>Software</td><td>build, code, fix, debug, refactor</td></tr>
           <tr><td class="tk" style="color:var(--green)">Infra</td><td>Infrastructure</td><td>deploy, docker, server, network</td></tr>
           <tr><td class="tk" style="color:var(--yellow)">Web</td><td>Web Dev</td><td>website, frontend, landing page</td></tr>
-          <tr><td class="tk" style="color:var(--red)">Maven</td><td>HR</td><td>RETIRED 2026-06-22 &mdash; classify inline</td></tr>
         </table>
         <br>Repo: <span class="v">~/projects/orchestrator/</span> &bull; CLI: <span class="v">cli.py</span>
       </div>
@@ -395,7 +389,7 @@
     </div>
     <div class="card t-cyan">
       <div class="clabel">JARVIS Front-Door <span style="color:var(--green);font-size:9px">[LIVE]</span></div>
-      <div class="cdetail">Three paths into the orchestrator goals queue:<br>&nbsp;&bull; <span class="v">CLI</span> &mdash; <code>sx &lt;objective&gt; | &lt;end_goal&gt;</code><br>&nbsp;&bull; <span class="v">EMOC GUI</span> &mdash; kick-off form on Command Center<br>&nbsp;&bull; <span class="v">Telegram</span> &mdash; <code>/exec</code> / <code>/orchestrate</code> / <code>/go</code><br><br>POST <span class="v">/api/command-center/goals/planner</span><br><br>Vendor-aware dispatch (per Vendor enum):<br>&nbsp;&bull; ANTHROPIC &rarr; <span class="v">spawn-fresh.sh</span><br>&nbsp;&bull; OPENAI_CODEX &rarr; <span class="v">codex-spawn.sh</span><br>&nbsp;&bull; GOOGLE / MISTRAL / GROQ / LEMONADE &rarr; <span class="v">tier2-llm.py</span></div>
+      <div class="cdetail">Three paths into the orchestrator goals queue:<br>&nbsp;&bull; <span class="v">CLI</span> &mdash; <code>sx &lt;objective&gt; | &lt;end_goal&gt;</code><br>&nbsp;&bull; <span class="v">EMOC GUI</span> &mdash; kick-off form on Command Center<br>&nbsp;&bull; <span class="v">Telegram</span> &mdash; <code>/exec</code> / <code>/orchestrate</code> / <code>/go</code><br><br>POST <span class="v">/api/command-center/goals/planner</span><br><br>Vendor-aware dispatch (per Vendor enum):<br>&nbsp;&bull; ANTHROPIC &rarr; <span class="v">spawn-fresh.sh</span><br>&nbsp;&bull; OPENAI_CODEX &rarr; <span class="v">codex-spawn.sh</span><br>&nbsp;&bull; GOOGLE &rarr; <span class="v">tier2-llm.py</span></div>
     </div>
   </div>
 </div>
@@ -429,14 +423,10 @@
           <tr><td class="tk" style="color:var(--cyan);font-family:Orbitron;font-size:13px">OPUS 4.7</td><td><span class="v">Primary</span></td><td>Writing, research, architecture, security, complex reasoning</td></tr>
           <tr><td class="tk" style="color:var(--green);font-family:Orbitron;font-size:13px">SONNET 4.6</td><td><span class="v">Delegated</span></td><td>Sub-agents (CLAUDE_CODE_SUBAGENT_MODEL), cortex cron ($0.50)</td></tr>
           <tr><td class="tk" style="color:var(--dim);font-family:Orbitron;font-size:13px">HAIKU 4.5</td><td><span class="v">Throwaway</span></td><td>Extraction, classification, validation</td></tr>
-          <tr><td colspan="3" style="border-top:1px dashed var(--border);padding-top:6px;font-size:9px;color:var(--dim)">TIER 2 ROUTER (cheap-cloud + local fallback)</td></tr>
-          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:11px">LEMONADE</td><td><span class="v">Local Vulkan</span></td><td>Llama-3.2-3B Q4 on iGPU &mdash; FREE</td></tr>
-          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:11px">GROQ</td><td><span class="v">Llama 4 Scout</span></td><td>$0.11/$0.34 MTok &bull; ~594 tok/s &bull; bulk text</td></tr>
-          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:11px">GEMINI 2.5</td><td><span class="v">Flash</span></td><td>$0.30/$2.50 MTok &bull; web grounding + vision</td></tr>
-          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:11px">MISTRAL</td><td><span class="v">Large 3</span></td><td>$0.50/$1.50 MTok &bull; EU GDPR-safe</td></tr>
-          <tr><td colspan="3" style="border-top:1px dashed var(--border);padding-top:6px;font-size:9px;color:var(--dim)">LOCAL (shelby-llm &mdash; PARKED 2026-04-12, text-only limitation)</td></tr>
-          <tr><td class="tk" style="color:var(--dim);font-family:Orbitron;font-size:11px">GEMMA4:31B</td><td><span class="v">Dawn</span></td><td>Sonnet-tier &bull; OpenClaw potential replacement</td></tr>
-          <tr><td class="tk" style="color:var(--dim);font-family:Orbitron;font-size:11px">GEMMA4:E4B</td><td><span class="v">Day / Dusk</span></td><td>Haiku-tier &bull; existing delegations still working</td></tr>
+          <tr><td colspan="3" style="border-top:1px dashed var(--border);padding-top:6px;font-size:9px;color:var(--dim)">TIER 2 ROUTER (~/scripts/tier2-llm.py &mdash; 3-vendor active, S669)</td></tr>
+          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:11px">GEMINI FLASH-LITE</td><td><span class="v">gemini alias</span></td><td>$0.10/$0.40 MTok &bull; bulk transforms, fast</td></tr>
+          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:11px">GEMINI 3.5 FLASH</td><td><span class="v">gemini-pro alias</span></td><td>$1.50/$9.00 MTok &bull; frontier + grounding + vision</td></tr>
+          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:11px">CODEX GPT-5.5</td><td><span class="v">codex</span></td><td>terminal / long-context / bulk specialist</td></tr>
         </table>
       </div>
     </div>
@@ -648,7 +638,6 @@
         <span class="tag" style="border-color:var(--green-dim);color:var(--green)">context-checkpoint</span>
         <span class="tag" style="border-color:var(--green-dim);color:var(--green)">context-management</span>
         <span class="tag" style="border-color:var(--orange-dim);color:var(--orange)">memory-service</span>
-        <span class="tag" style="border-color:var(--orange-dim);color:var(--orange)">shelby-llm-delegation</span>
       </div>
     </div>
   </div>
@@ -700,12 +689,8 @@
       <div class="cdetail"><span class="v">context7</span> &mdash; live library documentation<br>resolve-library-id &rarr; query-docs<br>All 3 machines &bull; stdio launcher<br>Mandatory before any external library code</div>
     </div>
     <div class="card t-orange">
-      <div class="clabel">shelby-llm MCP <span style="color:var(--red);font-size:9px">[PARKED 2026-04-12]</span></div>
-      <div class="cdetail"><span class="v">shelby-llm</span> &mdash; local LLM mesh (still running, no further investment)<br>Gemma 4 via Ollama across 3 machines<br>Dawn: gemma4:31b (Sonnet-tier) &bull; Day/Dusk: gemma4:e4b<br>Tools: llm_ask, llm_summarize, llm_transform, llm_code_review, llm_analyze_image, llm_transcribe_audio<br><br><span style="color:var(--dim);font-size:9px">Why parked: text-only, no MCP tool use. <span class="v">OpenClaw</span> identified as potential replacement (native MCP + Ollama). 26B MoE minimum viable for tool calling.</span></div>
-    </div>
-    <div class="card t-orange">
       <div class="clabel">Tier 2 LLM Router</div>
-      <div class="cdetail">Wrapper: <span class="v">[home]/scripts/tier2-llm.py</span> (stdlib-only)<br>Order: <span class="v">Lemonade &rarr; Groq &rarr; Gemini &rarr; Mistral &rarr; Perplexity &rarr; Sonnet &rarr; Opus</span><br><br>5 providers below Sonnet:<br>&bull; <span class="v">Lemonade</span> &mdash; local Llama-3.2-3B Q4 via Vulkan iGPU, FREE<br>&bull; <span class="v">Groq</span> &mdash; Llama 4 Scout, $0.11/$0.34, ~594 tok/s<br>&bull; <span class="v">Gemini 2.5 Flash</span> &mdash; web grounding + vision<br>&bull; <span class="v">Mistral Large 2411</span> &mdash; EU GDPR-safe<br>&bull; <span class="v">Perplexity Sonar Pro</span> &mdash; web research + citations, ~$0.007/call (auto-routed via shelby-route <span class="v">web-grounded-research</span> class)<br><br>OpenRouter is at-parity vs direct vendors but adds intermediary failure mode &mdash; skip for architectural reasons<br>Skill: <span class="v">shelby-llm-tier2-delegation</span></div>
+      <div class="cdetail">Wrapper: <span class="v">[home]/scripts/tier2-llm.py</span> (stdlib-only)<br>Active fallback order: <span class="v">gemini &rarr; gemini-pro &rarr; Codex &rarr; Opus</span><br><br>3 active providers (S669):<br>&bull; <span class="v">gemini-2.5-flash-lite</span> (<span class="v">gemini</span> alias) &mdash; $0.10/$0.40, bulk transforms, fast<br>&bull; <span class="v">gemini-3.5-flash</span> (<span class="v">gemini-pro</span> alias) &mdash; $1.50/$9.00, frontier reasoning + grounding<br>&bull; <span class="v">Codex GPT-5.5</span> &mdash; terminal/long-context/bulk specialist<br><br>Others disabled S669 (Lemonade, Groq, Mistral, Perplexity, Sonnet) &mdash; preserved in code for re-enable<br>Skill: <span class="v">shelby-llm-delegation</span></div>
     </div>
     <div class="card t-orange">
       <div class="clabel">Utility MCP</div>
@@ -716,20 +701,8 @@
       <div class="cdetail"><span class="v">mempalace</span> &mdash; knowledge graph + diary<br>Day :8767 &bull; FastMCP streamable-http (<span class="v">/mcp/mcp</span>)<br>Bearer auth on <span class="v">/mcp/*</span> &bull; token via env file (chmod 600)<br>SQLite + vector embeddings &bull; 609+ drawers<br>Tools: kg_add, kg_query, kg_invalidate, diary_write,<br>mempalace_wake_up, mempalace_search, mempalace_store, mempalace_inspect, mempalace_delete<br>Inline KG capture during sessions (no ceremony)</div>
     </div>
     <div class="card t-orange">
-      <div class="clabel">shelby-designer MCP <span style="color:var(--red);font-size:9px">[bearer-auth]</span></div>
-      <div class="cdetail"><span class="v">shelby-designer</span> &mdash; AI design generation (Gemini Flash)<br>Day :8768 (Docker, Colima) &bull; loopback-only Web GUI<br>Bearer auth on <span class="v">/mcp/*</span> &bull; token via env file (chmod 600)<br>Tools: generate_design, refine_design, get_credit_status, whoami</div>
-    </div>
-    <div class="card t-orange">
-      <div class="clabel">mcp-local-rag</div>
-      <div class="cdetail"><span class="v">mcp-local-rag</span> &mdash; semantic + keyword hybrid search<br>Indexes vault + codebases &bull; complements Grep<br>Use for "where did we discuss X" / concept recall<br>Local embeddings &bull; no cloud calls</div>
-    </div>
-    <div class="card t-orange">
       <div class="clabel">Semgrep MCP</div>
       <div class="cdetail"><span class="v">semgrep</span> &mdash; SAST / static analysis<br>Tools: semgrep_scan, semgrep_scan_with_custom_rule,<br>get_abstract_syntax_tree, semgrep_findings<br>Auto-fires during dev-cycle quality gates<br>Source code only (.py/.js/.ts/.go/.sh)</div>
-    </div>
-    <div class="card t-orange">
-      <div class="clabel">Maven &mdash; RETIRED 2026-06-22</div>
-      <div class="cdetail"><span class="v">maven</span> &mdash; RETIRED; classification folded inline (route-policy + skill-routing matrix); daemon decommissioned<br>FastMCP launcher &bull; venv python3<br>Tools: maven_classify, maven_generate_profile,<br>maven_validate_profile, maven_recruitment_log, maven_list_heads<br>Department heads request specialists dynamically</div>
     </div>
     <div class="card t-orange">
       <div class="clabel">video-grab MCP</div>
@@ -786,7 +759,7 @@
     </div>
     <div class="card t-red" style="flex:1.5;min-width:520px">
       <div class="clabel">shelby-route v2 &mdash; Auto-routing layer (Day-only)</div>
-      <div class="cdetail">v1 shipped 2026-04-30, v2 shipped 2026-05-01<br>Wrapper: <span class="v">[home]/scripts/shelby-route.sh --auto "&lt;brief&gt;"</span><br>Policy: <span class="v">[vault]/Config/relay/route-policy.toml</span><br><br><span class="v" style="color:var(--red)">8 task classes:</span> repo-bug-fix, log-triage, vault-cleanup, mechanical-refactor, spec-implementation, bulk-text-transform, long-context-analysis, web-grounded-research<br><span class="v" style="color:var(--red)">6 engines (fallback chain):</span> codex, sonnet-spawn, gemini, groq, lemonade, <span style="color:var(--orange)">perplexity</span><br><br><span class="v" style="color:var(--red)">8-mode failure detection:</span> exit-code, timeout, empty-result, error-keywords, self-report phrases, context-misalignment (task_id), AGENTS.md truncation, Rule of Two<br>Full-chain failure &rarr; Cortex alert (no silent skips)<br><br><span class="v" style="color:var(--cyan)">v2 advisory hook</span> (UserPromptSubmit, ~35ms p50):<br>&bull; <span class="v">[vault]/Config/scripts/route-advisory-hook.py</span><br>&bull; Classifies prompt &rarr; injects <span class="v">[shelby-route] suggests: &lt;class&gt; chain=...</span> into context<br>&bull; Converts routing from opt-in (model must remember) &rarr; opt-out (auto-classified)<br><br>PATH addition in settings.json: <span class="v">[home]/scripts</span> resolves bare in Bash</div>
+      <div class="cdetail">v1 shipped 2026-04-30, v2 shipped 2026-05-01<br>Wrapper: <span class="v">[home]/scripts/shelby-route.sh --auto "&lt;brief&gt;"</span><br>Policy: <span class="v">[vault]/Config/relay/route-policy.toml</span><br><br><span class="v" style="color:var(--red)">8 task classes:</span> repo-bug-fix, log-triage, vault-cleanup, mechanical-refactor, spec-implementation, bulk-text-transform, long-context-analysis, web-grounded-research<br><span class="v" style="color:var(--red)">4 engines (fallback chain):</span> codex, sonnet-spawn, gemini, gemini-pro<br><br><span class="v" style="color:var(--red)">8-mode failure detection:</span> exit-code, timeout, empty-result, error-keywords, self-report phrases, context-misalignment (task_id), AGENTS.md truncation, Rule of Two<br>Full-chain failure &rarr; Cortex alert (no silent skips)<br><br><span class="v" style="color:var(--cyan)">v2 advisory hook</span> (UserPromptSubmit, ~35ms p50):<br>&bull; <span class="v">[vault]/Config/scripts/route-advisory-hook.py</span><br>&bull; Classifies prompt &rarr; injects <span class="v">[shelby-route] suggests: &lt;class&gt; chain=...</span> into context<br>&bull; Converts routing from opt-in (model must remember) &rarr; opt-out (auto-classified)<br><br>PATH addition in settings.json: <span class="v">[home]/scripts</span> resolves bare in Bash</div>
     </div>
   </div>
 </div>
@@ -859,7 +832,7 @@
           <tr><td class="tk" style="color:var(--green)">Borg/discovery</td><td><span class="v">borg-scan-pull</span> daily 03:45 &bull; <span class="v">borg-watcher-quantized</span> &rarr; _Cortex.md</td></tr>
           <tr><td class="tk" style="color:var(--green)">CC ecosystem</td><td><span class="v">cc-update</span> Sun 04:00 (npm + plugin updates) &bull; <span class="v">cc-update-verify</span></td></tr>
           <tr><td class="tk" style="color:var(--green)">Memory layer</td><td><span class="v">memory-lifecycle</span> daily 02:30 + Sat 03:30 &mdash; reclassify &amp; score</td></tr>
-          <tr><td class="tk" style="color:var(--green)">Hooks (per-turn)</td><td><span class="v">budget-tier-hook</span> &mdash; injects [shelby-budget] when &ge;40%<br><span class="v">auto-rename-session</span> &mdash; renames new ccode sessions via Groq</td></tr>
+          <tr><td class="tk" style="color:var(--green)">Hooks (per-turn)</td><td><span class="v">budget-tier-hook</span> &mdash; injects [shelby-budget] when &ge;40%<br><span class="v">auto-rename-session</span> &mdash; renames new ccode sessions via Gemini</td></tr>
           <tr><td class="tk" style="color:var(--green)">Recovery</td><td><span class="v">boot-recover</span> &bull; <span class="v">machine-recovery-drift-check</span> daily 03:30 &bull; <span class="v">cloudflare-ddns-vpn</span></td></tr>
         </table>
       </div>
@@ -1123,7 +1096,6 @@
         <div class="idetail">
           <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">relay.py daemon</span>
           <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">Audio Receiver :12345</span>
-          <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">shelby-llm (gemma4:31b)</span>
           <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">ComfyUI :8188</span>
           <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">Docker DOCKER-USER</span>
         </div>
@@ -1153,8 +1125,6 @@
           <span class="tag" style="border-color:var(--green);color:var(--green)">relay.py daemon</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">mcp-memory-service :8765</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">MemPalace :8767</span>
-          <span class="tag" style="border-color:var(--green);color:var(--green)">shelby-designer :8768</span>
-          <span class="tag" style="border-color:var(--red);color:var(--red)">Maven :7199 (retired)</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">AmneziaWG :443/UDP</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">Caddy *arr proxy</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">Tailscale Drive auto-mount</span>
@@ -1176,7 +1146,6 @@
         <div class="idetail">
           <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">relay.py daemon</span>
           <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">Audio Receiver :12346</span>
-          <span class="tag" style="border-color:var(--cyan);color:var(--cyan)">shelby-llm (gemma4:e4b)</span>
         </div>
       </div>
     </div>
@@ -1188,10 +1157,177 @@
   </div>
 </div>
 
+<!-- ============================================================ -->
+<!-- SECTION: PROMPT FLOW -->
+<!-- ============================================================ -->
+<div class="section" id="sec-promptflow">
+  <div class="section-head" style="border-color:var(--cyan);color:var(--cyan)" onclick="toggle(this)">
+    <span class="arrow">&#9660;</span>
+    <span class="stitle">Prompt Flow &mdash; From Prompt to Result</span>
+    <span class="scount">8 Stages &bull; Entry &rarr; Prime &rarr; Classify &rarr; Dispatch &rarr; Gates &rarr; Synthesize &rarr; Persist &rarr; Output</span>
+  </div>
+  <div class="section-body">
+    <svg class="topo-svg" viewBox="0 0 1720 440">
+      <defs>
+        <marker id="pfn" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3 L0,6" fill="none" stroke="#58a6ff" stroke-width="1.2"/></marker>
+        <marker id="pfg" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3 L0,6" fill="none" stroke="#16c79a" stroke-width="1.2"/></marker>
+        <marker id="pfr" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3 L0,6" fill="none" stroke="#ff6b6b" stroke-width="1.2"/></marker>
+        <marker id="pfo" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3 L0,6" fill="none" stroke="#f0a030" stroke-width="1.2"/></marker>
+      </defs>
+
+      <!-- ① ENTRY POINTS — 5 sources converging into PRIME -->
+      <text x="80" y="22" text-anchor="middle" fill="#58a6ff" font-family="Orbitron" font-size="8" letter-spacing="2" opacity=".7">① ENTRY</text>
+      <rect x="8" y="34" width="145" height="28" rx="3" fill="rgba(26,58,92,0.3)" stroke="#58a6ff" stroke-width="1"/>
+      <text x="80" y="52" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="9">ccode CC CLI</text>
+      <rect x="8" y="72" width="145" height="28" rx="3" fill="rgba(26,58,92,0.3)" stroke="#58a6ff" stroke-width="1"/>
+      <text x="80" y="90" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="9">JARVIS sx &lt;obj&gt; | &lt;goal&gt;</text>
+      <rect x="8" y="110" width="145" height="28" rx="3" fill="rgba(26,58,92,0.3)" stroke="#58a6ff" stroke-width="1"/>
+      <text x="80" y="128" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="9">EMOC GUI</text>
+      <rect x="8" y="148" width="145" height="28" rx="3" fill="rgba(26,58,92,0.3)" stroke="#58a6ff" stroke-width="1"/>
+      <text x="80" y="166" text-anchor="middle" fill="#58a6ff" font-family="Share Tech Mono" font-size="9">Telegram /exec /go</text>
+      <rect x="8" y="186" width="145" height="28" rx="3" fill="rgba(45,27,80,0.3)" stroke="#b388ff" stroke-width="1"/>
+      <text x="80" y="204" text-anchor="middle" fill="#b388ff" font-family="Share Tech Mono" font-size="9">Voice /tts</text>
+
+      <!-- Fan-in lines from entry sources to PRIME -->
+      <line x1="153" y1="48" x2="205" y2="155" stroke="#58a6ff" stroke-width="1" stroke-dasharray="5,3" opacity=".55" class="flow-anim"/>
+      <line x1="153" y1="86" x2="205" y2="165" stroke="#58a6ff" stroke-width="1" stroke-dasharray="5,3" opacity=".55" class="flow-anim"/>
+      <line x1="153" y1="124" x2="205" y2="175" stroke="#58a6ff" stroke-width="1" stroke-dasharray="5,3" opacity=".55" class="flow-anim"/>
+      <line x1="153" y1="162" x2="205" y2="185" stroke="#58a6ff" stroke-width="1" stroke-dasharray="5,3" opacity=".55" class="flow-anim"/>
+      <line x1="153" y1="200" x2="205" y2="193" stroke="#b388ff" stroke-width="1" stroke-dasharray="5,3" opacity=".55" class="flow-anim"/>
+
+      <!-- ② PRIME -->
+      <text x="295" y="122" text-anchor="middle" fill="#8b949e" font-family="Orbitron" font-size="8" letter-spacing="2" opacity=".6">② PRIME</text>
+      <rect x="205" y="132" width="180" height="75" rx="5" fill="rgba(26,58,92,0.4)" stroke="#58a6ff" stroke-width="2"/>
+      <text x="295" y="160" text-anchor="middle" fill="#58a6ff" font-family="Orbitron" font-size="12" font-weight="700">PRIME</text>
+      <text x="295" y="177" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">SessionStart hook auto-loads</text>
+      <text x="295" y="190" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">CLAUDE.md &bull; MEMORY.md</text>
+      <text x="295" y="200" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">vault index &bull; Project Status</text>
+
+      <!-- PRIME → CLASSIFY -->
+      <line x1="385" y1="170" x2="415" y2="170" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#pfn)"/>
+
+      <!-- ③ CLASSIFY -->
+      <text x="508" y="122" text-anchor="middle" fill="#8b949e" font-family="Orbitron" font-size="8" letter-spacing="2" opacity=".6">③ CLASSIFY</text>
+      <rect x="415" y="132" width="185" height="75" rx="5" fill="rgba(26,58,92,0.35)" stroke="#58a6ff" stroke-width="2"/>
+      <text x="507" y="158" text-anchor="middle" fill="#58a6ff" font-family="Orbitron" font-size="11" font-weight="700">CLASSIFY</text>
+      <text x="507" y="174" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">route-advisory-hook.py</text>
+      <text x="507" y="187" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">[shelby-route] banner (telemetry)</text>
+      <text x="507" y="199" text-anchor="middle" fill="#f0c929" font-family="Share Tech Mono" font-size="7">inline &mdash; Maven retired S812</text>
+
+      <!-- CLASSIFY → DISPATCH -->
+      <line x1="600" y1="170" x2="630" y2="170" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#pfn)"/>
+
+      <!-- ④ DISPATCH -->
+      <text x="727" y="118" text-anchor="middle" fill="#16c79a" font-family="Orbitron" font-size="8" letter-spacing="2" opacity=".9">④ DISPATCH</text>
+      <rect x="630" y="128" width="194" height="85" rx="5" fill="rgba(10,61,46,0.45)" stroke="#16c79a" stroke-width="2.5"/>
+      <text x="727" y="155" text-anchor="middle" fill="#16c79a" font-family="Orbitron" font-size="12" font-weight="700">DISPATCH</text>
+      <text x="727" y="171" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">control point (not classifier)</text>
+      <text x="727" y="184" text-anchor="middle" fill="#16c79a" font-family="Share Tech Mono" font-size="8">auto_route → default delegate</text>
+      <text x="727" y="196" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">else → inline (majority of tasks)</text>
+      <text x="727" y="207" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">shelby-route --auto "&lt;brief&gt;"</text>
+
+      <!-- Fan-out lines from DISPATCH to dispatch primitives -->
+      <line x1="660" y1="213" x2="590" y2="280" stroke="#16c79a" stroke-width="1" stroke-dasharray="5,3" opacity=".65" class="flow-anim" marker-end="url(#pfg)"/>
+      <line x1="685" y1="213" x2="685" y2="280" stroke="#16c79a" stroke-width="1" stroke-dasharray="5,3" opacity=".65" class="flow-anim" marker-end="url(#pfg)"/>
+      <line x1="727" y1="213" x2="780" y2="280" stroke="#16c79a" stroke-width="1" stroke-dasharray="5,3" opacity=".65" class="flow-anim" marker-end="url(#pfg)"/>
+      <line x1="763" y1="213" x2="875" y2="280" stroke="#16c79a" stroke-width="1" stroke-dasharray="5,3" opacity=".65" class="flow-anim" marker-end="url(#pfg)"/>
+      <line x1="785" y1="213" x2="965" y2="280" stroke="#f0a030" stroke-width="1" stroke-dasharray="5,3" opacity=".65" class="flow-anim" marker-end="url(#pfo)"/>
+
+      <!-- Dispatch primitive boxes -->
+      <rect x="532" y="280" width="112" height="32" rx="3" fill="rgba(10,61,46,0.2)" stroke="#16c79a" stroke-width="1"/>
+      <text x="588" y="293" text-anchor="middle" fill="#16c79a" font-family="Share Tech Mono" font-size="8">Inline (Opus)</text>
+      <text x="588" y="305" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">main session</text>
+
+      <rect x="648" y="280" width="80" height="32" rx="3" fill="rgba(10,61,46,0.2)" stroke="#16c79a" stroke-width="1"/>
+      <text x="688" y="293" text-anchor="middle" fill="#16c79a" font-family="Share Tech Mono" font-size="8">Agent tool</text>
+      <text x="688" y="305" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">&rarr; summary</text>
+
+      <rect x="742" y="280" width="78" height="32" rx="3" fill="rgba(10,61,46,0.2)" stroke="#16c79a" stroke-width="1"/>
+      <text x="781" y="293" text-anchor="middle" fill="#16c79a" font-family="Share Tech Mono" font-size="8">/spawn</text>
+      <text x="781" y="305" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">&rarr; disk</text>
+
+      <rect x="834" y="280" width="110" height="32" rx="3" fill="rgba(10,61,46,0.2)" stroke="#16c79a" stroke-width="1"/>
+      <text x="889" y="293" text-anchor="middle" fill="#16c79a" font-family="Share Tech Mono" font-size="8">/codex-spawn</text>
+      <text x="889" y="305" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">Codex peer</text>
+
+      <rect x="928" y="280" width="105" height="32" rx="3" fill="rgba(61,42,10,0.2)" stroke="#f0a030" stroke-width="1"/>
+      <text x="980" y="293" text-anchor="middle" fill="#f0a030" font-family="Share Tech Mono" font-size="8">tier2-llm.py</text>
+      <text x="980" y="305" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">Gemini / Codex</text>
+
+      <!-- DISPATCH → GATES -->
+      <line x1="824" y1="170" x2="858" y2="170" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#pfn)"/>
+
+      <!-- ⑤ GATES -->
+      <text x="955" y="118" text-anchor="middle" fill="#ff6b6b" font-family="Orbitron" font-size="8" letter-spacing="2" opacity=".9">⑤ GATES</text>
+      <rect x="858" y="128" width="194" height="85" rx="5" fill="rgba(61,26,26,0.45)" stroke="#ff6b6b" stroke-width="2.5"/>
+      <text x="955" y="155" text-anchor="middle" fill="#ff6b6b" font-family="Orbitron" font-size="12" font-weight="700">GATES</text>
+      <text x="955" y="171" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">/carso (Codex adv. + 2nd opinion)</text>
+      <text x="955" y="184" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">/coso &bull; T1 adaptive_review</text>
+      <text x="955" y="197" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">T4 format_check (schema gate)</text>
+      <text x="955" y="210" text-anchor="middle" fill="#ff6b6b" font-family="Share Tech Mono" font-size="8">FIX-FIRST &rarr; loop back</text>
+
+      <!-- FIX-FIRST return arc (GATES bottom → DISPATCH bottom) -->
+      <path d="M 955 213 C 955 370 727 370 727 213" fill="none" stroke="#ff6b6b" stroke-width="1.5" stroke-dasharray="7,4" opacity=".6" class="flow-anim-rev" marker-end="url(#pfr)"/>
+      <text x="841" y="390" text-anchor="middle" fill="#ff6b6b" font-family="Share Tech Mono" font-size="8" opacity=".65">FIX-FIRST cycle</text>
+
+      <!-- GATES → SYNTHESIZE -->
+      <line x1="1052" y1="170" x2="1086" y2="170" stroke="#58a6ff" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#pfn)"/>
+
+      <!-- ⑥ SYNTHESIZE -->
+      <text x="1183" y="122" text-anchor="middle" fill="#8b949e" font-family="Orbitron" font-size="8" letter-spacing="2" opacity=".6">⑥ SYNTHESIZE</text>
+      <rect x="1086" y="132" width="194" height="75" rx="5" fill="rgba(26,58,92,0.35)" stroke="#58a6ff" stroke-width="2"/>
+      <text x="1183" y="158" text-anchor="middle" fill="#58a6ff" font-family="Orbitron" font-size="11" font-weight="700">SYNTHESIZE</text>
+      <text x="1183" y="174" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">Opus merges results</text>
+      <text x="1183" y="187" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">cross-ref: agreement/conflict/gap</text>
+      <text x="1183" y="199" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">voice profiles applied</text>
+
+      <!-- SYNTHESIZE → PERSIST -->
+      <line x1="1280" y1="170" x2="1314" y2="170" stroke="#16c79a" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#pfg)"/>
+
+      <!-- ⑦ PERSIST -->
+      <text x="1411" y="122" text-anchor="middle" fill="#8b949e" font-family="Orbitron" font-size="8" letter-spacing="2" opacity=".6">⑦ PERSIST</text>
+      <rect x="1314" y="132" width="194" height="75" rx="5" fill="rgba(10,61,46,0.35)" stroke="#16c79a" stroke-width="2"/>
+      <text x="1411" y="158" text-anchor="middle" fill="#16c79a" font-family="Orbitron" font-size="11" font-weight="700">PERSIST</text>
+      <text x="1411" y="174" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">Session Log &bull; MEMORY &bull; KB</text>
+      <text x="1411" y="187" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">git commit &bull; content/idea trackers</text>
+      <text x="1411" y="199" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">MemPalace KG &bull; memory-service</text>
+
+      <!-- PERSIST → OUTPUT -->
+      <line x1="1508" y1="170" x2="1542" y2="170" stroke="#16c79a" stroke-width="2" stroke-dasharray="8,4" class="flow-anim" marker-end="url(#pfg)"/>
+
+      <!-- ⑧ OUTPUT -->
+      <text x="1632" y="122" text-anchor="middle" fill="#8b949e" font-family="Orbitron" font-size="8" letter-spacing="2" opacity=".6">⑧ OUTPUT</text>
+      <rect x="1542" y="132" width="168" height="75" rx="5" fill="rgba(10,61,46,0.45)" stroke="#16c79a" stroke-width="2.5"/>
+      <text x="1626" y="158" text-anchor="middle" fill="#16c79a" font-family="Orbitron" font-size="12" font-weight="700">OUTPUT</text>
+      <text x="1626" y="174" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">chat &bull; voice block</text>
+      <text x="1626" y="187" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="8">WhatsApp-to-self &bull; artifact</text>
+      <text x="1626" y="199" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">deployed page &bull; Parallax draft</text>
+
+      <!-- Section footer caption -->
+      <text x="860" y="430" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9" opacity=".4">Every request travels this path &bull; GATES loops back to DISPATCH on FIX-FIRST verdict &bull; Most tasks resolve in DISPATCH as Inline (Opus)</text>
+    </svg>
+    <div class="card t-cyan" style="flex:0 0 auto;min-width:300px;max-width:360px;align-self:flex-start">
+      <div class="clabel">Stage Reference</div>
+      <div class="cdetail">
+        <table class="bp-table">
+          <tr><td class="tk" style="color:var(--cyan)">① Entry</td><td>5 paths in: CC CLI, JARVIS, EMOC, Telegram, Voice</td></tr>
+          <tr><td class="tk" style="color:var(--cyan)">② Prime</td><td>SessionStart: CLAUDE.md + MEMORY + vault index</td></tr>
+          <tr><td class="tk" style="color:var(--cyan)">③ Classify</td><td>route-advisory-hook telemetry; skill-radar candidates</td></tr>
+          <tr><td class="tk" style="color:var(--green)">④ Dispatch</td><td>control point: auto_route → delegate; else inline</td></tr>
+          <tr><td class="tk" style="color:var(--red)">⑤ Gates</td><td>/carso, /coso, T1 adaptive, T4 format_check</td></tr>
+          <tr><td class="tk" style="color:var(--cyan)">⑥ Synthesize</td><td>cross-ref agreement/conflict/gap; voice profiles</td></tr>
+          <tr><td class="tk" style="color:var(--green)">⑦ Persist</td><td>vault, git, trackers, MemPalace KG</td></tr>
+          <tr><td class="tk" style="color:var(--green)">⑧ Output</td><td>chat, voice, WhatsApp, artifact, Parallax</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ========== STATS ========== -->
 <div class="stats-bar">
   <div class="stat"><span class="sn" style="color:var(--cyan)">3</span>Machines</div>
-  <div class="stat"><span class="sn" style="color:var(--orange)">22</span>MCP Servers</div>
+  <div class="stat"><span class="sn" style="color:var(--orange)">20</span>MCP Servers</div>
   <div class="stat"><span class="sn" style="color:var(--yellow)">22</span>Plugins</div>
   <div class="stat"><span class="sn" style="color:var(--yellow)">77</span>Config Skills</div>
   <div class="stat"><span class="sn" style="color:var(--yellow)">25</span>Rules</div>
@@ -1200,8 +1336,7 @@
   <div class="stat"><span class="sn" style="color:var(--purple)">3</span>TTS Engines</div>
   <div class="stat"><span class="sn" style="color:var(--green)">2</span>GitHub Backups</div>
   <div class="stat"><span class="sn" style="color:var(--orange)">4</span>Google Accounts</div>
-  <div class="stat"><span class="sn" style="color:var(--cyan)">6</span>Dept Heads</div>
-  <div class="stat"><span class="sn" style="color:var(--orange)">5</span>Tier-2 Providers</div>
+  <div class="stat"><span class="sn" style="color:var(--orange)">3</span>Tier-2 Providers</div>
   <div class="stat"><span class="sn" style="color:var(--red)">5</span>Codex Defenses</div>
   <div class="stat"><span class="sn" style="color:var(--cyan)">723</span>Orchestrator Tests</div>
 </div>
