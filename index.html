@@ -381,7 +381,7 @@
     </div>
     <div class="card t-cyan">
       <div class="clabel">Effort + Model Architecture</div>
-      <div class="cdetail">Session floor: <span class="v">effortLevel=high</span> via launch alias + settings.json<br>Per-skill <span class="v">effort:</span> frontmatter on 44/53 skills<br>&nbsp;&bull; 30 <span class="v" style="color:var(--green)">low</span> (loaders, routine)<br>&nbsp;&bull; 14 <span class="v" style="color:var(--orange)">xhigh</span> (cycles, deep reasoning)<br>&nbsp;&bull; 9 default <span class="v">high</span><br><br>Escape hatches: <span class="v">/effort max</span>, "ultrathink" keyword, <span class="v">/effort low</span><br>xhigh only on Opus 4.7 (silent fallback to high otherwise)</div>
+      <div class="cdetail">Session floor: <span class="v">effortLevel=high</span> via launch alias + settings.json<br>Per-skill <span class="v">effort:</span> frontmatter on 44/53 skills<br>&nbsp;&bull; 30 <span class="v" style="color:var(--green)">low</span> (loaders, routine)<br>&nbsp;&bull; 14 <span class="v" style="color:var(--orange)">xhigh</span> (cycles, deep reasoning)<br>&nbsp;&bull; 9 default <span class="v">high</span><br><br>Escape hatches: <span class="v">/effort max</span>, "ultrathink" keyword, <span class="v">/effort low</span><br>xhigh only on Opus 4.8 (silent fallback to high otherwise)</div>
     </div>
     <div class="card t-cyan">
       <div class="clabel">EMOC Command Center v1 <span style="color:var(--green);font-size:9px">[LIVE]</span></div>
@@ -406,11 +406,11 @@
   <div class="section-body">
     <div class="card t-cyan" style="flex:1;min-width:400px">
       <div class="clabel">Claude Code &mdash; Dawn/Dusk</div>
-      <div class="cdetail">Model: <span class="v">Claude Opus 4.7</span> (main)<br>Launch: <span class="v">ccode</span> alias (--model claude-opus-4-7 --effort high)<br>Mobile: <span class="v">hcode</span> alias (Happy Engineering, E2E Signal-protocol)<br>Permissions: <span class="v">--dangerously-skip-permissions</span><br>Session type: <span class="v">CLAUDE_SESSION_TYPE=main</span><br>Cron: Sonnet ($0.50) &bull; Sub-agents: Sonnet 4.6 (CLAUDE_CODE_SUBAGENT_MODEL)</div>
+      <div class="cdetail">Model: <span class="v">Claude Opus 4.8</span> (main)<br>Launch: <span class="v">ccode</span> alias (--model claude-opus-4-7 --effort high)<br>Mobile: <span class="v">hcode</span> alias (Happy Engineering, E2E Signal-protocol)<br>Permissions: <span class="v">--dangerously-skip-permissions</span><br>Session type: <span class="v">CLAUDE_SESSION_TYPE=main</span><br>Cron: Sonnet ($0.50) &bull; Sub-agents: Sonnet 4.6 (CLAUDE_CODE_SUBAGENT_MODEL)</div>
     </div>
     <div class="card t-green" style="flex:1;min-width:400px">
       <div class="clabel">Claude Code &mdash; Day</div>
-      <div class="cdetail">Model: <span class="v">Claude Opus 4.7</span> (main)<br>Parallel harness: <span class="v">Codex CLI 0.125</span> (read-only context tools)<br>Automation hub: instruction watcher, relay daemon, config guard<br>Also runs: cortex cron, background agents, delegated tasks, /spawn fresh</div>
+      <div class="cdetail">Model: <span class="v">Claude Opus 4.8</span> (main)<br>Parallel harness: <span class="v">Codex CLI 0.125</span> (read-only context tools)<br>Automation hub: instruction watcher, relay daemon, config guard<br>Also runs: cortex cron, background agents, delegated tasks, /spawn fresh</div>
     </div>
     <div class="card t-cyan">
       <div class="clabel">Delegation System</div>
@@ -420,7 +420,7 @@
       <div class="clabel" style="color:var(--white);border-color:var(--border)">Model Routing</div>
       <div class="cdetail">
         <table class="bp-table">
-          <tr><td class="tk" style="color:var(--cyan);font-family:Orbitron;font-size:13px">OPUS 4.7</td><td><span class="v">Primary</span></td><td>Writing, research, architecture, security, complex reasoning</td></tr>
+          <tr><td class="tk" style="color:var(--cyan);font-family:Orbitron;font-size:13px">OPUS 4.8</td><td><span class="v">Primary</span></td><td>Writing, research, architecture, security, complex reasoning</td></tr>
           <tr><td class="tk" style="color:var(--green);font-family:Orbitron;font-size:13px">SONNET 4.6</td><td><span class="v">Delegated</span></td><td>Sub-agents (CLAUDE_CODE_SUBAGENT_MODEL), cortex cron ($0.50)</td></tr>
           <tr><td class="tk" style="color:var(--dim);font-family:Orbitron;font-size:13px">HAIKU 4.5</td><td><span class="v">Throwaway</span></td><td>Extraction, classification, validation</td></tr>
           <tr><td colspan="3" style="border-top:1px dashed var(--border);padding-top:6px;font-size:9px;color:var(--dim)">TIER 2 ROUTER (~/scripts/tier2-llm.py &mdash; 3-vendor active, S669)</td></tr>
@@ -660,7 +660,7 @@
           <tr><td class="tk" style="color:var(--orange)">mrmetaverse</td><td>[brand email]</td><td>Day :8010 / Dawn :8000</td></tr>
           <tr><td class="tk" style="color:var(--orange)">business</td><td>[org email]</td><td>Day :8011 / Dawn :8001</td></tr>
           <tr><td class="tk" style="color:var(--orange)">innovation</td><td>[org email]</td><td>Day :8012 / Dawn :8002</td></tr>
-          <tr><td class="tk" style="color:var(--orange)">difine</td><td>[consulting email]</td><td>Day :8013 / Dawn :8003</td></tr>
+          <tr><td class="tk" style="color:var(--orange)">[consulting]</td><td>[consulting email]</td><td>Day :8013 / Dawn :8003</td></tr>
         </table>
         <br>Tokens: per-account env file (chmod 600)
       </div>
@@ -1344,7 +1344,7 @@
 <!-- ========== FOOTER ========== -->
 <div class="bp-footer">
   <span>EXTENDED MIND BLUEPRINT &mdash; Aragorn Meulendijks &mdash; 2026</span>
-  <span>Claude Code (Opus 4.7) + Codex 0.128 &bull; Tailscale &bull; Obsidian &bull; Docker &bull; GitHub</span>
+  <span>Claude Code (Opus 4.8) + Codex 0.128 &bull; Tailscale &bull; Obsidian &bull; Docker &bull; GitHub</span>
   <span class="quote">"The Extended Mind is not a metaphor &mdash; it is architecture."</span>
 </div>
 
