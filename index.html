@@ -401,7 +401,7 @@
   <div class="section-head" style="border-color:var(--white);color:var(--white)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Claude Code Sessions</span>
-    <span class="scount">Opus Primary &bull; Sonnet Delegated &bull; Haiku Throwaway</span>
+    <span class="scount">Fable 5 Primary &bull; Sol/Kimi Escalation &bull; Sonnet 5 Sub-agents</span>
   </div>
   <div class="section-body">
     <div class="card t-cyan" style="flex:1;min-width:400px">
@@ -414,14 +414,18 @@
     </div>
     <div class="card t-cyan">
       <div class="clabel">Delegation System</div>
-      <div class="cdetail">Root: <span class="v">~/projects/</span> &bull; Isolated project environments<br>Launch: <span class="v">/delegate</span> &bull; Multi-task: <span class="v">/orchestrate</span><br>Default: Sonnet &bull; Production: <span class="v">--deep</span> (Opus)<br>Must unset CLAUDECODE: <span class="v">env -u CLAUDECODE</span><br>Headless: <span class="v">--permission-mode acceptEdits</span></div>
+      <div class="cdetail">Root: <span class="v">~/projects/</span> &bull; Isolated project environments<br>Launch: <span class="v">/delegate</span> &bull; Multi-task: <span class="v">/go</span><br>Default: Sonnet 5 (sub-agent floor) &bull; Production: <span class="v">--deep</span> (Fable 5)<br>Must unset CLAUDECODE: <span class="v">env -u CLAUDECODE</span><br>Headless: <span class="v">--permission-mode acceptEdits</span></div>
     </div>
     <div class="card" style="border-color:var(--border)">
       <div class="clabel" style="color:var(--white);border-color:var(--border)">Model Routing</div>
       <div class="cdetail">
         <table class="bp-table">
-          <tr><td class="tk" style="color:var(--cyan);font-family:Orbitron;font-size:13px">OPUS 4.8</td><td><span class="v">Primary</span></td><td>Writing, research, architecture, security, complex reasoning</td></tr>
-          <tr><td class="tk" style="color:var(--green);font-family:Orbitron;font-size:13px">SONNET 4.6</td><td><span class="v">Delegated</span></td><td>Sub-agents (CLAUDE_CODE_SUBAGENT_MODEL), cortex cron ($0.50)</td></tr>
+          <tr><td class="tk" style="color:var(--cyan);font-family:Orbitron;font-size:13px">FABLE 5</td><td><span class="v">Primary</span></td><td>Main session @ medium &mdash; fleetwide default (ccode, 2026-07-13)</td></tr>
+          <tr><td class="tk" style="color:var(--purple);font-family:Orbitron;font-size:12px">GPT-5.6 SOL</td><td><span class="v">Escalation</span></td><td>Harder reasoning @ xhigh &bull; second-opinion lane (/coso, /carso)</td></tr>
+          <tr><td class="tk" style="color:var(--red);font-family:Orbitron;font-size:12px">KIMI K3</td><td><span class="v">Heaviest</span></td><td>@ max &bull; adversarial review primary &bull; general delegation</td></tr>
+          <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:12px">GPT-5.6 TERRA</td><td><span class="v">Speed lane</span></td><td>Latency-sensitive tasks @ medium</td></tr>
+          <tr><td class="tk" style="color:var(--green);font-family:Orbitron;font-size:12px">SONNET 5</td><td><span class="v">Sub-agents</span></td><td>Agent-tool floor (CLAUDE_CODE_SUBAGENT_MODEL) &mdash; Claude-only lane</td></tr>
+          <tr><td colspan="3" style="font-size:9px;color:var(--dim)">Deep Research = 3&times; parallel: Kimi K3 + Gemini 3.1 Pro + GPT-5.6 Sol, cross-referenced</td></tr>
           <tr><td class="tk" style="color:var(--dim);font-family:Orbitron;font-size:13px">HAIKU 4.5</td><td><span class="v">Throwaway</span></td><td>Extraction, classification, validation</td></tr>
           <tr><td colspan="3" style="border-top:1px dashed var(--border);padding-top:6px;font-size:9px;color:var(--dim)">TIER 2 ROUTER (~/scripts/tier2-llm.py &mdash; 3-vendor active, S669)</td></tr>
           <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:11px">GEMINI FLASH-LITE</td><td><span class="v">gemini alias</span></td><td>$0.10/$0.40 MTok &bull; bulk transforms, fast</td></tr>
@@ -484,7 +488,7 @@
 
     <div class="card t-purple">
       <div class="clabel">Voice Config</div>
-      <div class="cdetail">Switch: <span class="v">/tts edge|elevenlabs|kokoro</span><br>Trigger: Stop hook &rarr; voice-hook.sh (30s)<br>Config: <span class="v">~/projects/claude-voice/scripts/config.json</span><br>Mode: <span class="v">always on</span> &mdash; every response gets &lt;voice&gt;</div>
+      <div class="cdetail">Switch: <span class="v">/tts</span> &bull; Day engine: <span class="v">pocket-tts</span> (edge / elevenlabs fallback)<br>Trigger: Stop hook &rarr; voice-hook.sh (30s)<br>Config: <span class="v">~/projects/claude-voice/scripts/config.json</span><br>Mode: <span class="v">always on</span> &mdash; every response gets &lt;voice&gt;</div>
     </div>
   </div>
 </div>
@@ -496,7 +500,7 @@
   <div class="section-head" style="border-color:var(--yellow);color:var(--yellow)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Plugin Ecosystem</span>
-    <span class="scount">15 Plugins &bull; 36 gstack Skills &bull; 55 Config Skills &bull; 23 Rules &bull; Effort Architecture</span>
+    <span class="scount">22 Plugins &bull; 36 gstack Skills &bull; 122 Config Skills &bull; 44 Rules &bull; Effort Architecture</span>
   </div>
   <div class="section-body">
     <div class="card t-yellow" style="flex:1;min-width:460px">
@@ -571,7 +575,7 @@
       <div class="cdetail"><span class="v" style="color:var(--yellow)">/ultrareview</span> &mdash; cloud multi-agent code review<br>~$20/run, ~20 min, Team/Ent billing<br>Conditional: dev-cycle 9b, web-cycle 11b, infra-cycle 7b<br>User-approval gate &bull; never default-fire<br><br><span class="v" style="color:var(--yellow)">/session-audit</span> &mdash; claude-doctor wrapper<br>Scans transcripts for anti-patterns<br>~30s, free, never auto-writes MEMORY.md<br>Conditional: cycle phase 10b/12b/8b<br>Output: <span class="v">[vault]/Config/cc-doctor/</span></div>
     </div>
     <div class="card t-yellow">
-      <div class="clabel">55 Config Skills (SKILL.md format)</div>
+      <div class="clabel">122 Config Skills (SKILL.md format)</div>
       <div class="cdetail">
         <span style="color:var(--dim);font-size:9px">Migrated from /commands/ to /skills/ (CC 2.1.88)</span><br>
         <span style="color:var(--white);font-size:10px">Session</span>
@@ -615,7 +619,7 @@
       </div>
     </div>
     <div class="card t-yellow">
-      <div class="clabel">22 Rules</div>
+      <div class="clabel">44 Rules</div>
       <div class="cdetail">
         <span class="tag" style="border-color:var(--red-dim);color:var(--red)">api-key-security</span>
         <span class="tag" style="border-color:var(--red-dim);color:var(--red)">external-data-security</span>
@@ -650,7 +654,7 @@
   <div class="section-head" style="border-color:var(--orange);color:var(--orange)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">MCP Server Ecosystem</span>
-    <span class="scount">18 Active Integrations</span>
+    <span class="scount">32 Active Integrations</span>
   </div>
   <div class="section-body">
     <div class="card t-orange" style="flex:1.3;min-width:550px">
@@ -666,23 +670,23 @@
       </div>
     </div>
     <div class="card t-orange" style="flex:1;min-width:400px">
-      <div class="clabel">Research Stack (stdio Launchers)</div>
+      <div class="clabel">Research Stack MCPs</div>
       <div class="cdetail">Launcher: <span class="v">~/scripts/*-launcher.sh</span> &bull; All 3 machines<br>Pattern: source env file (chmod 600) &rarr; exec <span class="v">npx -y &lt;package&gt;</span><br><br>
         <table class="bp-table">
-          <tr><td class="tk" style="color:var(--orange)">tavily</td><td>AI search</td><td style="color:var(--dim)">stdio</td></tr>
-          <tr><td class="tk" style="color:var(--orange)">exa</td><td>Neural search</td><td style="color:var(--dim)">stdio</td></tr>
-          <tr><td class="tk" style="color:var(--orange)">firecrawl</td><td>Web scraping</td><td style="color:var(--dim)">stdio</td></tr>
-          <tr><td class="tk" style="color:var(--orange)">gemini-design</td><td>Deep research + multi-modal</td><td style="color:var(--dim)">stdio</td></tr>
+          <tr><td class="tk" style="color:var(--orange)">parallel-search</td><td>Web search + fetch</td><td style="color:var(--dim)">remote</td></tr>
+          <tr><td class="tk" style="color:var(--orange)">arxiv / semantic-scholar</td><td>Papers, citations, semantic search</td><td style="color:var(--dim)">mcp</td></tr>
+          <tr><td class="tk" style="color:var(--orange)">alphavantage / fred / helium</td><td>Markets, macro data, news bias</td><td style="color:var(--dim)">mcp</td></tr>
+          <tr><td class="tk" style="color:var(--orange)">huggingface / ms-learn / open-targets</td><td>Models, MS docs, biomed</td><td style="color:var(--dim)">mcp</td></tr>
         </table>
       </div>
     </div>
     <div class="card t-orange">
       <div class="clabel">Messaging MCP</div>
-      <div class="cdetail"><span class="v" style="color:var(--green)">WhatsApp</span> &mdash; Day only, Bun + TS<br>&nbsp;Auth: ~/.whatsapp-auth/<br>&nbsp;Groups: groupFetchAllParticipating()</div>
+      <div class="cdetail"><span class="v" style="color:var(--green)">WhatsApp</span> &mdash; Day only, Bun + TS (whatsapp-mcp-bun)<br>&nbsp;Shelby runs its <span class="v">own WA account</span> (since 2026-07-17)<br>&nbsp;Owner sends resolve LID via owner-send helper &mdash; never phone JID<br><br><span class="v">hermes</span> &mdash; Telegram / Discord / Slack / Signal bridge</div>
     </div>
     <div class="card t-orange">
-      <div class="clabel">Gemini Design MCP</div>
-      <div class="cdetail"><span class="v">gemini-design</span> &mdash; multi-modal AI<br>Image gen/edit, video gen, deep research, TTS<br>Code execution, URL analysis, YouTube summaries<br>Caching, structured output, brainstorming</div>
+      <div class="clabel">Media Generation MCPs</div>
+      <div class="cdetail"><span class="v">higgsfield</span> + <span class="v">magnific</span> &mdash; subscription image/video (Seedance 2.0)<br><span class="v">seedance-byteplus</span> &mdash; LAST-RESORT tier (postpaid confirm required)<br><span class="v">heygen</span> &mdash; avatar video &bull; <span class="v">video-grab</span> &mdash; download / reels<br>Spend ladder (2026-07-16): subscription &rarr; prepaid fal &rarr; BytePlus<br>Image primary: <span class="v">GPT-image-2</span> (Image Forge)</div>
     </div>
     <div class="card t-orange">
       <div class="clabel">Context7 MCP</div>
@@ -690,11 +694,11 @@
     </div>
     <div class="card t-orange">
       <div class="clabel">Tier 2 LLM Router</div>
-      <div class="cdetail">Wrapper: <span class="v">[home]/scripts/tier2-llm.py</span> (stdlib-only)<br>Active fallback order: <span class="v">gemini &rarr; gemini-pro &rarr; Codex &rarr; Opus</span><br><br>3 active providers (S669):<br>&bull; <span class="v">gemini-2.5-flash-lite</span> (<span class="v">gemini</span> alias) &mdash; $0.10/$0.40, bulk transforms, fast<br>&bull; <span class="v">gemini-3.5-flash</span> (<span class="v">gemini-pro</span> alias) &mdash; $1.50/$9.00, frontier reasoning + grounding<br>&bull; <span class="v">Codex GPT-5.5</span> &mdash; terminal/long-context/bulk specialist<br><br>Others disabled S669 (Lemonade, Groq, Mistral, Perplexity, Sonnet) &mdash; preserved in code for re-enable<br>Skill: <span class="v">shelby-llm-delegation</span></div>
+      <div class="cdetail">Wrapper: <span class="v">[home]/scripts/tier2-llm.py</span> (stdlib-only)<br>Active fallback order: <span class="v">gemini &rarr; gemini-pro &rarr; Codex &rarr; Opus</span><br><br>3 active providers (S669):<br>&bull; <span class="v">gemini-2.5-flash-lite</span> (<span class="v">gemini</span> alias) &mdash; $0.10/$0.40, bulk transforms, fast<br>&bull; <span class="v">gemini-3.5-flash</span> (<span class="v">gemini-pro</span> alias) &mdash; $1.50/$9.00, frontier reasoning + grounding<br>&bull; <span class="v">Codex GPT-5.5</span> &mdash; terminal/long-context/bulk specialist<br>&bull; <span class="v">Kimi K3</span> &mdash; CLI delegation on subscription OAuth; metered <span class="v">kimi</span> alias = fallback only<br><br>Others disabled S669 (Lemonade, Groq, Mistral, Perplexity, Sonnet) &mdash; preserved in code for re-enable<br>Skill: <span class="v">shelby-llm-delegation</span></div>
     </div>
     <div class="card t-orange">
       <div class="clabel">Utility MCP</div>
-      <div class="cdetail"><span class="v">mcp-memory-service</span> &mdash; hybrid BM25+vector search<br>Docker on Day :8765, Streamable HTTP<br>Local ONNX MiniLM-L6-v2 embeddings<br><br><span class="v">sequential-thinking</span> &mdash; structured reasoning<br>Launcher script + pkill cleanup<br><br>Config: <span class="v">~/.claude.json</span></div>
+      <div class="cdetail"><span class="v">mcp-memory-service</span> &mdash; hybrid BM25+vector search<br>Docker on Day :8765, Streamable HTTP<br>Local ONNX MiniLM-L6-v2 embeddings<br><br><span class="v">sequential-thinking</span> &mdash; structured reasoning<br>Launcher script + pkill cleanup<br><br><span class="v">work-registry</span> &bull; <span class="v">headroom</span> &bull; <span class="v">mermaid</span> &bull; <span class="v">context-mode</span><br>Config: <span class="v">~/.claude.json</span></div>
     </div>
     <div class="card t-orange">
       <div class="clabel">MemPalace MCP v3 <span style="color:var(--red);font-size:9px">[bearer-auth]</span></div>
@@ -746,16 +750,24 @@
   <div class="section-head" style="border-color:var(--red);color:var(--red)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Codex Parallel Harness</span>
-    <span class="scount">CLI 0.125 &bull; 5-Layer Defense-in-Depth &bull; Day Only</span>
+    <span class="scount">4 Peer Harnesses &mdash; Codex &bull; Grok &bull; Kimi &bull; 5-Layer Defense-in-Depth</span>
   </div>
   <div class="section-body">
     <div class="card t-red" style="flex:1.2;min-width:520px">
       <div class="clabel">Codex CLI 0.125 (parallel to Claude Code)</div>
-      <div class="cdetail">Runs alongside Claude Code on Day<br>Read-only context tools only &mdash; <span class="v">no Gmail/Drive/Calendar/WhatsApp</span><br><br><span class="v" style="color:var(--red)">5-layer defense-in-depth:</span><br>1. <span class="v">Prompt allowlist</span><br>2. <span class="v">Sandbox deny_read</span> rules<br>3. <span class="v">Tool-call hook</span> (codex-guard-hook.py)<br>4. <span class="v">HMAC integrity</span> on AGENTS-shelby.md<br>5. <span class="v">MCP capability scoping</span> (read-only)<br><br>Vault canonicals (no symlinks &mdash; Obsidian Sync):<br>&bull; <span class="v">[vault]/Config/AGENTS-shelby.md</span><br>&bull; <span class="v">[vault]/Config/templates/codex-config.toml.tpl</span><br>&bull; <span class="v">[vault]/Config/scripts/codex-install-day.sh</span><br>&bull; <span class="v">[vault]/Config/scripts/codex-guard-hook.py</span><br>&bull; <span class="v">[vault]/Config/scripts/check-agent-sync.py</span></div>
+      <div class="cdetail">Runs alongside Claude Code on Day<br>Read-only context tools only &mdash; <span class="v">no Gmail/Drive/Calendar/WhatsApp</span><br><br><span class="v" style="color:var(--red)">5-layer defense-in-depth:</span><br>1. <span class="v">Prompt allowlist</span><br>2. <span class="v">Sandbox deny_read</span> rules<br>3. <span class="v">Tool-call hook</span> (codex-guard-hook.py)<br>4. <span class="v">HMAC integrity</span> on AGENTS-shelby.md<br>5. <span class="v">MCP capability scoping</span> (read-only)<br><br>Vault canonicals (no symlinks &mdash; vault-git-sync):<br>&bull; <span class="v">[vault]/Config/AGENTS-shelby.md</span><br>&bull; <span class="v">[vault]/Config/templates/codex-config.toml.tpl</span><br>&bull; <span class="v">[vault]/Config/scripts/codex-install-day.sh</span><br>&bull; <span class="v">[vault]/Config/scripts/codex-guard-hook.py</span><br>&bull; <span class="v">[vault]/Config/scripts/check-agent-sync.py</span></div>
     </div>
     <div class="card t-red" style="flex:1;min-width:340px">
       <div class="clabel">Codex MCP Profile (intentionally narrow)</div>
       <div class="cdetail"><span class="v" style="color:var(--green)">Allowed (read-only):</span><br>&bull; <span class="v">context7</span> &mdash; library docs<br>&bull; <span class="v">memory_service</span> (search-only)<br>&bull; <span class="v">mempalace</span> (search-only)<br><br><span class="v" style="color:var(--red)">Blocked:</span><br>Gmail, Drive, Calendar, WhatsApp, write-mutate access<br><br>Install (idempotent): <span class="v">bash [vault]/Config/scripts/codex-install-day.sh</span></div>
+    </div>
+    <div class="card t-red" style="flex:1;min-width:340px">
+      <div class="clabel">Grok CLI &mdash; Full Shelby Driver</div>
+      <div class="cdetail">xAI Grok CLI, fleetwide &mdash; 137 skill adapters in <span class="v">~/.grok/skills</span><br>Auth: grok.com OAuth subscription (no paid API credits)<br>Roles: adversarial review panels (/carso, /coso), peer harness<br>Peer harnesses are never re-walled as a &quot;security fix&quot;</div>
+    </div>
+    <div class="card t-red" style="flex:1;min-width:340px">
+      <div class="clabel">Kimi Code CLI &mdash; Fourth Peer (2026-07-16)</div>
+      <div class="cdetail">Moonshot Kimi K3 &mdash; heaviest reasoning tier (@max)<br>Skills auto-discovered from <span class="v">~/.claude/skills</span><br>MCP rendered per-client &bull; relay agent &quot;kimi&quot;<br>Billing: subscription OAuth; metered API = fallback only</div>
     </div>
     <div class="card t-red" style="flex:1.5;min-width:520px">
       <div class="clabel">shelby-route v2 &mdash; Auto-routing layer (Day-only)</div>
@@ -798,7 +810,7 @@
   <div class="section-head" style="border-color:var(--green);color:var(--green)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Automation &amp; Cron</span>
-    <span class="scount">15+ launchd Jobs &bull; Cron + Self-Healing Daemons &bull; Backup Systems</span>
+    <span class="scount">120+ launchd Jobs &bull; Cron + Self-Healing Daemons &bull; Backup Systems</span>
   </div>
   <div class="section-body">
     <div class="card t-green" style="flex:1;min-width:460px">
@@ -915,12 +927,12 @@
   <div class="section-head" style="border-color:var(--orange);color:var(--orange)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Cloud Layer</span>
-    <span class="scount">Obsidian Sync &bull; Google Cloud &bull; Connectors &bull; Self-Hosted Apps</span>
+    <span class="scount">vault-git-sync &bull; Google Cloud &bull; Connectors &bull; Self-Hosted Apps</span>
   </div>
   <div class="section-body">
     <div class="card t-green">
-      <div class="clabel">Obsidian Sync</div>
-      <div class="cdetail"><span class="v">End-to-end encrypted vault sync</span><br>Propagation: seconds to minutes<br>Ignores dotfiles (config uses non-dot names)<br><span class="v">Source of truth for all 3 machines</span></div>
+      <div class="clabel">vault-git-sync <span style="color:var(--red);font-size:9px">[Obsidian Sync RETIRED 2026-06-10]</span></div>
+      <div class="cdetail"><span class="v">Canonical sync plane: vault-git-sync</span> &mdash; push &rarr; Day merge &rarr; pull-apply<br>launchd / systemd timers on all 3 machines<br>Obsidian Sync dead as infra (10GB cap hit 2026-06-10)<br><span class="v">Vault git mirror = source of truth for all 3 machines</span><br><span class="v">Vault-LD KG</span>: /kg SPARQL projection &bull; nightly 03:30 + /wrap refresh</div>
     </div>
     <div class="card t-orange">
       <div class="clabel">Google Cloud Platform</div>
@@ -1327,12 +1339,12 @@
 <!-- ========== STATS ========== -->
 <div class="stats-bar">
   <div class="stat"><span class="sn" style="color:var(--cyan)">3</span>Machines</div>
-  <div class="stat"><span class="sn" style="color:var(--orange)">20</span>MCP Servers</div>
+  <div class="stat"><span class="sn" style="color:var(--orange)">32</span>MCP Servers</div>
   <div class="stat"><span class="sn" style="color:var(--yellow)">22</span>Plugins</div>
-  <div class="stat"><span class="sn" style="color:var(--yellow)">77</span>Config Skills</div>
-  <div class="stat"><span class="sn" style="color:var(--yellow)">25</span>Rules</div>
+  <div class="stat"><span class="sn" style="color:var(--yellow)">122</span>Config Skills</div>
+  <div class="stat"><span class="sn" style="color:var(--yellow)">44</span>Rules</div>
   <div class="stat"><span class="sn" style="color:var(--red)">6</span>Hook Events</div>
-  <div class="stat"><span class="sn" style="color:var(--green)">15+</span>Day Daemons</div>
+  <div class="stat"><span class="sn" style="color:var(--green)">120+</span>Day Daemons</div>
   <div class="stat"><span class="sn" style="color:var(--purple)">3</span>TTS Engines</div>
   <div class="stat"><span class="sn" style="color:var(--green)">2</span>GitHub Backups</div>
   <div class="stat"><span class="sn" style="color:var(--orange)">4</span>Google Accounts</div>
@@ -1344,7 +1356,7 @@
 <!-- ========== FOOTER ========== -->
 <div class="bp-footer">
   <span>EXTENDED MIND BLUEPRINT &mdash; Aragorn Meulendijks &mdash; 2026</span>
-  <span>Claude Code (Opus 4.8) + Codex 0.128 &bull; Tailscale &bull; Obsidian &bull; Docker &bull; GitHub</span>
+  <span>Claude Code (Fable 5) + Codex + Grok + Kimi &bull; Tailscale &bull; Obsidian &bull; Docker &bull; GitHub</span>
   <span class="quote">"The Extended Mind is not a metaphor &mdash; it is architecture."</span>
 </div>
 
