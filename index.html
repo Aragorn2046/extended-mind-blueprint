@@ -381,7 +381,7 @@
     </div>
     <div class="card t-cyan">
       <div class="clabel">Effort + Model Architecture</div>
-      <div class="cdetail">Session floor: <span class="v">effortLevel=high</span> via launch alias + settings.json<br>Per-skill <span class="v">effort:</span> frontmatter on 44/53 skills<br>&nbsp;&bull; 30 <span class="v" style="color:var(--green)">low</span> (loaders, routine)<br>&nbsp;&bull; 14 <span class="v" style="color:var(--orange)">xhigh</span> (cycles, deep reasoning)<br>&nbsp;&bull; 9 default <span class="v">high</span><br><br>Escape hatches: <span class="v">/effort max</span>, "ultrathink" keyword, <span class="v">/effort low</span><br>xhigh reserved for top-tier Claude (Fable 5); silent fallback to high otherwise</div>
+      <div class="cdetail">Session floor: <span class="v">effortLevel=high</span> via launch alias + settings.json<br>Per-skill <span class="v">effort:</span> frontmatter on 44/53 skills<br>&nbsp;&bull; 30 <span class="v" style="color:var(--green)">low</span> (loaders, routine)<br>&nbsp;&bull; 14 <span class="v" style="color:var(--orange)">xhigh</span> (cycles, deep reasoning)<br>&nbsp;&bull; 9 default <span class="v">high</span><br><br>Escape hatches: <span class="v">/effort max</span>, "ultrathink" keyword, <span class="v">/effort low</span><br>xhigh reserved for top-tier Claude (Opus 5); silent fallback to high otherwise</div>
     </div>
     <div class="card t-cyan">
       <div class="clabel">EMOC Command Center v1 <span style="color:var(--green);font-size:9px">[LIVE]</span></div>
@@ -401,26 +401,27 @@
   <div class="section-head" style="border-color:var(--white);color:var(--white)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Claude Code Sessions</span>
-    <span class="scount">Fable 5 Primary &bull; Sol/Kimi Escalation &bull; Sonnet 5 Sub-agents</span>
+    <span class="scount">Opus 5 Primary &bull; Sol/Kimi Escalation &bull; Sonnet 5 Sub-agents</span>
   </div>
   <div class="section-body">
     <div class="card t-cyan" style="flex:1;min-width:400px">
       <div class="clabel">Claude Code &mdash; Dawn/Dusk</div>
-      <div class="cdetail">Model: <span class="v">Fable 5</span> @ medium (main)<br>Launch: <span class="v">ccode</span> alias (--model fable --effort medium --permission-mode auto)<br>Mobile: <span class="v">hcode</span> alias (Happy Engineering, E2E Signal-protocol)<br>Permissions: <span class="v">--dangerously-skip-permissions</span><br>Session type: <span class="v">CLAUDE_SESSION_TYPE=main</span><br>Cron: gemini-pro (tier2) &bull; Sub-agents: Sonnet 5 (CLAUDE_CODE_SUBAGENT_MODEL)</div>
+      <div class="cdetail">Model: <span class="v">Opus 5</span> @ medium (main)<br>Launch: <span class="v">ccode</span> alias (--model fable --effort medium --permission-mode auto)<br>Mobile: <span class="v">hcode</span> alias (Happy Engineering, E2E Signal-protocol)<br>Permissions: <span class="v">--dangerously-skip-permissions</span><br>Session type: <span class="v">CLAUDE_SESSION_TYPE=main</span><br>Cron: gemini-pro (tier2) &bull; Sub-agents: Sonnet 5 (CLAUDE_CODE_SUBAGENT_MODEL)</div>
     </div>
     <div class="card t-green" style="flex:1;min-width:400px">
       <div class="clabel">Claude Code &mdash; Day</div>
-      <div class="cdetail">Model: <span class="v">Fable 5</span> @ medium (main)<br>Parallel harness: <span class="v">Codex CLI 0.125</span> (read-only context tools)<br>Automation hub: instruction watcher, relay daemon, config guard<br>Also runs: cortex cron, background agents, delegated tasks, /spawn fresh</div>
+      <div class="cdetail">Model: <span class="v">Opus 5</span> @ medium (main)<br>Parallel harness: <span class="v">Codex CLI 0.133</span> (read-only context tools)<br>Automation hub: instruction watcher, relay daemon, config guard<br>Also runs: cortex cron, background agents, delegated tasks, /spawn fresh</div>
     </div>
     <div class="card t-cyan">
       <div class="clabel">Delegation System</div>
-      <div class="cdetail">Root: <span class="v">~/projects/</span> &bull; Isolated project environments<br>Launch: <span class="v">/delegate</span> &bull; Multi-task: <span class="v">/go</span><br>Default: Sonnet 5 (sub-agent floor) &bull; Production: <span class="v">--deep</span> (Fable 5)<br>Must unset CLAUDECODE: <span class="v">env -u CLAUDECODE</span><br>Headless: <span class="v">--permission-mode acceptEdits</span></div>
+      <div class="cdetail">Root: <span class="v">~/projects/</span> &bull; Isolated project environments<br>Launch: <span class="v">/delegate</span> &bull; Multi-task: <span class="v">/go</span><br>Default: Sonnet 5 (sub-agent floor) &bull; Production: <span class="v">--deep</span> (Opus 5)<br>Must unset CLAUDECODE: <span class="v">env -u CLAUDECODE</span><br>Headless: <span class="v">--permission-mode acceptEdits</span></div>
     </div>
     <div class="card" style="border-color:var(--border)">
       <div class="clabel" style="color:var(--white);border-color:var(--border)">Model Routing</div>
       <div class="cdetail">
         <table class="bp-table">
-          <tr><td class="tk" style="color:var(--cyan);font-family:Orbitron;font-size:13px">FABLE 5</td><td><span class="v">Primary</span></td><td>Main session @ medium &mdash; fleetwide default (ccode, 2026-07-13)</td></tr>
+          <tr><td class="tk" style="color:var(--cyan);font-family:Orbitron;font-size:13px">OPUS 5</td><td><span class="v">Primary</span></td><td>Main session @ ultracode (xhigh + dynamic multi-agent workflows) &mdash; interactive default since 2026-07-24</td></tr>
+          <tr><td class="tk" style="color:var(--cyan);font-family:Orbitron;font-size:12px">FABLE 5</td><td><span class="v">In-family fallback</span></td><td>@ medium &mdash; demoted from default 2026-07-24; downgrade-guards retained</td></tr>
           <tr><td class="tk" style="color:var(--purple);font-family:Orbitron;font-size:12px">GPT-5.6 SOL</td><td><span class="v">Escalation</span></td><td>Harder reasoning @ xhigh &bull; second-opinion lane (/coso, /carso)</td></tr>
           <tr><td class="tk" style="color:var(--red);font-family:Orbitron;font-size:12px">KIMI K3</td><td><span class="v">Heaviest</span></td><td>@ max &bull; adversarial review primary &bull; general delegation</td></tr>
           <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:12px">GPT-5.6 TERRA</td><td><span class="v">Speed lane</span></td><td>Latency-sensitive tasks @ medium</td></tr>
@@ -500,7 +501,7 @@
   <div class="section-head" style="border-color:var(--yellow);color:var(--yellow)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Plugin Ecosystem</span>
-    <span class="scount">22 Plugins &bull; 36 gstack Skills &bull; 122 Config Skills &bull; 44 Rules &bull; Effort Architecture</span>
+    <span class="scount">22 Plugins &bull; 36 gstack Skills &bull; 126 Config Skills &bull; 45 Rules &bull; Effort Architecture</span>
   </div>
   <div class="section-body">
     <div class="card t-yellow" style="flex:1;min-width:460px">
@@ -575,7 +576,7 @@
       <div class="cdetail"><span class="v" style="color:var(--yellow)">/ultrareview</span> &mdash; cloud multi-agent code review<br>~$20/run, ~20 min, Team/Ent billing<br>Conditional: dev-cycle 9b, web-cycle 11b, infra-cycle 7b<br>User-approval gate &bull; never default-fire<br><br><span class="v" style="color:var(--yellow)">/session-audit</span> &mdash; claude-doctor wrapper<br>Scans transcripts for anti-patterns<br>~30s, free, never auto-writes MEMORY.md<br>Conditional: cycle phase 10b/12b/8b<br>Output: <span class="v">[vault]/Config/cc-doctor/</span></div>
     </div>
     <div class="card t-yellow">
-      <div class="clabel">122 Config Skills (SKILL.md format)</div>
+      <div class="clabel">126 Config Skills (SKILL.md format)</div>
       <div class="cdetail">
         <span style="color:var(--dim);font-size:9px">Migrated from /commands/ to /skills/ (CC 2.1.88)</span><br>
         <span style="color:var(--white);font-size:10px">Session</span>
@@ -619,7 +620,7 @@
       </div>
     </div>
     <div class="card t-yellow">
-      <div class="clabel">44 Rules</div>
+      <div class="clabel">45 Rules</div>
       <div class="cdetail">
         <span class="tag" style="border-color:var(--red-dim);color:var(--red)">api-key-security</span>
         <span class="tag" style="border-color:var(--red-dim);color:var(--red)">external-data-security</span>
@@ -654,7 +655,7 @@
   <div class="section-head" style="border-color:var(--orange);color:var(--orange)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">MCP Server Ecosystem</span>
-    <span class="scount">32 Active Integrations</span>
+    <span class="scount">41 Active Integrations</span>
   </div>
   <div class="section-body">
     <div class="card t-orange" style="flex:1.3;min-width:550px">
@@ -754,7 +755,7 @@
   </div>
   <div class="section-body">
     <div class="card t-red" style="flex:1.2;min-width:520px">
-      <div class="clabel">Codex CLI 0.125 (parallel to Claude Code)</div>
+      <div class="clabel">Codex CLI 0.133 (parallel to Claude Code)</div>
       <div class="cdetail">Runs alongside Claude Code on Day<br>Read-only context tools only &mdash; <span class="v">no Gmail/Drive/Calendar/WhatsApp</span><br><br><span class="v" style="color:var(--red)">5-layer defense-in-depth:</span><br>1. <span class="v">Prompt allowlist</span><br>2. <span class="v">Sandbox deny_read</span> rules<br>3. <span class="v">Tool-call hook</span> (codex-guard-hook.py)<br>4. <span class="v">HMAC integrity</span> on AGENTS-shelby.md<br>5. <span class="v">MCP capability scoping</span> (read-only)<br><br>Vault canonicals (no symlinks &mdash; vault-git-sync):<br>&bull; <span class="v">[vault]/Config/AGENTS-shelby.md</span><br>&bull; <span class="v">[vault]/Config/templates/codex-config.toml.tpl</span><br>&bull; <span class="v">[vault]/Config/scripts/codex-install-day.sh</span><br>&bull; <span class="v">[vault]/Config/scripts/codex-guard-hook.py</span><br>&bull; <span class="v">[vault]/Config/scripts/check-agent-sync.py</span></div>
     </div>
     <div class="card t-red" style="flex:1;min-width:340px">
@@ -1140,7 +1141,7 @@
           <span class="tag" style="border-color:var(--green);color:var(--green)">AmneziaWG :443/UDP</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">Caddy *arr proxy</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">Tailscale Drive auto-mount</span>
-          <span class="tag" style="border-color:var(--green);color:var(--green)">Codex CLI 0.125</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">Codex CLI 0.133</span>
         </div>
       </div>
     </div>
@@ -1172,6 +1173,97 @@
 <!-- ============================================================ -->
 <!-- SECTION: PROMPT FLOW -->
 <!-- ============================================================ -->
+<div class="section" id="sec-pipelines">
+  <div class="section-head" style="border-color:var(--yellow);color:var(--yellow)" onclick="toggle(this)">
+    <span class="arrow">&#9660;</span>
+    <span class="stitle">Pipelines, Portals &amp; Knowledge Plane</span>
+    <span class="scount">Capture &rarr; Route &rarr; Produce &rarr; Publish &bull; Autonomous lanes</span>
+  </div>
+  <div class="section-body">
+
+    <div class="card t-cyan">
+      <div class="clabel">Cortex Capture [LIVE]</div>
+      <div class="cdetail">Offline-first phone capture PWA &mdash; text, photo, screenshot.<br><br>Public host: <span class="v">cortex.apps.itsmrmetaverse.com</span><br>Service worker + valid TLS = true offline capture<br>Boards at <span class="v">?board=1</span> (Content &bull; Ideas)<br><br>Day is the only write plane. Captures queue locally and drain when the device reconnects.<br><br><span style="opacity:.5;font-size:9px">Legacy :8443 front decommissioned 2026-06-15 &mdash; do not revive</span></div>
+    </div>
+
+    <div class="card t-cyan">
+      <div class="clabel">BEAM &mdash; Mobile Session Spawning</div>
+      <div class="cdetail">Start a full working session from the phone and walk away.<br><br>Mobile trigger &rarr; tmux session spawn<br>Subtree-aware capacity limits<br>Tombstone-gated reaping (no kill without a recorded state)<br>Workflow-cycle routing from the brief<br><br><span class="v">202 = queued-at-capacity</span>, working as designed &mdash; the reaper frees squatted slots.</div>
+    </div>
+
+    <div class="card t-cyan">
+      <div class="clabel">Shelby WhatsApp Channel</div>
+      <div class="cdetail">Shelby holds its <span class="v">own</span> WhatsApp account &mdash; two-way command + status with Aragorn.<br><br>Polling loop with instant queued-acks<br>Sender authorization by JID, never display name<br>Plain-language, action-first output gate<br><br><span class="v">WhatsApp INFORMS, never approves</span> &mdash; every decision gate is raised in the live session; no reply-grammar approvals.</div>
+    </div>
+
+    <div class="card t-cyan">
+      <div class="clabel">Keynote Cockpits</div>
+      <div class="cdetail">One private prep site per speaking engagement.<br><br>Researches the event from mail, calendar, meeting transcripts and chat via isolated sub-agents<br>Dark bento dashboard: event facts, audience, topic, logistics, contacts, countdown, live to-do<br>Tailnet-private hosting on the named-URL stack<br>Index of all engagements at <span class="v">keynotes.apps.itsmrmetaverse.com</span></div>
+    </div>
+
+    <div class="card t-yellow">
+      <div class="clabel">Content Command Center (CCC)</div>
+      <div class="cdetail">Day's five-platform publishing plane.<br><br>Schedule &bull; approve &bull; publish &bull; measure<br>TikTok routed through the approved partner app, not CCC's own<br>Caption appenders reserve space <span class="v">before</span> trim &mdash; never cut a URL<br>Production runs from a <span class="v">pinned worktree</span> via its own deploy script, never the shared checkout</div>
+    </div>
+
+    <div class="card t-yellow">
+      <div class="clabel">Reel Production Lane</div>
+      <div class="cdetail">Recording &rarr; captioned vertical reel, fully automated.<br><br>Cold-open hook (climax &rarr; transition &rarr; full clip)<br><span class="v">Subject-aware crop</span> &mdash; frames the person, never blind-centres<br>Burned-in captions on every talking-head cut<br>Evidence-only lower-thirds + source banner on third-party footage<br>Every text element verified on a rendered frame<br><br>Weekly Revolutie Robotica lane: Tuesday build &rarr; CCC Wed&ndash;Sat.</div>
+    </div>
+
+    <div class="card t-yellow">
+      <div class="clabel">Autonomous Intel &amp; Back Office</div>
+      <div class="cdetail"><span class="v">Intel Radar</span> &mdash; daily AI/robotics/exponential sweep, filtered through Aragorn's own theses<br><span class="v">Lead Sweep</span> &mdash; weekly inbox sweep across the brand + venture accounts, sandboxed sub-agents<br><span class="v">Scheduling Loop</span> &mdash; watches registered scheduling threads, parses replies in a quarantined model, takes pre-validated actions<br><span class="v">Deep Research</span> &mdash; three models in parallel, cross-referenced</div>
+    </div>
+
+    <div class="card t-green">
+      <div class="clabel">AI-Wiki &mdash; Self-Compiling Manual</div>
+      <div class="cdetail">The system writes its own encyclopedia.<br><br>Raw session material drops into an inbox; a model compiles it into wiki articles<br><span class="v">102 articles</span>, hourly auto-compile, Day primary<br>Stale-article flagging + verify-by dates<br><br>Karpathy wiki pattern &mdash; a compiled markdown encyclopedia in place of pure RAG.</div>
+    </div>
+
+    <div class="card t-green">
+      <div class="clabel">Knowledge Enforcement Stack</div>
+      <div class="cdetail">Query order is enforced, not suggested:<br><span class="v">INDEX &rarr; compiled page &rarr; semantic search &rarr; graph &rarr; immutable source</span><br><br>Conflicting sources are never silently resolved &mdash; they are logged as open contradictions and linted nightly.<br><br><span class="v">Vault-LD</span> &mdash; RDF projection of the vault, SPARQL-queryable typed relationships and provenance chains.</div>
+    </div>
+
+    <div class="card t-green">
+      <div class="clabel">turbovec &mdash; Vector Index</div>
+      <div class="cdetail">Default vector-index library for new Shelby RAG features.<br><br>Rust TurboQuant index, Python bindings<br>~8&times; memory compression vs float32<br>Beats FAISS on ARM &bull; online ingest &bull; fully local, air-gappable<br><br>Existing brains keep their own engines; turbovec is the forward default.</div>
+    </div>
+
+    <div class="card t-green">
+      <div class="clabel">work-registry</div>
+      <div class="cdetail">Cross-machine work-item tracking &mdash; the cure for phantom carry-forwards.<br><br>Single source of open work across every session and machine<br>Commit-message auto-close hook<br>Nightly reconciler + projection<br>CLI available fleetwide<br><br>Answers &ldquo;is this actually still open?&rdquo; with data instead of memory.</div>
+    </div>
+
+    <div class="card t-red">
+      <div class="clabel">Session Lifecycle Ledger</div>
+      <div class="cdetail">Cross-harness disposition ledger.<br><br><span class="v">No kill without a tombstone</span> &mdash; the reaper records state before it acts, and fails closed<br>Multi-signal liveness: a human reading draws ~0 CPU, so CPU alone never proves death<br>Immutable lifecycle events + recovery projections<br><br>Shared devices prove life, never death.</div>
+    </div>
+
+    <div class="card t-red">
+      <div class="clabel">Model Routing Control Plane</div>
+      <div class="cdetail">Routing is configuration, not code.<br><br>Revisioned routing state edited through a guarded store &mdash; never hand-edited<br><span class="v">Per-model reasoning level</span>: each model row carries its own effort, validated against that vendor's vocabulary<br>Primary + ordered fallback chain, applied per rung at spawn time<br>Live in the command-centre UI</div>
+    </div>
+
+    <div class="card t-red">
+      <div class="clabel">Adversarial Review Gates</div>
+      <div class="cdetail">Nothing load-bearing ships on one model's opinion.<br><br><span class="v">Code / pre-ship</span> &mdash; a heavyweight adversarial reviewer plus an independent senior second opinion, synthesized to SHIP / FIX-FIRST / RECONSIDER<br><span class="v">Anything else</span> &mdash; diagnoses, strategy, architecture, drafts get the same cross-vendor challenge<br>Provider-neutral fallback fills two heterogeneous seats in quality order<br><br>Convergence between vendors is weighted highest.</div>
+    </div>
+
+    <div class="card t-red">
+      <div class="clabel">Autonomous Dispatch Lane</div>
+      <div class="cdetail"><span class="v">autocortex</span> &mdash; captured items dispatch themselves into real sessions, behind three explicit safety gates<br><span class="v">relay-dispatcher</span> &mdash; tool-stripped worker executing delegated agent-to-agent work<br><br>Provenance rule: a terminal pane is <span class="v">not</span> a clean channel &mdash; an untrusted worker's answer is never parsed from rendered output, only from an authenticated side-channel.</div>
+    </div>
+
+    <div class="card t-cyan">
+      <div class="clabel">Portless &amp; localship</div>
+      <div class="cdetail"><span class="v">Portless</span> &mdash; stable named <span class="v">.localhost</span> URLs replace remembered port numbers for every local service.<br><br><span class="v">localship</span> &mdash; per-worktree dev isolation: each branch gets its own ports, database, environment, session and tunnel, plus a kanban hub. Parallel agents stop colliding.</div>
+    </div>
+
+  </div>
+</div>
+
 <div class="section" id="sec-promptflow">
   <div class="section-head" style="border-color:var(--cyan);color:var(--cyan)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
@@ -1247,7 +1339,7 @@
 
       <!-- Dispatch primitive boxes -->
       <rect x="532" y="280" width="112" height="32" rx="3" fill="rgba(10,61,46,0.2)" stroke="#16c79a" stroke-width="1"/>
-      <text x="588" y="293" text-anchor="middle" fill="#16c79a" font-family="Share Tech Mono" font-size="8">Inline (Fable 5)</text>
+      <text x="588" y="293" text-anchor="middle" fill="#16c79a" font-family="Share Tech Mono" font-size="8">Inline (Opus 5)</text>
       <text x="588" y="305" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">main session</text>
 
       <rect x="648" y="280" width="80" height="32" rx="3" fill="rgba(10,61,46,0.2)" stroke="#16c79a" stroke-width="1"/>
@@ -1316,7 +1408,7 @@
       <text x="1626" y="199" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="7">deployed page &bull; Parallax draft</text>
 
       <!-- Section footer caption -->
-      <text x="860" y="430" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9" opacity=".4">Every request travels this path &bull; GATES loops back to DISPATCH on FIX-FIRST verdict &bull; Most tasks resolve in DISPATCH as Inline (Fable 5)</text>
+      <text x="860" y="430" text-anchor="middle" fill="#8b949e" font-family="Share Tech Mono" font-size="9" opacity=".4">Every request travels this path &bull; GATES loops back to DISPATCH on FIX-FIRST verdict &bull; Most tasks resolve in DISPATCH as Inline (Opus 5)</text>
     </svg>
     <div class="card t-cyan" style="flex:0 0 auto;min-width:300px;max-width:360px;align-self:flex-start">
       <div class="clabel">Stage Reference</div>
@@ -1356,7 +1448,7 @@
 <!-- ========== FOOTER ========== -->
 <div class="bp-footer">
   <span>EXTENDED MIND BLUEPRINT &mdash; Aragorn Meulendijks &mdash; 2026</span>
-  <span>Claude Code (Fable 5) + Codex + Grok + Kimi &bull; Tailscale &bull; Obsidian &bull; Docker &bull; GitHub</span>
+  <span>Claude Code (Opus 5) + Codex + Grok + Kimi &bull; Tailscale &bull; Obsidian &bull; Docker &bull; GitHub</span>
   <span class="quote">"The Extended Mind is not a metaphor &mdash; it is architecture."</span>
 </div>
 
