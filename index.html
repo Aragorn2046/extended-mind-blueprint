@@ -427,7 +427,7 @@
           <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:12px">GPT-5.6 TERRA</td><td><span class="v">Speed lane</span></td><td>Latency-sensitive tasks @ medium</td></tr>
           <tr><td class="tk" style="color:var(--green);font-family:Orbitron;font-size:12px">SONNET 5</td><td><span class="v">Sub-agents</span></td><td>Agent-tool floor (CLAUDE_CODE_SUBAGENT_MODEL) &mdash; Claude-only lane</td></tr>
           <tr><td class="tk" style="color:var(--red);font-family:Orbitron;font-size:12px">GROK 4.5</td><td><span class="v">Independent fallback</span></td><td>CARSO fallback after Fable 5 and Opus 5; always before Gemini</td></tr>
-          <tr><td colspan="3" style="font-size:9px;color:var(--dim)">CARSO rev 29: Kimi K3 &rarr; GPT-5.6 Sol &rarr; Fable 5 xhigh &rarr; Opus 5 xhigh &rarr; Grok 4.5 &rarr; Gemini last-resort. The active driver is removed from its own route.</td></tr>
+          <tr><td colspan="3" style="font-size:9px;color:var(--dim)">CARSO/COSO rev 30: Kimi K3 &rarr; GPT-5.6 Sol &rarr; Fable 5 xhigh &rarr; Opus 5 xhigh &rarr; Grok 4.5 &rarr; Gemini last-resort. The active driver is removed from its own route.</td></tr>
           <tr><td colspan="3" style="font-size:9px;color:var(--dim)">Deep Research = 3&times; parallel: Kimi K3 + Gemini 3.1 Pro + GPT-5.6 Sol, cross-referenced</td></tr>
           <tr><td class="tk" style="color:var(--dim);font-family:Orbitron;font-size:13px">HAIKU 4.5</td><td><span class="v">Throwaway</span></td><td>Extraction, classification, validation</td></tr>
           <tr><td colspan="3" style="border-top:1px dashed var(--border);padding-top:6px;font-size:9px;color:var(--dim)">TIER 2 ROUTER (~/scripts/tier2-llm.py &mdash; 3-vendor active, S669)</td></tr>
@@ -1272,7 +1272,7 @@
 
     <div class="card t-red">
       <div class="clabel">Adversarial Review Gates</div>
-      <div class="cdetail">Nothing load-bearing ships on one model's opinion.<br><br><span class="v">Code / pre-ship</span> &mdash; a heavyweight adversarial reviewer plus an independent senior second opinion, synthesized to SHIP / FIX-FIRST / RECONSIDER<br><span class="v">CARSO rev 29</span> &mdash; Kimi K3 max &rarr; GPT-5.6 Sol xhigh &rarr; Fable 5 xhigh &rarr; Opus 5 xhigh &rarr; Grok 4.5 high &rarr; Gemini last-resort<br>The active driver is filtered out and failed seats backfill visibly<br><br>Convergence between vendors is weighted highest.</div>
+      <div class="cdetail">Nothing load-bearing ships on one model's opinion.<br><br><span class="v">Code / pre-ship</span> &mdash; a heavyweight adversarial reviewer plus an independent senior second opinion, synthesized to SHIP / FIX-FIRST / RECONSIDER<br><span class="v">CARSO/COSO rev 30</span> &mdash; Kimi K3 max &rarr; GPT-5.6 Sol xhigh &rarr; Fable 5 xhigh &rarr; Opus 5 xhigh &rarr; Grok 4.5 high &rarr; Gemini last-resort<br>The active driver is filtered out; failed seats backfill visibly; a two-seat run never silently downgrades to one<br><br>Convergence between vendors is weighted highest.</div>
     </div>
 
     <div class="card t-red">
