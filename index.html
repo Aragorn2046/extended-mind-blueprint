@@ -276,7 +276,7 @@
   <h1>EXTENDED MIND BLUEPRINT</h1>
   <div class="sub" style="font-size:1.1em;letter-spacing:3px;color:var(--cyan);margin-top:4px;margin-bottom:2px">[ SHELBY ]</div>
   <div class="sub">Multi-Machine AI Development Environment</div>
-  <div class="auth">Designed &amp; Built by Aragorn Meulendijks &mdash; 2026</div>
+  <div class="auth">Designed &amp; Built by Aragorn Meulendijks &mdash; 2026 &bull; Fleet snapshot updated 2026-08-04</div>
 </div>
 
 <!-- ========== LEGEND ========== -->
@@ -400,21 +400,21 @@
 <div class="section" id="sec-sessions">
   <div class="section-head" style="border-color:var(--white);color:var(--white)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
-    <span class="stitle">Claude Code Sessions</span>
-    <span class="scount">Opus 5 Primary &bull; Sol/Kimi Escalation &bull; Sonnet 5 Sub-agents</span>
+    <span class="stitle">Coding-Agent Sessions</span>
+    <span class="scount">Dawn-first execution &bull; Vendor-neutral control plane &bull; Fleet visibility</span>
   </div>
   <div class="section-body">
     <div class="card t-cyan" style="flex:1;min-width:400px">
-      <div class="clabel">Claude Code &mdash; Dawn/Dusk</div>
-      <div class="cdetail">Model: <span class="v">Opus 5</span> @ medium (main)<br>Launch: <span class="v">ccode</span> alias (--model fable --effort medium --permission-mode auto)<br>Mobile: <span class="v">hcode</span> alias (Happy Engineering, E2E Signal-protocol)<br>Permissions: <span class="v">--dangerously-skip-permissions</span><br>Session type: <span class="v">CLAUDE_SESSION_TYPE=main</span><br>Cron: gemini-pro (tier2) &bull; Sub-agents: Sonnet 5 (CLAUDE_CODE_SUBAGENT_MODEL)</div>
+      <div class="clabel">Dawn &mdash; Primary Operations Hub</div>
+      <div class="cdetail">Interactive sessions, builds, repositories and heavy compute run here.<br><br>Claude Code, Codex, Grok and Kimi operate as peer harnesses<br>Session names derive from the first-prompt topic and remain stable across projections<br>Long-lived work uses isolated worktrees and explicit lifecycle state<br><br><span class="v">If it is not infrastructure hosting, it runs on Dawn.</span></div>
     </div>
     <div class="card t-green" style="flex:1;min-width:400px">
-      <div class="clabel">Claude Code &mdash; Day</div>
-      <div class="cdetail">Model: <span class="v">Opus 5</span> @ medium (main)<br>Parallel harness: <span class="v">Codex CLI 0.133</span> (read-only context tools)<br>Automation hub: instruction watcher, relay daemon, config guard<br>Also runs: cortex cron, background agents, delegated tasks, /spawn fresh</div>
+      <div class="clabel">Day &mdash; Always-On Infrastructure</div>
+      <div class="cdetail">MCP servers, Docker/Colima, tunnels, timed jobs and unattended pipelines only.<br><br>Hosts EMOC, the Session Bridge control plane, relay, browser/computer-use services and fleet synchronization<br>Headless infrastructure workers may run here; interactive project work does not<br><br><span class="v">Day is the services backbone, not a general workstation.</span></div>
     </div>
     <div class="card t-cyan">
-      <div class="clabel">Delegation System</div>
-      <div class="cdetail">Root: <span class="v">~/projects/</span> &bull; Isolated project environments<br>Launch: <span class="v">/delegate</span> &bull; Multi-task: <span class="v">/go</span><br>Default: Sonnet 5 (sub-agent floor) &bull; Production: <span class="v">--deep</span> (Opus 5)<br>Must unset CLAUDECODE: <span class="v">env -u CLAUDECODE</span><br>Headless: <span class="v">--permission-mode acceptEdits</span></div>
+      <div class="clabel">Dusk &mdash; Active-Use Laptop</div>
+      <div class="cdetail">Mobile workstation for Dusk-specific work while Aragorn is actively using it.<br><br>No unattended or long-running ownership: the laptop can disappear mid-job<br>Sessions still publish normalized state and recover after reconnect<br>Durable work is routed to Dawn; infrastructure stays on Day</div>
     </div>
     <div class="card" style="border-color:var(--border)">
       <div class="clabel" style="color:var(--white);border-color:var(--border)">Model Routing</div>
@@ -426,6 +426,8 @@
           <tr><td class="tk" style="color:var(--red);font-family:Orbitron;font-size:12px">KIMI K3</td><td><span class="v">Heaviest</span></td><td>@ max &bull; adversarial review primary &bull; general delegation</td></tr>
           <tr><td class="tk" style="color:var(--orange);font-family:Orbitron;font-size:12px">GPT-5.6 TERRA</td><td><span class="v">Speed lane</span></td><td>Latency-sensitive tasks @ medium</td></tr>
           <tr><td class="tk" style="color:var(--green);font-family:Orbitron;font-size:12px">SONNET 5</td><td><span class="v">Sub-agents</span></td><td>Agent-tool floor (CLAUDE_CODE_SUBAGENT_MODEL) &mdash; Claude-only lane</td></tr>
+          <tr><td class="tk" style="color:var(--red);font-family:Orbitron;font-size:12px">GROK 4.5</td><td><span class="v">Independent fallback</span></td><td>CARSO fallback after Fable 5 and Opus 5; always before Gemini</td></tr>
+          <tr><td colspan="3" style="font-size:9px;color:var(--dim)">CARSO rev 29: Kimi K3 &rarr; GPT-5.6 Sol &rarr; Fable 5 xhigh &rarr; Opus 5 xhigh &rarr; Grok 4.5 &rarr; Gemini last-resort. The active driver is removed from its own route.</td></tr>
           <tr><td colspan="3" style="font-size:9px;color:var(--dim)">Deep Research = 3&times; parallel: Kimi K3 + Gemini 3.1 Pro + GPT-5.6 Sol, cross-referenced</td></tr>
           <tr><td class="tk" style="color:var(--dim);font-family:Orbitron;font-size:13px">HAIKU 4.5</td><td><span class="v">Throwaway</span></td><td>Extraction, classification, validation</td></tr>
           <tr><td colspan="3" style="border-top:1px dashed var(--border);padding-top:6px;font-size:9px;color:var(--dim)">TIER 2 ROUTER (~/scripts/tier2-llm.py &mdash; 3-vendor active, S669)</td></tr>
@@ -488,8 +490,8 @@
     </svg>
 
     <div class="card t-purple">
-      <div class="clabel">Voice Config</div>
-      <div class="cdetail">Switch: <span class="v">/tts</span> &bull; Day engine: <span class="v">pocket-tts</span> (edge / elevenlabs fallback)<br>Trigger: Stop hook &rarr; voice-hook.sh (30s)<br>Config: <span class="v">~/projects/claude-voice/scripts/config.json</span><br>Mode: <span class="v">always on</span> &mdash; every response gets &lt;voice&gt;</div>
+      <div class="clabel">JARVIS Voice &mdash; Fleetwide</div>
+      <div class="cdetail">Always-on response voice across all three machines.<br><br><span class="v">Day</span>: local MLX pocket-TTS<br><span class="v">Dawn + Dusk</span>: local PyTorch pocket-TTS on loopback<br>English is pinned to the local JARVIS voice; ElevenLabs handles Dutch and provider fallback<br>Stop hooks speak the final response, while the next prompt immediately stops playback</div>
     </div>
   </div>
 </div>
@@ -501,7 +503,7 @@
   <div class="section-head" style="border-color:var(--yellow);color:var(--yellow)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Plugin Ecosystem</span>
-    <span class="scount">22 Plugins &bull; 36 gstack Skills &bull; 126 Config Skills &bull; 45 Rules &bull; Effort Architecture</span>
+    <span class="scount">25 Plugins &bull; 36 gstack Skills &bull; 128 Config Skills &bull; 47 Rules &bull; Effort Architecture</span>
   </div>
   <div class="section-body">
     <div class="card t-yellow" style="flex:1;min-width:460px">
@@ -576,7 +578,7 @@
       <div class="cdetail"><span class="v" style="color:var(--yellow)">/ultrareview</span> &mdash; cloud multi-agent code review<br>~$20/run, ~20 min, Team/Ent billing<br>Conditional: dev-cycle 9b, web-cycle 11b, infra-cycle 7b<br>User-approval gate &bull; never default-fire<br><br><span class="v" style="color:var(--yellow)">/session-audit</span> &mdash; claude-doctor wrapper<br>Scans transcripts for anti-patterns<br>~30s, free, never auto-writes MEMORY.md<br>Conditional: cycle phase 10b/12b/8b<br>Output: <span class="v">[vault]/Config/cc-doctor/</span></div>
     </div>
     <div class="card t-yellow">
-      <div class="clabel">126 Config Skills (SKILL.md format)</div>
+      <div class="clabel">128 Config Skills (SKILL.md format)</div>
       <div class="cdetail">
         <span style="color:var(--dim);font-size:9px">Migrated from /commands/ to /skills/ (CC 2.1.88)</span><br>
         <span style="color:var(--white);font-size:10px">Session</span>
@@ -620,7 +622,7 @@
       </div>
     </div>
     <div class="card t-yellow">
-      <div class="clabel">45 Rules</div>
+      <div class="clabel">47 Rules</div>
       <div class="cdetail">
         <span class="tag" style="border-color:var(--red-dim);color:var(--red)">api-key-security</span>
         <span class="tag" style="border-color:var(--red-dim);color:var(--red)">external-data-security</span>
@@ -655,7 +657,7 @@
   <div class="section-head" style="border-color:var(--orange);color:var(--orange)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">MCP Server Ecosystem</span>
-    <span class="scount">41 Active Integrations</span>
+    <span class="scount">45 Active Integrations &bull; Shared per-host templates</span>
   </div>
   <div class="section-body">
     <div class="card t-orange" style="flex:1.3;min-width:550px">
@@ -751,20 +753,20 @@
   <div class="section-head" style="border-color:var(--red);color:var(--red)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Codex Parallel Harness</span>
-    <span class="scount">4 Peer Harnesses &mdash; Codex &bull; Grok &bull; Kimi &bull; 5-Layer Defense-in-Depth</span>
+    <span class="scount">4 Peer Harnesses &mdash; Claude Code &bull; Codex &bull; Grok &bull; Kimi &bull; Model-agnostic parity</span>
   </div>
   <div class="section-body">
     <div class="card t-red" style="flex:1.2;min-width:520px">
-      <div class="clabel">Codex CLI 0.133 (parallel to Claude Code)</div>
-      <div class="cdetail">Runs alongside Claude Code on Day<br>Read-only context tools only &mdash; <span class="v">no Gmail/Drive/Calendar/WhatsApp</span><br><br><span class="v" style="color:var(--red)">5-layer defense-in-depth:</span><br>1. <span class="v">Prompt allowlist</span><br>2. <span class="v">Sandbox deny_read</span> rules<br>3. <span class="v">Tool-call hook</span> (codex-guard-hook.py)<br>4. <span class="v">HMAC integrity</span> on AGENTS-shelby.md<br>5. <span class="v">MCP capability scoping</span> (read-only)<br><br>Vault canonicals (no symlinks &mdash; vault-git-sync):<br>&bull; <span class="v">[vault]/Config/AGENTS-shelby.md</span><br>&bull; <span class="v">[vault]/Config/templates/codex-config.toml.tpl</span><br>&bull; <span class="v">[vault]/Config/scripts/codex-install-day.sh</span><br>&bull; <span class="v">[vault]/Config/scripts/codex-guard-hook.py</span><br>&bull; <span class="v">[vault]/Config/scripts/check-agent-sync.py</span></div>
+      <div class="clabel">Codex CLI 0.146.0 &mdash; Full Shelby Peer</div>
+      <div class="cdetail">Interactive Codex work runs on Dawn beside Claude Code, Grok and Kimi.<br><br>All harnesses receive the same per-host MCP template by default<br>Shared files use relay-issued write locks so peers cannot clobber one another<br>External content remains untrusted; sensitive mutation still obeys the Rule of Two<br>Codex session names are generated from the first-prompt topic and preserved by the Session Bridge<br><br><span class="v">Parity is the default; security is enforced at the capability boundary.</span></div>
     </div>
     <div class="card t-red" style="flex:1;min-width:340px">
-      <div class="clabel">Codex MCP Profile (intentionally narrow)</div>
-      <div class="cdetail"><span class="v" style="color:var(--green)">Allowed (read-only):</span><br>&bull; <span class="v">context7</span> &mdash; library docs<br>&bull; <span class="v">memory_service</span> (search-only)<br>&bull; <span class="v">mempalace</span> (search-only)<br><br><span class="v" style="color:var(--red)">Blocked:</span><br>Gmail, Drive, Calendar, WhatsApp, write-mutate access<br><br>Install (idempotent): <span class="v">bash [vault]/Config/scripts/codex-install-day.sh</span></div>
+      <div class="clabel">MCP Parity + Trust Scoping</div>
+      <div class="cdetail"><span class="v" style="color:var(--green)">Full parity:</span> Workspace, research, media, browser and infrastructure tools render from the same fleet template.<br><br><span class="v">Trust-scoped exceptions:</span><br>&bull; memory_service + MemPalace are read-only from peer harnesses<br>&bull; WhatsApp is read-only for Codex<br>&bull; Day disables stdio servers only for a known macOS terminal constraint<br><br>No credentials are copied into prompts or repositories.</div>
     </div>
     <div class="card t-red" style="flex:1;min-width:340px">
       <div class="clabel">Grok CLI &mdash; Full Shelby Driver</div>
-      <div class="cdetail">xAI Grok CLI, fleetwide &mdash; 137 skill adapters in <span class="v">~/.grok/skills</span><br>Auth: grok.com OAuth subscription (no paid API credits)<br>Roles: adversarial review panels (/carso, /coso), peer harness<br>Peer harnesses are never re-walled as a &quot;security fix&quot;</div>
+      <div class="cdetail">xAI Grok CLI 0.2.101, fleetwide &mdash; 149 skill adapters<br>Auth: grok.com OAuth subscription (no paid API credits)<br>Roles: adversarial review panels (/carso, /coso), peer harness<br>CARSO always tries Grok before its Gemini last-resort rung<br>Peer harnesses are never re-walled as a &quot;security fix&quot;</div>
     </div>
     <div class="card t-red" style="flex:1;min-width:340px">
       <div class="clabel">Kimi Code CLI &mdash; Fourth Peer (2026-07-16)</div>
@@ -811,7 +813,7 @@
   <div class="section-head" style="border-color:var(--green);color:var(--green)" onclick="toggle(this)">
     <span class="arrow">&#9660;</span>
     <span class="stitle">Automation &amp; Cron</span>
-    <span class="scount">120+ launchd Jobs &bull; Cron + Self-Healing Daemons &bull; Backup Systems</span>
+    <span class="scount">151 loaded launchd Jobs &bull; Cron + Self-Healing Services &bull; Backup Systems</span>
   </div>
   <div class="section-body">
     <div class="card t-green" style="flex:1;min-width:460px">
@@ -892,8 +894,8 @@
       <div class="clabel">Symlink Architecture</div>
       <div class="cdetail">Created by <span class="v">setup-symlinks.sh</span> per machine<br><br>
         Config/settings.json &rarr; <span class="v">~/.claude/settings.json</span><br>
-        Config/skills/ &rarr; <span class="v">~/.claude/skills/</span> (55 Config skills)<br>
-        Config/rules/ &rarr; <span class="v">~/.claude/rules/</span> (23 rules)<br>
+        Config/skills/ &rarr; <span class="v">~/.claude/skills/</span> (128 Config skills)<br>
+        Config/rules/ &rarr; <span class="v">~/.claude/rules/</span> (47 rules)<br>
         Config/CLAUDE.md &rarr; <span class="v">~/workspace/CLAUDE.md</span><br>
         Config/memory/ &rarr; <span class="v">~/.claude/projects/*/memory/</span> (28+)
       </div>
@@ -1097,12 +1099,13 @@
     <!-- Machine details -->
     <div class="card machine-card t-cyan" style="flex:1 1 300px">
       <div class="mname" style="color:var(--cyan)">DAWN</div>
-      <div class="msub" style="color:var(--cyan)">Desktop &mdash; Primary Workstation</div>
+      <div class="msub" style="color:var(--cyan)">Desktop &mdash; Primary Operations Hub</div>
       <div class="mspecs">
         <span class="k">hostname</span> <span class="v">DAWN</span> &bull; <span class="k">os</span> <span class="v">Windows + WSL2</span><br>
         <span class="k">gpu</span> <span class="v">RTX 5090</span> (gaming rig) &bull; <span class="k">tailscale</span> <span class="v">100.x.x.108</span><br>
         <span class="k">ai_name</span> <span class="v">"Dawn"</span> &bull; <span class="k">docker</span> <span class="v">manual start</span><br>
-        <span class="k">relay</span> <span class="v">systemd (Restart=always)</span> &bull; <span class="k">audio_rx</span> <span class="v">:12345</span>
+        <span class="k">role</span> <span class="v">all interactive work + builds</span><br>
+        <span class="k">relay</span> <span class="v">systemd (Restart=always)</span> &bull; <span class="k">resilience</span> <span class="v">WSL guard + watchdog</span>
       </div>
       <div class="inner-box" style="border-color:var(--cyan-dim)">
         <div class="ilabel" style="color:var(--cyan)">Local Services</div>
@@ -1121,7 +1124,7 @@
       <div class="mspecs">
         <span class="k">hostname</span> <span class="v">day</span> &bull; <span class="k">os</span> <span class="v">macOS / Colima Docker</span><br>
         <span class="k">tailscale</span> <span class="v">100.x.x.104</span> &bull; <span class="k">vault</span> <span class="v">[vault]/</span><br>
-        <span class="k">relay</span> <span class="v">launchd (KeepAlive)</span> &bull; <span class="k">role</span> <span class="v">Server, automation hub</span>
+        <span class="k">relay</span> <span class="v">launchd (KeepAlive)</span> &bull; <span class="k">role</span> <span class="v">infrastructure host only</span>
       </div>
       <div class="inner-box" style="border-color:var(--green-dim)">
         <div class="ilabel" style="color:var(--green)">Exclusive Services</div>
@@ -1141,18 +1144,19 @@
           <span class="tag" style="border-color:var(--green);color:var(--green)">AmneziaWG :443/UDP</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">Caddy *arr proxy</span>
           <span class="tag" style="border-color:var(--green);color:var(--green)">Tailscale Drive auto-mount</span>
-          <span class="tag" style="border-color:var(--green);color:var(--green)">Codex CLI 0.133</span>
+          <span class="tag" style="border-color:var(--green);color:var(--green)">Session Bridge control plane</span>
         </div>
       </div>
     </div>
 
     <div class="card machine-card t-cyan" style="flex:1 1 300px">
       <div class="mname" style="color:var(--cyan)">DUSK</div>
-      <div class="msub" style="color:var(--cyan)">Laptop &mdash; Mobile Workstation</div>
+      <div class="msub" style="color:var(--cyan)">Laptop &mdash; Active-Use Only</div>
       <div class="mspecs">
         <span class="k">hostname</span> <span class="v">DUSK</span> &bull; <span class="k">os</span> <span class="v">Windows + WSL2</span><br>
         <span class="k">tailscale</span> <span class="v">100.x.x.61</span> &bull; <span class="k">docker</span> <span class="v">Docker Desktop</span><br>
-        <span class="k">relay</span> <span class="v">systemd (Restart=always)</span> &bull; <span class="k">audio_rx</span> <span class="v">:12346</span>
+        <span class="k">role</span> <span class="v">Dusk-specific work while attended</span><br>
+        <span class="k">policy</span> <span class="v">no unattended or long-running ownership</span>
       </div>
       <div class="inner-box" style="border-color:var(--cyan-dim)">
         <div class="ilabel" style="color:var(--cyan)">Local Services</div>
@@ -1188,7 +1192,27 @@
 
     <div class="card t-cyan">
       <div class="clabel">BEAM &mdash; Mobile Session Spawning</div>
-      <div class="cdetail">Start a full working session from the phone and walk away.<br><br>Mobile trigger &rarr; tmux session spawn<br>Subtree-aware capacity limits<br>Tombstone-gated reaping (no kill without a recorded state)<br>Workflow-cycle routing from the brief<br><br><span class="v">202 = queued-at-capacity</span>, working as designed &mdash; the reaper frees squatted slots.</div>
+      <div class="cdetail">Start a full working session from the phone and walk away.<br><br>Dawn-first mobile trigger &rarr; tmux session spawn<br>Subtree-aware capacity limits<br>Tombstone-gated reaping (no kill without a recorded state)<br>Workflow-cycle routing from the brief<br><br><span class="v">202 = queued-at-capacity</span>, working as designed &mdash; the reaper frees squatted slots.</div>
+    </div>
+
+    <div class="card t-cyan">
+      <div class="clabel">Session Bridge &mdash; Cross-Machine Control Plane [LIVE]</div>
+      <div class="cdetail">Vendor-neutral discovery and inspection of coding-agent sessions.<br><br>Stable machine IDs survive restarts; Codex adapters normalize local state into versioned sessions and activity events<br>Dawn and Dusk push snapshots to Day, which retains last-known state when a machine goes offline<br>Read-only REST and MCP call the same application layer<br>Display names, projects, status, timestamps and input-needed flags are exported; raw prompts, files, diffs, logs and environment variables are private by default<br><br><span class="v">Web connector works now.</span> Native phone voice control depends on the ChatGPT client exposing custom MCP connections to voice mode.</div>
+    </div>
+
+    <div class="card t-cyan">
+      <div class="clabel">EMOC Sessions Cockpit [LIVE]</div>
+      <div class="cdetail">The fleet's truthful session surface.<br><br>Top-level Sessions tab with Kanban, filters, saved views, search and project labels<br>Fresh, stale and offline states are shown explicitly; disconnected machines keep their last-known sessions<br>Open ends and input-needed sessions rise to the top<br>One-button takeover is HMAC-authorized and remains separate from read-only discovery</div>
+    </div>
+
+    <div class="card t-green">
+      <div class="clabel">Fleet Resilience &amp; Safe Deploys</div>
+      <div class="cdetail">Dawn's WSL control plane now uses an ext4 shadow config, namespace healer and watchdog to prevent recurring stalls.<br><br>Cross-machine deploy scripts require an explicit ref and production services run from pinned worktrees<br>ClipSync image staging stays off Windows drvfs hot paths<br>Session lifecycle events and tombstones make recovery evidence-based instead of process-name guesswork</div>
+    </div>
+
+    <div class="card t-yellow">
+      <div class="clabel">Portal vs Pipeline Boundary</div>
+      <div class="cdetail"><span class="v">OpenCode is a manual portal only.</span><br><br>It is never embedded in daemons, cron jobs or automated workers because its interactive scaffolding is too large for an API pipeline<br>Unattended LLM work uses direct, metered and observable API lanes instead<br>This keeps automation cheap, deterministic and inspectable</div>
     </div>
 
     <div class="card t-cyan">
@@ -1243,12 +1267,12 @@
 
     <div class="card t-red">
       <div class="clabel">Model Routing Control Plane</div>
-      <div class="cdetail">Routing is configuration, not code.<br><br>Revisioned routing state edited through a guarded store &mdash; never hand-edited<br><span class="v">Per-model reasoning level</span>: each model row carries its own effort, validated against that vendor's vocabulary<br>Primary + ordered fallback chain, applied per rung at spawn time<br>Live in the command-centre UI</div>
+      <div class="cdetail">Routing is configuration, not code.<br><br>Revisioned routing state edited through a guarded store &mdash; never hand-edited<br><span class="v">Per-model reasoning level</span>: each model row carries its own effort, validated against that vendor's vocabulary<br>Primary + ordered fallback chain, applied per rung at spawn time<br>CARSO's dashboard policy and runnable adapter map are tested together so the UI cannot promise an unavailable reviewer<br>Live in the command-centre UI</div>
     </div>
 
     <div class="card t-red">
       <div class="clabel">Adversarial Review Gates</div>
-      <div class="cdetail">Nothing load-bearing ships on one model's opinion.<br><br><span class="v">Code / pre-ship</span> &mdash; a heavyweight adversarial reviewer plus an independent senior second opinion, synthesized to SHIP / FIX-FIRST / RECONSIDER<br><span class="v">Anything else</span> &mdash; diagnoses, strategy, architecture, drafts get the same cross-vendor challenge<br>Provider-neutral fallback fills two heterogeneous seats in quality order<br><br>Convergence between vendors is weighted highest.</div>
+      <div class="cdetail">Nothing load-bearing ships on one model's opinion.<br><br><span class="v">Code / pre-ship</span> &mdash; a heavyweight adversarial reviewer plus an independent senior second opinion, synthesized to SHIP / FIX-FIRST / RECONSIDER<br><span class="v">CARSO rev 29</span> &mdash; Kimi K3 max &rarr; GPT-5.6 Sol xhigh &rarr; Fable 5 xhigh &rarr; Opus 5 xhigh &rarr; Grok 4.5 high &rarr; Gemini last-resort<br>The active driver is filtered out and failed seats backfill visibly<br><br>Convergence between vendors is weighted highest.</div>
     </div>
 
     <div class="card t-red">
@@ -1259,6 +1283,11 @@
     <div class="card t-cyan">
       <div class="clabel">Portless &amp; localship</div>
       <div class="cdetail"><span class="v">Portless</span> &mdash; stable named <span class="v">.localhost</span> URLs replace remembered port numbers for every local service.<br><br><span class="v">localship</span> &mdash; per-worktree dev isolation: each branch gets its own ports, database, environment, session and tunnel, plus a kanban hub. Parallel agents stop colliding.</div>
+    </div>
+
+    <div class="card t-purple" style="flex:1.5;min-width:520px">
+      <div class="clabel">Fleet Refresh &mdash; 25 July to 4 August 2026</div>
+      <div class="cdetail">This snapshot incorporates the last ten days of shipped infrastructure:<br><br>&bull; revisioned per-model routing and truthful fallback execution<br>&bull; Session Lifecycle Ledger + cross-machine Session Bridge<br>&bull; EMOC Sessions cockpit and honest stale/offline projections<br>&bull; JARVIS pocket-TTS across Day, Dawn and Dusk<br>&bull; Dawn-first BEAM routing and formal machine ownership<br>&bull; Codex topic-based session naming and full MCP parity<br>&bull; WSL namespace healing, watchdogs and ext4 shadow configuration<br>&bull; pinned-worktree deploy safety and portal-vs-pipeline boundaries<br><br><span class="v">Snapshot date: 2026-08-04</span></div>
     </div>
 
   </div>
@@ -1431,24 +1460,24 @@
 <!-- ========== STATS ========== -->
 <div class="stats-bar">
   <div class="stat"><span class="sn" style="color:var(--cyan)">3</span>Machines</div>
-  <div class="stat"><span class="sn" style="color:var(--orange)">32</span>MCP Servers</div>
-  <div class="stat"><span class="sn" style="color:var(--yellow)">22</span>Plugins</div>
-  <div class="stat"><span class="sn" style="color:var(--yellow)">122</span>Config Skills</div>
-  <div class="stat"><span class="sn" style="color:var(--yellow)">44</span>Rules</div>
+  <div class="stat"><span class="sn" style="color:var(--orange)">45</span>MCP Servers</div>
+  <div class="stat"><span class="sn" style="color:var(--yellow)">25</span>Plugins</div>
+  <div class="stat"><span class="sn" style="color:var(--yellow)">128</span>Config Skills</div>
+  <div class="stat"><span class="sn" style="color:var(--yellow)">47</span>Rules</div>
   <div class="stat"><span class="sn" style="color:var(--red)">6</span>Hook Events</div>
-  <div class="stat"><span class="sn" style="color:var(--green)">120+</span>Day Daemons</div>
+  <div class="stat"><span class="sn" style="color:var(--green)">151</span>Day Jobs</div>
   <div class="stat"><span class="sn" style="color:var(--purple)">3</span>TTS Engines</div>
   <div class="stat"><span class="sn" style="color:var(--green)">2</span>GitHub Backups</div>
   <div class="stat"><span class="sn" style="color:var(--orange)">4</span>Google Accounts</div>
   <div class="stat"><span class="sn" style="color:var(--orange)">3</span>Tier-2 Providers</div>
-  <div class="stat"><span class="sn" style="color:var(--red)">5</span>Codex Defenses</div>
+  <div class="stat"><span class="sn" style="color:var(--red)">4</span>Peer Harnesses</div>
   <div class="stat"><span class="sn" style="color:var(--cyan)">723</span>Orchestrator Tests</div>
 </div>
 
 <!-- ========== FOOTER ========== -->
 <div class="bp-footer">
   <span>EXTENDED MIND BLUEPRINT &mdash; Aragorn Meulendijks &mdash; 2026</span>
-  <span>Claude Code (Opus 5) + Codex + Grok + Kimi &bull; Tailscale &bull; Obsidian &bull; Docker &bull; GitHub</span>
+  <span>Claude Code + Codex + Grok + Kimi &bull; Session Bridge &bull; Tailscale &bull; Docker &bull; GitHub</span>
   <span class="quote">"The Extended Mind is not a metaphor &mdash; it is architecture."</span>
 </div>
 
